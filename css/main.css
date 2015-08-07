@@ -8,7 +8,7 @@ body, h1, h2, h3, h4, h5, article {
 
 h1 {
   font-weight:bold;
-  font-size:3rem;
+  font-size:2.5rem;
 }
 
 .title {
@@ -112,4 +112,25 @@ h2 subtitle {
 
 .uk-panel {
   padding-bottom:20px;
+}
+
+@media screen and (max-width:1250px) {
+  .face {
+    width:100px;
+    height:100px;
+  }
+}
+
+@media screen and (max-width:960px) {
+  .top-area {
+    text-align:center;
+  }
+
+  .face {
+    float:none;
+    display:inline;    
+  }
+  .about {
+    text-align:center;
+  }
 }
