@@ -105,3 +105,11 @@ h2 subtitle {
 .vimeo {
   width:100%;
 }
+
+.links a {
+  margin-bottom:3px;
+}
+
+.uk-panel {
+  padding-bottom:20px;
+}
