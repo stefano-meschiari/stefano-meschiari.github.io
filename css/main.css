@@ -138,15 +138,18 @@ h2 subtitle {
   }
 }
 
-@media screen and (max-width:960px) {
+@media screen and (max-width:1000px) {
   .top-area {
     text-align:center;
   }
 
   .face {
     float:none;
-    display:inline;    
+    display:block;
+    position:relative;
+    margin:auto;
   }
+  
   .about {
     text-align:center;
   }
