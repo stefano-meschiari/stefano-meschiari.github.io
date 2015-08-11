@@ -75,6 +75,22 @@ h1 {
   color:black;
 }
 
+.interests {
+  text-align:center;
+  margin-bottom:20px;
+  line-height:1.6;
+}
+
+.uk-badge {
+  font-size:0.7rem;
+  text-transform:uppercase;
+}
+
+.mission {
+  text-transform:lowercase;
+  font-variant:small-caps;
+  font-weight:bold;
+}
 
 .section-title {
   font-size:2rem;
