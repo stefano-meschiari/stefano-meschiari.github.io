@@ -43,6 +43,7 @@ h3.skill {
 }
 
 h3.where {
+  font-size:1rem;
   font-weight:400;
   font-style:italic;
   margin-bottom:10px;
