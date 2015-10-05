@@ -1,0 +1,19 @@
+html {
+  font-size:12px;
+}
+
+.pdf {
+  display:none;
+}
+
+h2.section {
+  margin-top:15px;
+}
+
+.thumbs {
+  height:100px;
+}
+
+td {
+  padding-bottom:0px;
+}

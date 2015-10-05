@@ -102,3 +102,9 @@ a:hover {
 li {
   margin-bottom:5px;
 }
+
+.thumbs {
+  height:120px;
+  border:1px solid silver;
+  border-radius:4px;
+}

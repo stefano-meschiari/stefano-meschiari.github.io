@@ -18,7 +18,7 @@ Hello! Thanks for visiting my portfolio. If you like anything I do, don't hesita
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="bower_components/uikit/css/uikit.min.css">
         <link rel="stylesheet" href="css/resume.css">
-        
+        <link rel="stylesheet" href="css/resume-print.css" media="print">        
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         
@@ -37,6 +37,10 @@ Hello! Thanks for visiting my portfolio. If you like anything I do, don't hesita
     </head>
     <body>
 		    <div class="uk-container uk-container-center resume">
+            <div class="uk-float-right pdf">
+                <a href="resume.pdf">PDF</a>
+            </div>
+
             <h1 class="title">Stefano Meschiari, Ph.D.</h1>
             <h2 class="tagline">Researcher, Data Scientist, EdTech enthusiast in Austin, TX</h2>
             <div class="addresses">
@@ -65,7 +69,7 @@ Hello! Thanks for visiting my portfolio. If you like anything I do, don't hesita
                         </h3>
                         <ul>
                             <li>I lead the data analysis effort for the Lick-Carnegie science collaboration (~20 scientists across the United States). I analyze time series data produced by large telescopes and search for the presence of new exoplanetary systems, leading to the discovery of several new planets. Each dataset is analyzed using <a href="http://www.stefanom.org/systemic">my statistical code, Systemic</a>, which models our observations using Markov-Chain Monte Carlo techniques; Systemic was used to discover more than 40 new planetary systems.</li>
-                            <li>I write high-performance, parallelized codes to model planet formation through numerical simulations. My codes solve ordinary and partial differential equations over millions of years on the University's supercomputers.</li>                            
+                            <li>I write high-performance, parallelized codes that solve ordinary and partial differential equations to model planet formation through numerical simulations. </li>                            
                         </ul>
                     </td>
                 </tr>
@@ -172,7 +176,14 @@ Hello! Thanks for visiting my portfolio. If you like anything I do, don't hesita
             </div>
 
             <h2 class="section">Projects</h2>
-            <div class="right">See <a href="http://stefano-meschiari.github.io">my portfolio</a> for a list of my open-source projects. I contribute to more than 16 repositories on GitHub.
+            <div class="right">See <a href="http://stefano-meschiari.github.io">my portfolio (http://stefano-meschiari.github.io)</a> for a list of my open-source projects. I contribute to more than 16 repositories on GitHub.
+                <p>
+                <center>
+                    <img src="img/219134.png" class="thumbs">
+                    <img src="img/systemic2_thumb.jpg" class="thumbs">
+                    <img src="img/spc_thumb.jpg" class="thumbs">
+                    <img src="img/systemic-live_thumb.jpg" class="thumbs">
+                </center>
             </div>
         </div>
     </body>
