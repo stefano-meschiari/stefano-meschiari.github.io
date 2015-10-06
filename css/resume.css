@@ -109,3 +109,7 @@ li {
   border:1px solid silver;
   border-radius:4px;
 }
+
+.objective {
+  display:none;
+}
