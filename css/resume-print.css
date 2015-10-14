@@ -22,3 +22,17 @@ h2.section {
 td {
   padding-bottom:5px;
 }
+
+.addresses {
+  padding:10px;
+  margin-top:10px;
+  margin-bottom:20px;
+  font-size:1.25rem;
+  background-color:#EEEEEE !important;
+}
+
+.addresses i {
+  color:gray !important;
+  text-align:center;
+  width:22px;
+}

@@ -74,15 +74,17 @@ td.left {
   font-size:1.25rem;
 }
 .addresses {
-  padding-top:5px;
-  padding-bottom:5px;
-  margin-top:5px;
-  margin-bottom:15px;
+  padding:10px;
+  margin-top:10px;
+  margin-bottom:20px;
   font-size:1.25rem;
+  background-color:#EEEEEE;
 }
 
 .addresses i {
-  color:lightGray;
+  color:gray;
+  text-align:center;
+  width:22px;
 }
 
 .addresses a {
