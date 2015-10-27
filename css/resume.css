@@ -78,13 +78,20 @@ td.left {
   margin-top:10px;
   margin-bottom:20px;
   font-size:1.25rem;
-  background-color:#EEEEEE;
+  background:linear-gradient(to top, #DDDDDD, #EEEEEE)
 }
 
 .addresses i {
   color:gray;
   text-align:center;
   width:22px;
+}
+.addresses-sec {
+  color:gray;
+
+  display:inline-block;
+  width:100px;
+  font-variant:small-caps;
 }
 
 .addresses a {
