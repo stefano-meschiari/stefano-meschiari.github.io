@@ -21,6 +21,7 @@ h2.section {
 
 td {
   padding-bottom:5px;
+  background:#F5F5F5 !important;  
 }
 
 .addresses {
@@ -28,11 +29,15 @@ td {
   margin-top:10px;
   margin-bottom:20px;
   font-size:1.25rem;
-  background-color:#EEEEEE !important;
+  background:#F5F5F5 !important;  
 }
 
 .addresses i {
   color:gray !important;
   text-align:center;
   width:22px;
+}
+
+.thumbs-list {
+  display:none;
 }

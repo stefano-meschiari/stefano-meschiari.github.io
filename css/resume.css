@@ -39,7 +39,9 @@ h2.section {
 
 h3.skill {
   font-weight:600;
-  font-size:1.25rem;
+  font-size: 1rem;
+  text-transform:uppercase;
+  line-height:1.5rem;
 }
 
 h3.where {
@@ -49,23 +51,33 @@ h3.where {
   margin-bottom:10px;
 }
 
+table {
+  width:100%;
+}
+
 tr {
   margin-bottom:10px;
 }
 
 td {
+  background:linear-gradient(to top, #E0E0E0, #F5F5F5);  
   vertical-align: top;
-  padding-left:30px;
+  padding-left:10px;
+  padding-top:10px;
   padding-bottom:10px;  
 }
 
 td.left {
-  padding-left:0px;
-  padding-right:30px;
-  margin-right:30px;
+  padding-left:10px;
+  padding-right:10px;
+  margin-right:10px;
   border-right:1px solid lightGray;
   white-space:nowrap;
-  min-width:150px;
+  text-align:right;
+}
+
+td.left h3 {
+  color:gray;
 }
 
 .right {
@@ -78,7 +90,7 @@ td.left {
   margin-top:10px;
   margin-bottom:20px;
   font-size:1.25rem;
-  background:linear-gradient(to top, #DDDDDD, #EEEEEE)
+  background:linear-gradient(to top, #E0E0E0, #F5F5F5) !important;
 }
 
 .addresses i {
@@ -126,4 +138,8 @@ li {
 .lang {
   font-weight:600;
   color:darkgray;
+}
+
+.thumbs-list {
+  margin-top:20px;
 }
