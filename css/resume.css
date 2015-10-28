@@ -122,3 +122,8 @@ li {
 .objective {
   display:none;
 }
+
+.lang {
+  font-weight:600;
+  color:darkgray;
+}
