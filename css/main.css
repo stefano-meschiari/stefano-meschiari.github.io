@@ -155,6 +155,29 @@ h2 subtitle {
   }
 }
 
+@media screen and (max-width:500px) {
+  .top-area {
+    text-align:center;
+  }
+
+  .face {
+    float:none;
+    display:block;
+    position:relative;
+    margin:auto;
+  }
+  
+  .about {
+    text-align:center;
+  }
+
+  .email {
+    float:none;
+  }
+
+  
+}
+
 .tagline {
   font-weight:300;
 }
