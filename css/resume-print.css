@@ -15,13 +15,19 @@ h2.section {
   margin-top:15px;
 }
 
+.left {
+  padding:10px;
+}
+
+.right {
+  padding:10px;
+}
 .thumbs {
   height:100px;
 }
 
-td {
-  padding-bottom:5px;
-  background:#F5F5F5 !important;  
+.gray {
+  background:linear-gradient(to top, #E5E5E5, #F5F5F5) !important;
 }
 
 .addresses {
@@ -29,7 +35,6 @@ td {
   margin-top:10px;
   margin-bottom:20px;
   font-size:1.25rem;
-  background:#F5F5F5 !important;  
 }
 
 .addresses i {
