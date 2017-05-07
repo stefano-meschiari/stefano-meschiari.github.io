@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Stefano Meschiari -- Open-source Projects</title>
+  <meta name="description" content="Stefano Meschiari's personal website. 
+">
+
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  <link rel="stylesheet" href="/public/semantic/semantic.min.css">
+  <link rel="stylesheet" href="/public/semantic/components/accordion.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <script type="text/javascript" src="/public/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/public/semantic/semantic.min.js"></script>
+  <script type="text/javascript" src="/public/semantic/components/accordion.min.js"></script>
+  
+  <link rel="canonical" href="http://www.stefanom.org//projects">
+  <link rel="alternate" type="application/rss+xml" title="Stefano Meschiari" href="http://www.stefanom.org//feed.xml">
+  
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,500,500italic,700,700italic|PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+
+  <body>
+
+    <header>
+    <nav id="nav" class="ui secondary pointing menu">
+            
+            <a class="page item "
+                      href=" / ">
+                ABOUT
+            </a>
+            
+            <a class="page item "
+                      href=" /resume ">
+                RESUME
+            </a>
+            
+            <a class="page item active"
+                      href=" /projects ">
+                OPEN-SOURCE PROJECTS
+            </a>
+            
+            <a class="page item "
+                      href=" https://github.com/stefano-meschiari ">
+                GITHUB
+            </a>
+            
+            <a class="page item "
+                      href=" /blog ">
+                BLOG
+            </a>
+            
+            <a class="page item "
+                      href=" /research ">
+                RESEARCH
+            </a>
+            
+    </nav>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post ui">
+    <div class="post-content">
+        <div id="open-source projects">
+            <div class="ui one cards projects">
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                <img src="/img/systemic2.png" class="app-icon">
+                <a href="http://www.stefanom.org/devel/console-2" target="_blank">Systemic 2</a>
+            </div>
+            <div class="meta">
+                Exoplanetary Data Analysis for scientists.
+                <div>
+                    <div class="badge">Machine learning</div>
+                    <div class="badge">Numerical optimization</div>
+                    <div class="badge">Public data</div>
+                    <div class="badge">R</div>
+                    <div class="badge">C</div>
+                    <div class="badge">Java</div>                                    
+                    <div class="badge">Fortran</div>                                    
+                    <div class="badge">Astrophysics</div>
+                </div>                                
+            </div>
+            <div class="description">
+                <hr>
+                <div class="ui right floated item thumbnail">
+                    <a href="/img/systemic2_big.png" target="_new">
+                        <img src="/img/systemic2_thumb.jpg">
+                    </a>
+                </div>
+
+                <p>Systemic 2 is a software package for fitting and analyzing a variety of exoplanetary data. It consists of a fast, parallelized C library (which you can easily integrate into your own project), an R package providing a high-level interface to the library, and an easy-to-use  "IDE" interface for interactive analysis and plotting written in Java. Scientists can use Systemic 2 to either analyze, or reproduce the analysis of, exoplanetary datasets in a consistent, reproducible manner. </p>
+                <p>Systemic 2 offers interactive Keplerian and integrated fitting, Lomb-Scargle bootstrapped periodograms, Markov-Chain Monte Carlo and bootstrap uncertainty estimation, cross-validation, access to the GNU Scientific Library set of algorithms, a large library of pre-set plotting, and integrates with RVDB.io for easy access to published data.</p>
+                <p>Systemic 2 has been used to discover or characterize more than 40 planetary systems.</p>
+                <hr>
+                <a href="http://www.stefanom.org/console-2" class="more" target="_blank">
+                    Go to Systemic 2
+                </a>
+                <a href="https://github.com/stefano-meschiari/Systemic2" class="more secondary">
+                    <i class="ui icon github"></i>
+                    View on GitHub
+                </a>
+                <a href="http://adsabs.harvard.edu/abs/2009PASP..121.1016M" class="more secondary">
+                    <i class="ui icon file pdf outline"></i>
+                    Code Paper
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                <a target="systemic"></a>
+                <img src="/img/systemic_live.png" class="app-icon">
+                <a href="http://www.stefanom.org/systemic-live" target="_blank">Systemic Live</a>
+            </div>
+            <div class="meta">
+                Discover exoplanets using real astronomical data.
+                <div>
+                    <div class="badge">Web app</div>
+                    <div class="badge">JavaScript</div>
+                    <div class="badge">C</div>                                
+                    <div class="badge">Emscripten</div>
+                    <div class="badge">Public Data</div>
+                    <div class="badge">Astronomy</div>
+                </div>
+            </div>
+            <div class="description">
+                <hr>
+                <div class="ui right floated item thumbnail">
+                    <a href="/img/systemic-live-big.jpg" target="_new">
+                        <img src="/img/systemic-live_thumb.jpg">
+                    </a>
+                </div>
+            <p>Systemic Live is a web application that lets you visualize real radial velocity datasets from telescopes all around the world, and try to discover the exoplanetary signals buried in the data. Students, teachers and the general public get a taste of the scientific process of data analysis.</p>
+
+            <p>Systemic has become part of curricula of undergraduate and graduate classes at Caltech, University of Florida, University of Texas, MIT, San Jose State University, Delaware, Yale, Columbia, University of California at Santa Cruz, San Francisco State University, and others, reaching >400 students to date, and on the Massive Open Online Course "The Science of the Solar System", taken by ∼13,000 Coursera students.</p>
+            <p>Systemic Live uses the C/Fortran codebase of <a href="#systemic2">Systemic 2</a>, transformed into high-performance JavaScript code through the magic of Emscripten.</p>
+            <hr>
+            <a href="http://www.stefanom.org/systemic-live" class="more" target="_blank">
+                Go to Systemic Live
+            </a>
+            <a href="https://github.com/stefano-meschiari/Systemic-Live" class="more secondary">
+                <i class="ui icon github"></i>
+                View on GitHub
+            </a>
+            <a href="https://speakerdeck.com/exostefanom/you-too-can-make-spiffy-online-web-apps-for-outreach-and"
+               class="more secondary">
+                <i class="ui icon file powerpoint outline"></i>
+                Presentation
+            </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                <a target="spc"></a>
+                <img src="/img/spc.png" class="app-icon">
+                <a href="http://www.stefanom.org/spc" target="_blank">Super Planet Crash</a>
+            </div>
+            <div class="meta">
+                The game of Gravity.
+                <div>
+                    <div class="badge">HTML5 game</div>
+                    <div class="badge">JavaScript</div>
+                    <div class="badge">Canvas/Paper.js</div>
+                    <div class="badge">Gravity</div>
+                    <div class="badge">Astronomy</div>
+                </div>
+            </div>
+            <div class="description">
+                <hr>
+                <div class="ui right floated item thumbnail">
+                    <a href="/img/spc-big.jpg" target="_new" title="">
+                        <img src="/img/spc_thumb.jpg">
+                    </a>
+                </div>
+
+                <p>Super Planet Crash is a browser-based gravity game where players create planetary systems and watch them evolve. The more crowded and chaotic the system, the better!</p>
+                <p>Super Planet Crash has been played more than 12,000,000 times, and it has been featured in articles on <a href="http://www.theverge.com/2014/4/15/5616400/stefano-meschiari-university-of-texas-free-online-solar-system-simulation" target="_blank">The Verge</a>, <a href="http://www.huffingtonpost.com/2014/04/10/super-planet-crash-game_n_5120708.html?utm_hp_ref=science">Huffington Post</a>, <a href="http://io9.com/a-game-that-lets-you-build-or-destroy-your-own-sola-1560740605">io9</a>, <a href="http://www.space.com/25402-super-planet-crash-video-game.html">Space.com</a>,  <a href="http://motherboard.vice.com/read/build-and-destroy-your-own-solar-system-with-this-awesome-exoplanet-game?trk_source=homepage-rotator2">VICE</a>, &amp; <a href="http://www.stefanom.org/outreach" target="_blank">others</a>.</p>
+
+                <hr>
+                <a href="http://www.stefanom.org/spc" class="more" target="_blank">
+                    Play Super Planet Crash
+                </a>
+
+                <a href="https://speakerdeck.com/exostefanom/dot-astronomy-6-super-planet-crash-and-apps-for-astronomy-education"
+                   class="more secondary">
+                    <i class="ui icon file powerpoint outline"></i>
+                    Presentation
+                </a>
+                            
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                <a target="orbits"></a>
+                <img src="/img/orbits.png" class="app-icon">
+                <a href="http://save-point.herokuapp.com" target="_blank">Orbits & GravityKit</a>
+            </div>
+            <div class="meta">
+                Help an alien civilization design new planetary systems.
+                <div>
+                    <div class="badge">HTML5 game</div>
+                    <div class="badge">JavaScript</div>
+                    <div class="badge">Canvas/Paper.js</div>
+                    <div class="badge">Gravity</div>
+                    <div class="badge">Education</div>                                    
+                    <div class="badge">Astronomy</div>
+                </div>                      
+            </div>
+            <div class="description">
+                <hr>
+                <div class="ui right floated item thumbnail">
+                    <a href="/img/orbits-big.jpg" target="_new" title="">
+                        <img src="/img/orbits_thumb.jpg">
+                    </a>
+                </div>
+
+                <p>You are the newest employee of the planet-building company Nova Planetia, working for your short-tempered supervisor, Big Boss Reaz-7. Prove yourself worthy of a promotion by designing planetary systems to the exact specifications of your fickle customers.</p>
+
+                <p>Orbits consists of multiple bite-sized levels addressing specific scientific concepts about the motion of planets around stars. The game includes a login system which records students’ progress, and an instructor report system where instructors can check their students’ progress and scores.</p>
+
+                <p>GravityKit uses the same engine as Orbits for a free-form gravity simulator.</p>
+                
+                <hr>
+                
+                <a href="http://save-point.herokuapp.com" class="more" target="_blank">
+                    Play Orbits
+                </a>
+
+                <a href="http://save-point.herokuapp.com" class="more secondary" target="_blank">
+                    Play GravityKit
+                </a>
+                
+                <a href="https://github.com/stefano-meschiari/SAVE-Point" class="more secondary">
+                    <i class="ui icon github"></i>
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                <a name="savepoint"></a>
+                <img src="/img/savepoint.png" class="app-icon">
+                <a href="http://save-point.github.io" target="_blank">SAVE/Point</a> &mdash; Interactive Education Tools in the Public Square
+            </div>
+            <div class="meta">
+                <subtitle>Interactive displays for astronomy education in public spaces.</subtitle>
+                <div>
+                    <div class="badge">Education</div>                                    
+                    <div class="badge">Outreach</div>
+                    <div class="badge">Interactive installations</div>                                    
+                    <div class="badge">Astronomy</div>
+                </div>                                
+            </div>
+            <div class="description">
+                <hr>
+                <div class="ui right floated item thumbnail">
+                    <a href="/img/openspaces.jpg">
+                        <img src="/img/openspaces_thumb.jpg">
+                    </a>
+                </div>
+
+                <p>SAVE/Point (PI: Meschiari) is a collaboration of astronomers and educators dedicated to developing new, innovative games and educational applications to teach astronomical concepts at all levels. Our mission is to create fun, engaging and scientifically accurate educational activities that are widely accessible and on multiple devices and browsers.</p>
+                <p>We also develop touch applications to install in public spaces as interactive kiosks. Our group received preliminary funding to pilot the installation of five wall-mounted tablets running our suite of applications in 2014-2015. The tablets will be installed on four floors in the Robert Lee Moore building at the University of Texas, which houses the Physics, Mathematics and Astronomy Department and various research centers. Our apps will be available to students enrolled in classes in the building, and to the general public and K-12 students on field trips who might attend public viewing nights with the department telescopes. Additionally, we licensed our game to the <i>Seattle Museum of Flight</i> for use as a stand-alone interactive exhibit on gravity.</p>
+                <p>Our interactive games were hosted by the James Webb Telescope booth at the 2015 SXSW Gaming Expo.</p>
+                <hr>
+                <a href="http://save-point.github.io" class="more" target="_blank">
+                    Go to SAVE/Point website
+                </a>                
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                <a name="latex2exp"></a>
+                <img src="/img/latex2exp.png" class="app-icon">
+                <a href="https://github.com/stefano-meschiari/latex2exp/">latex2exp</a>
+            </div>
+            <div class="meta">
+                Render LaTeX content in R.
+                <div>
+                    <div class="badge">R</div>
+                    <div class="badge">LaTeX</div>
+                    <div class="badge">Plots</div>
+                </div>
+            </div>
+            <div class="description">
+                <hr>
+                <div class="ui right floated item thumbnail">
+                    <a href="https://github.com/stefano-meschiari/latex2exp/raw/master/README_files/figure-markdown_github/unnamed-chunk-6-1.png" target="_blank">
+                        <img src="https://github.com/stefano-meschiari/latex2exp/raw/master/README_files/figure-markdown_github/unnamed-chunk-6-1.png">
+                    </a>
+                </div>
+
+                <p><tt>latex2exp</tt> is an R package that parses and converts LaTeX math formulas to R's native (but arcane) math expressions. <tt>latex2exp</tt> is available on CRAN.</p>
+
+                <hr>
+                <a href="https://github.com/stefano-meschiari/latex2exp" class="more secondary">
+                    <i class="ui icon github"></i>
+                    View on GitHub
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                <a name="aaa"></a>
+                <img src="/img/aaa.jpg" class="app-icon" style="border-radius:10px">
+                <a href="http://askanastronomer.org" target="_blank">AskAnAstronomer.org</a>
+            </div>
+            <div class="meta">
+                Ask questions about the Universe to real astronomers.
+                <div>
+                    <div class="badge">Static Jekyll website</div>                                    
+                    <div class="badge">Education</div>                                    
+                    <div class="badge">Astronomy</div>
+                    <div class="badge">Outreach</div>                                    
+                </div>                                
+            </div>
+            <div class="description">
+                <hr>
+
+                <div class="ui right floated item thumbnail">
+                    <a href="/img/aaa_big.png" target="_blank">
+                        <img src="/img/aaa_big.png">
+                    </a>
+                </div>
+
+                <p>
+                    Curious about Astronomy? Have a burning question about the Universe that you'd like answered?
+                </p>
+                <p>
+                    I created this website to connect K-12 students, teachers, and the general public with a team of graduate students, postdocs, researchers and faculty affiliated with the <a href="http://www.as.utexas.edu/">University of Texas</a> and <a href="http://mcdonaldobservatory.org/">McDonald Observatory</a>. The most interesting questions are published on this website.
+                </p>
+                <p>
+                    Askanastronomer.org is a completely static website powered by Jekyll and GitHub Pages.
+                </p>
+
+                <hr>
+
+                <a href="http://askanastronomer.org" class="more" target="_blank">
+                    Ask an Astronomer
+                </a>
+                
+                <a href="https://github.com/askanastronomer/askanastronomer.github.io" class="more secondary">
+                    <i class="ui icon github"></i>
+                    View on GitHub
+                </a>
+            </div>
+        </div> 
+    </div>
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                <a href="http://stefanom.org/playpen/Trends/keywords/" target="_blank">AstroTRENDS</a>
+            </div>
+            <div class="meta">
+                An interactive visualization tool to understand trends in the astronomy literature.
+                <div>
+                    <div class="badge">Interactive viz</div>
+                    <div class="badge">Web app</div>
+                    <div class="badge">Astronomy</div>                                    
+                    <div class="badge">Publications</div>
+                    <div class="badge">Beta</div>
+                </div>                                
+            </div>
+            <div class="description">
+                <hr>
+                <div class="ui right floated item thumbnail">
+                    <a href="/img/astrotrends.jpg" data-uk-lightbox title="">
+                        <img src="/img/astrotrends_thumb.jpg">
+                    </a>
+                </div>
+
+                <p>
+                    AstroTRENDS is like Google Trends, but for the astronomy literature.
+                </p>
+                <p>
+                    Blog posts:
+                    <ul>
+                        <li>
+                            <a href="http://www.stefanom.org/astrotrends-a-new-tool-to-track-astronomy-topics-in-the-literature/">AstroTRENDS: A new tool to track astronomy topics in the literature</a>
+                        </li>
+                        <li>
+                            <a href="http://www.stefanom.org/astrotrends-weasel-words/">AstroTRENDS: Weasel words</a>
+                        </li>
+                        <li>
+                            <a href="http://www.stefanom.org/astrotrends-no-so-weaselly-after-all/">AstroTRENDS: No so weaselly after all</a>
+                        </li>
+                        <li>
+                            <a href="http://stefano-meschiari.github.io/Time-Between-Astronomy-Papers/">What is the average time between papers published in the astronomy community?</a>
+                        </li>
+                    </ul>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                In-progress Projects
+            </div>
+            <div class="description">
+                <div>
+                    <i class="ui icon github"></i> <a href="https://github.com/stefano-meschiari/tinymcmc" target="_blank">tinymcmc</a>
+                    <div><span class="badge badge-danger">Beta</span> <span class="badge">C</span></div>
+                    A tiny but generic implementation of the simple Metropolis-Hastings MCMC algorithm, with no dependencies. 
+                </div>
+                <hr>
+                <div>
+                    <i class="ui icon github"></i> <a href="https://github.com/stefano-meschiari/WhenGiantsCollide" target="_blank">When Giants Collide</a>
+                    <div><span class="badge badge-danger">Beta</span> <span class="badge">JavaScript</span></div>
+                    Is it a game? Is it a demo? Is it a web browser benchmark? Get some terrible thrills by smashing two giant balls of gas in your browser using Web Workers. It computes Barnes-Hut tree gravity for a collection of point masses.
+                </p>
+                <hr>
+                <div>
+                    <i class="ui icon github"></i> <a href="https://github.com/stefano-meschiari/PlanetDiscoveries" target="_blank">PlanetDiscoveries</a>
+                    <div><span class="badge badge-danger">Beta</span> <span class="badge">R</span><span class="badge">Shiny</span></div>
+                    Interactive period-mass-discovery data plot. Uses rbokeh and Shiny.
+                </div>
+                <hr>
+                <div>
+                    <i class="ui icon github"></i> <a href="https://github.com/stefano-meschiari/bam-lua" target="_blank">BAM</a>
+                    <div><span class="badge">Lua</span></div>
+                    <p>BAM (the Big Article Machine) is a lightweight, elementary, extensible templating language based on Lua. It was used to generate skeletons scientific articles for the <a href="https://en.wikipedia.org/wiki/Lick–Carnegie_Exoplanet_Survey">Lick-Carnegie Exoplanet Survey</a>.</p>
+                </div>
+                <hr>
+                <div>
+                    <i class="ui icon github"></i> <a href="http://astrokow.herokuapp.com/" target="_blank">AstroKOW</a>
+                    <p>
+                        If astronomers were to spam you with scientific articles, what would their abstracts look like? Featuring cute ASCII animals.
+                    </p>
+                </div>
+                <hr>
+                <div>
+                    <i class="ui icon github"></i> <a href="https://github.com/stefano-meschiari/Blanks">Blanks</a>
+                    <div><span class="badge">JavaScript</span></div>
+                    Blanks is a Wikipedia memory game, and an experiment in speed development of a minimum viable game.
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+        </div>
+  </div>
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+</footer>
+<script type="text/javascript">
+ $('.ui.accordion').accordion();
+</script>
+
+
+  </body>
+
+</html>

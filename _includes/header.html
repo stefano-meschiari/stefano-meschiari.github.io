@@ -1,0 +1,10 @@
+<header>
+    <nav id="nav" class="ui secondary pointing menu">
+            {% for my_page in site.data.sidebar %}
+            <a class="page item {% if page.title == my_page.title %}active{% endif %}"
+                      href="{% if my_page.external %} {{my_page.url}} {% else %} {{ my_page.url | prepend: site.baseurl }} {% endif %}">
+                {{ my_page.title | upcase }}
+            </a>
+            {% endfor %}
+    </nav>
+</header>
