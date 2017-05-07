@@ -1,13 +1,15 @@
 - title: Systemic
-  url: /systemic
+  url: http://www.stefanom.org/systemic
   anchor: systemic
+  external: true
   description: Discover exoplanets using real astronomical data.
   img: img/systemic_live.png
   frontpage: true
 
 - title: Super Planet Crash
-  url: /spc
+  url: http://www.stefanom.org/spc
   anchor: spc
+  external: true
   description: Race against gravity to create a crowded planetary system.
   img: img/spc.png
   frontpage: true
