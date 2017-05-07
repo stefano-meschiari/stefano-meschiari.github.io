@@ -11,8 +11,8 @@
   url: https://github.com/stefano-meschiari
   external: true
 
-- title: Blog
-  url: blog
-
 - title: Research
   url: research
+
+- title: Blog
+  url: blog
