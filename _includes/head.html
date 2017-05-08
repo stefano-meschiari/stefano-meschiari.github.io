@@ -3,16 +3,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Stefano Meschiari -- {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>Stefano Meschiari — {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:type" content="{% if page.thumbnail %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:image" content="{% if page.thumbnail %}{{ page.thumbnail }}{% else %}http://www.stefanom.io/img/stefano.jpg{% endif %}">
 
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
   <link rel="stylesheet" href="{{ "public/semantic/semantic.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "public/semantic/components/accordion.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "public/semantic/components/sidebar.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">
   <script type="text/javascript" src="{{ "public/jquery/dist/jquery.min.js" | prepend: site.baseurl }}"></script>
   <script type="text/javascript" src="{{ "public/semantic/semantic.min.js" | prepend: site.baseurl }}"></script>
   <script type="text/javascript" src="{{ "public/semantic/components/accordion.min.js" | prepend: site.baseurl }}"></script>
+  <script type="text/javascript" src="{{ "public/semantic/components/sidebar.min.js" | prepend: site.baseurl }}"></script>
   
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Research
-icon: configure 
+title: Research & Outreach
+id: research
 permalink: /research/
 ---
 <img src="/img/research_hero.jpg" class="hero">

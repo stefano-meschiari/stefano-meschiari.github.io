@@ -9,6 +9,12 @@ a, a:visited {
   color: $accent;
 }
 
+#menu {
+  margin-left: 15px;
+  margin-top: 15px;
+  display: none;
+}
+
 #nav {
   background: $accent-gradient;
   padding: 4px;
@@ -30,6 +36,36 @@ a, a:visited {
     border: none;
     box-shadow: $accent-shadow;
     background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@include small() {
+  #menu {
+    display: inline-block;
+  }
+
+  .summary {
+    text-align: center;
+
+    .image {
+      display: inline !important;
+      margin-right: 0px !important;
+      float: initial !important;
+    }
+
+    #social-links {
+      text-align: center;
+      float: initial;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: initial;
+    }
+  }
+  
+  #nav {
+    display: none;
   }
 }
 
@@ -100,8 +136,11 @@ h3.header {
   float:right;
 }
 
-a.more {
+.more {
   background: $accent-gradient-small;
+  border:none;
+  display: inline-block;
+  margin: 2px;
   color: rgba(255, 255, 255, 0.9);
   padding:6px;
   padding-left:12px;
@@ -117,13 +156,17 @@ a.more {
   }
 }
 
-a.more:hover {
+.more:hover {
   color: white;
   box-shadow: $accent-shadow-small;
   text-decoration: none;
 }
 
-a.more.secondary {
+.more:visited {
+  color:white;
+}
+
+.more.secondary {
   background: $clouds;
   color: $wetAsphalt;
   text-transform: initial;
@@ -160,6 +203,7 @@ p.item {
   height: 2.5rem;  
 }
 
+
 #resume {
   position: relative;
 
@@ -168,8 +212,9 @@ p.item {
     padding: 6px;
     padding-left: 12px;
     padding-right: 12px;
-    margin-right: 6px;
     color: black;
+    display: inline-block;
+    margin: 3px;
   }
 
   .links a:hover {
@@ -199,6 +244,13 @@ p.item {
       font-weight: initial;
       text-transform: none;
     }
+
+    @include small() {
+      em {
+        position: initial;
+        display: block;
+      }
+    }
   }
 
   ul {
@@ -226,6 +278,7 @@ p.item {
     margin-bottom: 1rem;
     border-radius: 3px;
     clear: both;
+    max-width: 40%;
     box-shadow: $accent-shadow;
   }
 
@@ -233,6 +286,7 @@ p.item {
     float: initial;
     margin: 0px;
     border-radius: 3px;
+    max-width: 100%;
     box-shadow: $accent-shadow;
   }
 }

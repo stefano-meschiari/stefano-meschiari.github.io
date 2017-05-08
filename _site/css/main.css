@@ -458,6 +458,11 @@ pre {
 a, a:visited {
   color: #3498db; }
 
+#menu {
+  margin-left: 15px;
+  margin-top: 15px;
+  display: none; }
+
 #nav {
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2)), linear-gradient(to right, #2980b9, #69d2e7);
   padding: 4px; }
@@ -475,6 +480,25 @@ a, a:visited {
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
     background: rgba(255, 255, 255, 0.1); }
 
+@media screen and (max-width: 700px) {
+  #menu {
+    display: inline-block; }
+
+  .summary {
+    text-align: center; }
+    .summary .image {
+      display: inline !important;
+      margin-right: 0px !important;
+      float: initial !important; }
+    .summary #social-links {
+      text-align: center;
+      float: initial;
+      margin-bottom: 1rem; }
+    .summary p {
+      text-align: initial; }
+
+  #nav {
+    display: none; } }
 .summary {
   margin-bottom: 3rem; }
 
@@ -527,8 +551,11 @@ h3.header {
 .float-right {
   float: right; }
 
-a.more {
+.more {
   background: linear-gradient(to right, #2980b9, #3498db);
+  border: none;
+  display: inline-block;
+  margin: 2px;
   color: rgba(255, 255, 255, 0.9);
   padding: 6px;
   padding-left: 12px;
@@ -537,16 +564,19 @@ a.more {
   font-size: 1rem;
   text-transform: uppercase;
   border-radius: 2px; }
-  a.more i.icon {
+  .more i.icon {
     width: initial;
     margin: 0; }
 
-a.more:hover {
+.more:hover {
   color: white;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
   text-decoration: none; }
 
-a.more.secondary {
+.more:visited {
+  color: white; }
+
+.more.secondary {
   background: #ecf0f1;
   color: #34495e;
   text-transform: initial; }
@@ -583,8 +613,9 @@ p.item {
     padding: 6px;
     padding-left: 12px;
     padding-right: 12px;
-    margin-right: 6px;
-    color: black; }
+    color: black;
+    display: inline-block;
+    margin: 3px; }
   #resume .links a:hover {
     text-decoration: none;
     background: linear-gradient(to right, #2980b9, #3498db);
@@ -606,6 +637,10 @@ p.item {
       right: 2rem;
       font-weight: initial;
       text-transform: none; }
+    @media screen and (max-width: 700px) {
+      #resume h4 em {
+        position: initial;
+        display: block; } }
   #resume ul {
     padding: 1rem;
     background: #f0f0f0;
@@ -626,9 +661,11 @@ p.item {
   margin-bottom: 1rem;
   border-radius: 3px;
   clear: both;
+  max-width: 40%;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1); }
 #research .hero {
   float: initial;
   margin: 0px;
   border-radius: 3px;
+  max-width: 100%;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1); }

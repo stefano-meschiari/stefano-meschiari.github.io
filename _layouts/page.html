@@ -3,8 +3,8 @@ layout: default
 ---
 <article class="post ui">
     <div class="post-content">
-        <div id="{{ page.title | downcase }}">
+        <div id="{% if page.id %}{{page.id}}{% else %}{{ page.title | downcase }}{% endif %}">
             {{ content }}
         </div>
-  </div>
+    </div>
 </article>

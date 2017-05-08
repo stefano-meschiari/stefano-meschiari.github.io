@@ -30,7 +30,6 @@ $on-palm:          600px;
 $on-laptop:        800px;
 
 
-
 // Use media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -44,7 +43,11 @@ $on-laptop:        800px;
     }
 }
 
-
+@mixin small() {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -54,3 +57,4 @@ $on-laptop:        800px;
         "flatui",
         "stefanom"
 ;
+

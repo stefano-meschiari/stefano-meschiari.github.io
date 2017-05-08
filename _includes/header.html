@@ -2,9 +2,24 @@
     <nav id="nav" class="ui secondary pointing menu">
             {% for my_page in site.data.sidebar %}
             <a class="page item {% if page.title == my_page.title %}active{% endif %}"
-                      href="{% if my_page.external %} {{my_page.url}} {% else %} {{ my_page.url | prepend: site.baseurl }} {% endif %}">
+               href="{% if my_page.external %} {{my_page.url}} {% else %} {{ my_page.url | prepend: site.baseurl }} {% endif %}"
+               id="{{my_page.id}}"
+            >
                 {{ my_page.title | upcase }}
             </a>
             {% endfor %}
     </nav>
+    <button id="menu" class="more" onClick="$('.menu.sidebar').sidebar('toggle')">
+        <i class="sidebar icon"></i> Menu
+    </button>
 </header>
+<div class="ui left vertical menu sidebar">
+    {% for my_page in site.data.sidebar %}
+    <a class="item {% if page.title == my_page.title %}active{% endif %}"
+       href="{% if my_page.external %} {{my_page.url}} {% else %} {{ my_page.url | prepend: site.baseurl }} {% endif %}"
+       id="{{my_page.id}}"
+    >
+        {{ my_page.title | upcase }}
+    </a>
+    {% endfor %}
+</div>

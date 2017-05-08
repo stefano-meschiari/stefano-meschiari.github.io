@@ -1,18 +1,25 @@
-- title: About
+- title: Home
   url: 
-
+  id: home
+  
 - title: Resume
   url: resume
-
+  id: resume
+  
 - title: Open-source Projects
   url: projects
-
+  id: projects
+  
 - title: GitHub
   url: https://github.com/stefano-meschiari
   external: true
-
-- title: Research
+  id: github
+  
+- title: Research & Outreach
   url: research
-
+  id: research
+  
 - title: Blog
   url: blog
+  id: blog
+

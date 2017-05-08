@@ -1,13 +1,12 @@
 ---
 layout: page
-title: About
+title: Home
 icon: child
 permalink: /
 ---
-
 <div class="ui segment summary">
     <img class="ui left floated image" src="img/stefano.jpg" width="200">
-    <div style="float:right">
+    <div class="float-right" id="social-links">
         <a class="ui button compact big circular icon" title="Email me" href="mailto:{{ site.data.env.email }}" target="_new">
             <i class="mail outline icon"></i>
         </a>
@@ -108,7 +107,7 @@ permalink: /
             <h3 class="header">
                 Stuff I've made
             </h3>
-            <div class="ui items">
+            <div class="ui items" id="projects">
                 {% for project in site.data.projects %}
                 {% if project.frontpage %}
                 <div class="item">
