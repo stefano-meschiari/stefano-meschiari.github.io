@@ -17,7 +17,7 @@ permalink: /resume/
 </div>
 <hr>
 
-I am a data scientist, software developer and ex-astrophysicist. I work with a wide range of data: from predicting students' future persistence at higher-education instututions, to understanding complicated time series that reveal the existence of new planetary systems with Bayesian modeling, to summarizing millions of game plays and behavior tracked within my game that went viral. I am proficient at machine learning, data analysis, data visualization and development of applications and tools.
+I am a data scientist, software developer and ex-astrophysicist. I work with a wide range of data: from predicting students' future persistence at higher-education institutions, to understanding complicated time series that reveal the existence of new planetary systems with Bayesian modeling, to summarizing millions of game plays and behavior tracked within my game that went viral. I am proficient at machine learning, data analysis, data visualization and development of applications and tools.
 
 ### Experience
 
