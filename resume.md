@@ -3,6 +3,11 @@ layout: page
 title: Resume 
 permalink: /resume/
 ---
+<div class="float-right">
+<a href="/files/meschiari_resume_may_2017.pdf">Download PDF</a>
+</div>
+
+
 <h1 class="name">Stefano Meschiari, Ph.D.</h1>
 <h2 class="subtitle">Product Data Scientist, Civitas Learning</h2>
 <div class="links">
