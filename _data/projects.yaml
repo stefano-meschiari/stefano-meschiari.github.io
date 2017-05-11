@@ -14,11 +14,11 @@
   img: img/spc.png
   frontpage: true
   
-- title: SAVE/Point
-  url: http://save-point.github.io
+- title: Apps & Games
+  url: http://save-point.herokuapp.com/dashboard/users.php?login=demo
   external: true
   anchor: savepoint
-  description: A collaboration of astronomers and educators dedicated to developing games and apps to teach astronomical concepts.
+  description: I lead a collaboration of astronomers and educators dedicated to developing games and apps to teach astronomical concepts.
   img: img/orbits.png
   frontpage: true
   
