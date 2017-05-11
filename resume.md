@@ -19,6 +19,8 @@ permalink: /resume/
 
 I am a data scientist and software developer with a background in astrophysics. I work with a wide range of data, from predicting students' future persistence at higher-education institutions, to understanding complicated time series that reveal the existence of new planetary systems with Bayesian modeling, to summarizing millions of game plays and behavior tracked within my game that went viral. I am proficient at machine learning, data analysis, data visualization and development of applications and tools.
 
+I love collaborating with product teams to integrate data science into their vision to test out new ideas and concepts. I am experienced at creating functional user interfaces for data science-driven prototypes, and working with cross-functional teams to evolve them to the next level.
+
 ### Experience
 
 #### *2016-present, [Civitas Learning](https://www.civitaslearning.com)* Product Data Scientist 
