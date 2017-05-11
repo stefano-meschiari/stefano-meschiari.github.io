@@ -669,3 +669,10 @@ p.item {
   border-radius: 3px;
   max-width: 100%;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1); }
+
+#systemic img {
+  float: left;
+  display: block;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+  width: 75px; }
