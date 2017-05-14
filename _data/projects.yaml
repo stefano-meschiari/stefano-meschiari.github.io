@@ -34,6 +34,7 @@
 - title: latex2exp
   url: https://github.com/stefano-meschiari/latex2exp
   external: true
+  anchor: latex2exp
   description: A package to typeset math formulas in R using LaTeX notation.
   img: img/latex2exp.png
   frontpage: true

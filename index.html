@@ -111,25 +111,13 @@ permalink: /
                 {% for project in site.data.projects %}
                 {% if project.frontpage %}
                 <div class="item">
-                    {% if project.external %}
-                    <a class="ui tiny image {{ project.class }}" href="{{ project.url }}" target="_new">
+                    <a class="ui tiny image {{ project.class }}" href="projects.html#{{ project.anchor }}">
                         <img src="{{ site.baseurl }}{{ project.img }}" style="border-radius:10px">      
                     </a>
-                    {% else %}
-                    <a class="ui tiny image {{ project.class }}" href="{{ site.baseurl }}/{{ project.url }}" target="_new">
-                        <img src="{{ site.baseurl }}{{ project.img }}" style="border-radius:10px">                            
-                    </a>
-                    {% endif %}
                     <div class="content">
-                        {% if project.external %}
-                        <a class="header" href="{{ project.url }}" target="_new">
+                        <a class="header" href="projects.html#{{ project.anchor }}">
                             {{ project.title }}
                         </a>
-                        {% else %}
-                        <a class="header" href="{{ site.baseurl }}/{{ project.url }}" target="_new">
-                            {{ project.title }}
-                        </a>
-                        {% endif %}
                         <div class="description">
                             {{ project.description }}
                             <p><a href="projects.html#{{ project.anchor }}">Read more...</a>
