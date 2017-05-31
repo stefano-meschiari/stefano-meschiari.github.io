@@ -7,11 +7,17 @@ permalink: /research/
 <img src="/img/research_hero.jpg" class="hero">
 
 <hr>
+[A presentation about my work](https://speakerdeck.com/exostefanom/my-work-in-astronomy)
+
 # Research
 * **[Google Scholar page](https://scholar.google.com/citations?user=r_wjpacAAAAJ&hl=en)**
 
 <hr>
 # Outreach
+
+#### Presentations 
+
+**[Slides of my presentations](https://speakerdeck.com/exostefanom/)**
 
 #### Articles
 _These are articles I wrote for the general public._
@@ -46,3 +52,4 @@ _These are articles that feature my work, or that I provided quotes for._
 *   **[New planet discoveries suggest low-mass planets are common around nearby stars](http://news.ucsc.edu/2009/12/3439.html)** UC Santa Cruz press release, Dec. 2009
 *   **[Astronomers get a sizzling weather report from a distant planet](http://news.ucsc.edu/2009/01/2703.html)** UC Santa Cruz press release, Jan. 2009
 *   **[Planet hunters wanted to help astronomers in the search for new worlds](http://news.ucsc.edu/2006/10/958.html)** UC Santa Cruz press release, Oct. 2006
+
