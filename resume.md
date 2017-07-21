@@ -9,7 +9,7 @@ permalink: /resume/
 
 
 <h1 class="name">Stefano Meschiari, Ph.D.</h1>
-<h2 class="subtitle">Product Data Scientist, Civitas Learning</h2>
+<h2 class="subtitle">Senior Data Scientist, Duo Security</h2>
 <div class="links">
 <a href="mailto:stefano.meschiari@gmail.com"><i class="mail outline icon"></i> stefano.meschiari@gmail.com</a>
 <a href="https://github.com/stefano-meschiari"><i class="github icon"></i> GitHub</a>
@@ -23,7 +23,11 @@ I love collaborating with product teams to integrate data science into their vis
 
 ### Experience
 
-#### *2016-present, [Civitas Learning](https://www.civitaslearning.com)* Product Data Scientist 
+#### *July 2016-present, [Duo Security](https://www.civitaslearning.com)* Senior Data Scientist
+
+<p></p>
+
+#### *Feb 2016-June 2016, [Civitas Learning](https://www.civitaslearning.com)* Product Data Scientist 
 * Create and improve on prototype machine learning tools and pipelines to model student outcomes. 
 * Prototype new product ideas and internal tooling that employ machine learning, novel summary statistics and visualizations.
 * Maintain and improve the custom modeling platform. Reduced training and scoring running time (and cloud costs) by half.
