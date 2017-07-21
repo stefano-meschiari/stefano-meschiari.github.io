@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resume 
-permalink: /resume/
+permalink: /resume
 ---
 <div class="float-right">
 <a class="more" href="/meschiari_resume.pdf">Download PDF</a>

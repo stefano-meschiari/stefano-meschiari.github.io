@@ -2,7 +2,7 @@
 layout: page
 title: Systemic
 id: systemic
-permalink: /systemic/
+permalink: /systemic
 ---
 Systemic Console is an application for discovering planetary signals within [radial velocity data](https://en.m.wikipedia.org/wiki/Doppler_spectroscopy). It is used around the world by research groups and classrooms to analyze radial velocity datasets and derive the orbital properties of putative planetary systems. It includes a diverse array of tools for teasing out planetary signals, estimating the robustness of planetary candidates, evaluating the overall orbital stability of the planetary systems, and creating plots, animations and data tables.
 
