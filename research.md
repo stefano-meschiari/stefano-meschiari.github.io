@@ -2,7 +2,7 @@
 layout: page
 title: Research & Outreach
 id: research
-permalink: /research
+permalink: /research/
 ---
 <img src="/img/research_hero.jpg" class="hero">
 
