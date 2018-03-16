@@ -53,8 +53,8 @@ I love collaborating with product teams to integrate data science into their vis
 * **Statistical Methods and Numerical Algorithms**: Hypothesis testing, bootstrapping, Markov-Chain Monte Carlo, numerical optimization using local and global methods, numerical simulations, integration of differential equations, time series analysis.
 * **Programming Languages**: 
   * R (including `dplyr`, `tidyr`, `ggplot2`, `RMarkdown`, `caret`, `glmnet`, `xgboost`, and the `h2o` ML platform)
+  * Scala (including `Spark` and `SparkML`)  
   * JavaScript (both backend and frontend, including `Express`, `React`, `HighCharts`)
-  * Scala (including `Spark` and `SparkML`)
   * Java
   * C and C++
   * SQL
