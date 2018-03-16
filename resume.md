@@ -23,11 +23,11 @@ I love collaborating with product teams to integrate data science into their vis
 
 ### Experience
 
-#### *July 2016-present, [Duo Security](https://www.civitaslearning.com)* Senior Data Scientist
+#### *July 2017-present, [Duo Security](https://www.duosecurity.com)* Senior Data Scientist
 
 <p></p>
 
-#### *Feb 2016-June 2016, [Civitas Learning](https://www.civitaslearning.com)* Product Data Scientist 
+#### *Feb 2016-June 2017, [Civitas Learning](https://www.civitaslearning.com)* Product Data Scientist 
 * Create and improve on prototype machine learning tools and pipelines to model student outcomes. 
 * Prototype new product ideas and internal tooling that employ machine learning, novel summary statistics and visualizations.
 * Maintain and improve the custom modeling platform. Reduced training and scoring running time (and cloud costs) by half.
