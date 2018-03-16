@@ -66,7 +66,7 @@ I love collaborating with product teams to integrate data science into their vis
 * 2004 -- **Bachelor of Science** (Astronomy, with highest honors), University of Bologna
 
 ### Publications, Academic Honors and Awards
-* Published 8 first-author publications on time series analysis, numerical optimization, and Monte-Carlo simulations  (cited a total of 224 times); a total of 17 refereed papers. 
+* Published **8 first-author publications** on time series analysis, numerical optimization, and Monte-Carlo simulations  (**cited a total of 224 times**); a total of 17 refereed papers. 
 * 2014 -- Meschiari, S. (PI), Ludwig, R., Green, J., *Interactive Education Tools in the Public Square* (Award: $2,800, for purchasing iPad Air tablets and wall mounts)
 * 2014 -- Meschiari, S. (PI), Green, J., Ludwig, R., *Bringing the Tools of Research Direct to the UT Class- room: Systemic, a Virtual Lab for Students* (Award: $87,710)
 * 2010 -- *Award for Excellence in Teaching*
