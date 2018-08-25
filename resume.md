@@ -4,7 +4,10 @@ title: Resume
 permalink: /resume/
 ---
 <div class="float-right">
+<!--
+Downloadable resume coming back soon!
 <a class="more" href="/meschiari_resume.pdf">Download PDF</a>
+-->
 </div>
 
 
