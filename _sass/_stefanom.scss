@@ -5,6 +5,8 @@ $accent-gradient-small: linear-gradient(to right, $belizeHole, $peterRiver);
 $accent-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
 $accent-shadow-small: 0px 2px 3px rgba(0, 0, 0, 0.2);
 
+$nav: #053358;
+
 a, a:visited {
   color: $accent;
 }
@@ -16,7 +18,7 @@ a, a:visited {
 }
 
 #nav {
-  background: $accent-gradient;
+  background: $nav;
   padding: 4px;
   
   a {
@@ -279,7 +281,6 @@ p.item {
     border-radius: 3px;
     clear: both;
     max-width: 40%;
-    box-shadow: $accent-shadow;
   }
 
   .hero {
@@ -299,4 +300,18 @@ p.item {
     margin-bottom: 3rem;
     width: 75px;
   }
+}
+
+.citations {
+  display: block;
+  float:right;
+  background: #bbb;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-left: 2em;
+  margin-bottom: 1em;
+  border-radius: 6px;
 }

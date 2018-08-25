@@ -4,13 +4,9 @@ title: Research & Outreach
 id: research
 permalink: /research/
 ---
-<img src="/img/research_hero.jpg" class="hero">
-
-<hr>
-[A presentation about my work](https://speakerdeck.com/exostefanom/my-work-in-astronomy)
-
 # Research
-* **[Google Scholar page](https://scholar.google.com/citations?user=r_wjpacAAAAJ&hl=en)**
+<img src="/img/citations.png" style="float:right">
+{% include papers.md %}
 
 <hr>
 # Outreach

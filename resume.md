@@ -17,24 +17,23 @@ permalink: /resume/
 </div>
 <hr>
 
-I am a data scientist and software developer with a background in astrophysics. I work with a wide range of data, from predicting students' future persistence at higher-education institutions, to understanding complicated time series that reveal the existence of new planetary systems with Bayesian modeling, to summarizing millions of game plays and behavior tracked within my game that went viral. I am proficient at machine learning, data analysis, data visualization, and development of data science applications and tools.
+I am an experienced data scientist with a background in Astrophysics research. I have worked on projects that involved analyzing complex datasets, building novel production ETL and machine learning platforms, researching new algorithms and approaches to attacking hard problems, and creating functional data tooling for other teams.
 
-I love collaborating with product teams to integrate data science into their vision to test out new ideas and concepts. I am experienced at creating functional user interfaces for data science-driven prototypes, and working with cross-functional teams to evolve products and platform to the next level.
+I enjoy working with cross-functional teams to create, polish, and evolve from napkin ideas to production. In particular, I love collaborating with product teams to coherently integrate data science into their vision, and helping them test out new concepts and visualizations with data science-driven prototypes.
 
 ### Experience
 
-#### *July 2016-present, [Duo Security](https://www.civitaslearning.com)* Senior Data Scientist
+#### *July 2017-present, [Duo Security](https://https://duo.com/labs)* Senior Data Scientist
+* I am part of a stellar data science group at Duo. We are focused on creating new data science-powered solutions to help companies detect threats and protect themselves. <br>At Duo, I lead the technical development of the data science platform, which powers the UEBA product feature. Our platform uses Spark at scale to analyze data, build models, and surface possible threats and authentication anomalies.
 
-<p></p>
-
-#### *Feb 2016-June 2016, [Civitas Learning](https://www.civitaslearning.com)* Product Data Scientist 
-* Create and improve on prototype machine learning tools and pipelines to model student outcomes. 
-* Prototype new product ideas and internal tooling that employ machine learning, novel summary statistics and visualizations.
-* Maintain and improve the custom modeling platform. Reduced training and scoring running time (and cloud costs) by half.
-* Independently developed end-to-end components for Data Science projects:
-  * Machine learning models (*linear models*, *random forest*, *gradient boosted trees*, and custom classification techniques using *R*, *Spark/Scala* and *JavaScript*)
-  * Back-end (*Node.JS/Express*, API calls to internal services, and offering new APIs and services for internal consumption)
-  * Front-end (*React*, *HighCharts* and custom-built components and visualizations).
+#### *Feb 2016-June 2017, [Civitas Learning](https://www.civitaslearning.com)* Product Data Scientist 
+* Created and improved on prototype machine learning tools and pipelines to model student outcomes. 
+* Prototyped new product ideas and internal tooling that employ machine learning, novel summary statistics and visualizations.
+* Maintained and improved the custom modeling platform. Reduced training and scoring running time (and cloud costs) by half.
+* Independently developed components for end-to-end Data Science projects:
+  * Machine learning models (*linear models*, *random forest*, *gradient boosted trees*, and custom classification techniques using *R*, *Scala and Spark* and *JavaScript*). 
+  * Back-end (*Node.JS/Express*, created new APIs and services exposing new functionality to internal services)
+  * Front-end (*React*, *HighCharts*, and custom-built components and visualizations).
 
 #### *2012-2016, [University of Texas at Austin](https://as.utexas.edu)* W. J. McDonald Postdoctoral Fellow
 * Led the data analysis effort for the Lick-Carnegie science collaboration (~20 scientists across the United States). Analyzed time series data using my *Markov-Chain Monte Carlo* code, Systemic. Systemic has been used to discover more than 40 new planetary systems.
@@ -49,7 +48,7 @@ I love collaborating with product teams to integrate data science into their vis
 * Led the development of a sophisticated desktop application to monitor the real-time performance of strategies on high-frequency stock trading.
 
 ### Technical Skills
-* **Machine Learning**: Classification, regression, feature engineering, propensity score matching, building ML pipelines.
+* **Machine Learning**: Classification, regression, feature engineering, propensity score matching, building high-volume ETL and machine learning pipelines.
 * **Statistical Methods and Numerical Algorithms**: Hypothesis testing, bootstrapping, Markov-Chain Monte Carlo, numerical optimization using local and global methods, numerical simulations, integration of differential equations, time series analysis.
 * **Programming Languages**: 
   * R (including `dplyr`, `tidyr`, `ggplot2`, `RMarkdown`, `caret`, `glmnet`, `xgboost`, and the `h2o` ML platform)
@@ -61,12 +60,12 @@ I love collaborating with product teams to integrate data science into their vis
   * Others: Lua, Matlab. Basic knowledge of Python, Fortran, Objective-C.
 
 ### Education
-* 2012 -- **Doctor of Philosophy** (Astronomy & Astrophysics), University of California at Santa Cruz
+* 2012 -- **Doctor of Philosophy** (Astronomy & Astrophysics), University of California at Santa Cruz. Received Whitford Prize for highest achievement in research, coursework, and teaching.
 * 2006 -- **Master of Science** (Astronomy, with highest honors), University of Bologna
 * 2004 -- **Bachelor of Science** (Astronomy, with highest honors), University of Bologna
 
 ### Publications, Academic Honors and Awards
-* Published 8 first-author publications on time series analysis, numerical optimization, and Monte-Carlo simulations  (cited a total of 224 times); a total of 17 refereed papers. 
+* Published 8 first-author publications on time series analysis, numerical optimization, and Monte-Carlo simulations  (cited 224 times); a total of 17 refereed papers (cited 992 times). See [research page](/research).
 * 2014 -- Meschiari, S. (PI), Ludwig, R., Green, J., *Interactive Education Tools in the Public Square* (Award: $2,800, for purchasing iPad Air tablets and wall mounts)
 * 2014 -- Meschiari, S. (PI), Green, J., Ludwig, R., *Bringing the Tools of Research Direct to the UT Class- room: Systemic, a Virtual Lab for Students* (Award: $87,710)
 * 2010 -- *Award for Excellence in Teaching*
