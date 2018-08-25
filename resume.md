@@ -52,8 +52,8 @@ I enjoy working with cross-functional teams to create, polish, and evolve from n
 * **Statistical Methods and Numerical Algorithms**: Hypothesis testing, bootstrapping, Markov-Chain Monte Carlo, numerical optimization using local and global methods, numerical simulations, integration of differential equations, time series analysis.
 * **Programming Languages**: 
   * R (including `dplyr`, `tidyr`, `ggplot2`, `RMarkdown`, `caret`, `glmnet`, `xgboost`, and the `h2o` ML platform)
+  * Scala (including `Spark` and `SparkML`)  
   * JavaScript (both backend and frontend, including `Express`, `React`, `HighCharts`)
-  * Scala (including `Spark` and `SparkML`)
   * Java
   * C and C++
   * SQL
@@ -65,7 +65,11 @@ I enjoy working with cross-functional teams to create, polish, and evolve from n
 * 2004 -- **Bachelor of Science** (Astronomy, with highest honors), University of Bologna
 
 ### Publications, Academic Honors and Awards
+<<<<<<< HEAD
 * Published 8 first-author publications on time series analysis, numerical optimization, and Monte-Carlo simulations  (cited 224 times); a total of 17 refereed papers (cited 992 times). See [research page](/research).
+=======
+* Published **8 first-author publications** on time series analysis, numerical optimization, and Monte-Carlo simulations  (**cited a total of 224 times**); a total of 17 refereed papers. 
+>>>>>>> 5bbd4217d2906ef07f173cf164d58d9dc7b0d952
 * 2014 -- Meschiari, S. (PI), Ludwig, R., Green, J., *Interactive Education Tools in the Public Square* (Award: $2,800, for purchasing iPad Air tablets and wall mounts)
 * 2014 -- Meschiari, S. (PI), Green, J., Ludwig, R., *Bringing the Tools of Research Direct to the UT Class- room: Systemic, a Virtual Lab for Students* (Award: $87,710)
 * 2010 -- *Award for Excellence in Teaching*
