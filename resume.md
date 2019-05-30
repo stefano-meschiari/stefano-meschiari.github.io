@@ -26,6 +26,7 @@ I enjoy working with cross-functional teams to create, polish, and evolve from n
 
 ### Experience
 
+#### *Feb 2019-present, [Duo Security](https://duo.com/labs)* Technical Lead, Data Science
 #### *July 2017-present, [Duo Security](https://duo.com/labs)* Senior Data Scientist
 * I am part of a stellar data science group at Duo. We are focused on creating new data science-powered solutions to help companies detect threats and protect themselves. <br>At Duo, I lead the technical development of the data science platform, which powers the UEBA product feature. Our platform uses Spark at scale to analyze data, build models, and surface possible threats and authentication anomalies.
 
