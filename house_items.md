@@ -9,10 +9,14 @@ permalink: /house_items
     h2 { margin-top: 2em; }
 </style>
 
-# House items
 ## Acer R240HY bidx 23.8-Inch IPS HDMI DVI VGA (1920 x 1080) Widescreen Monitor ($50)
 ![](/img/house_items/BE9BB25B-A80A-4D49-8748-F4F679A11A53.png)
 [Amazon](https://www.amazon.com/gp/product/B0148NNKTC/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&psc=1)
+
+
+## Marcy foldable bike ($50)
+![](/img/house_items/bike.jpg)
+[Amazon.com : Marcy Foldable Exercise Bike with Adjustable Resistance for Cardio Workout and Strength Training NS-652 : Exercise Bikes : Sports & Outdoors](https://www.amazon.com/gp/product/B0090OKG38/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 
 ## Coffee table ($30)
 ![](/img/house_items/IMG_1640.jpeg)
