@@ -4,14 +4,33 @@ title: Research & Outreach
 id: research
 permalink: /research/
 ---
-# Research
-<img src="/img/citations.png" style="float:right">
+<h3 class="ui horizontal divider header">
+  📊 DATA SCIENCE
+</h3>
+
+#### Writing
+* [Duo Trust Monitor Is Here to Make Risk Detection Easy](https://duo.com/blog/duo-trust-monitor-is-here-to-make-risk-detection-easy) &mdash; Duo Trust Monitor announcement.
+* [Finding a Needle in a Haystack using Apache Spark](https://github.com/stefano-meschiari/spark_workshop) &mdash; a workshop for engineers that shows how to use Apache Spark queries for simple outlier detection.
+* [Debugging Apache Spark Pipelines](https://duo.com/labs/tech-notes/debugging-apache-spark-pipelines) &mdash; a collection of common tuning steps for Apache Spark.
+
+#### Presentations
+* [Detecting and Preventing Cybersecurity Threats Using Machine Learning](https://dominodatalab.wistia.com/medias/eb6ga6kxee) (Domino Popup, Austin, 2018)
+
+<div class="ui hidden divider"></div>
+
+<h3 class="ui horizontal divider header">
+  🪐 ASTRONOMY
+</h3>
+
+<a href="https://scholar.google.com/citations?user=r_wjpacAAAAJ&hl=en" class="ui button float-right">Google Scholar</a>
+
+### Research
 {% include papers.md %}
 
 <hr>
-# Outreach
+## Outreach
 
-#### Presentations 
+#### Presentations
 
 **[Slides of my presentations](https://speakerdeck.com/exostefanom/)**
 
@@ -48,4 +67,3 @@ _These are articles that feature my work, or that I provided quotes for._
 *   **[New planet discoveries suggest low-mass planets are common around nearby stars](http://news.ucsc.edu/2009/12/3439.html)** UC Santa Cruz press release, Dec. 2009
 *   **[Astronomers get a sizzling weather report from a distant planet](http://news.ucsc.edu/2009/01/2703.html)** UC Santa Cruz press release, Jan. 2009
 *   **[Planet hunters wanted to help astronomers in the search for new worlds](http://news.ucsc.edu/2006/10/958.html)** UC Santa Cruz press release, Oct. 2006
-

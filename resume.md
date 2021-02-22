@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resume 
+title: Resume
 permalink: /resume/
 ---
 <div class="float-right">
@@ -12,56 +12,74 @@ Downloadable resume coming back soon!
 
 
 <h1 class="name">Stefano Meschiari, Ph.D.</h1>
-<h2 class="subtitle">Senior Data Scientist, Duo Security</h2>
+<h2 class="subtitle">Data Science Technical Lead, Duo Security</h2>
+<hr>
 <div class="links">
-<a href="mailto:stefano.meschiari@gmail.com"><i class="mail outline icon"></i> stefano.meschiari@gmail.com</a>
-<a href="https://github.com/stefano-meschiari"><i class="github icon"></i> GitHub</a>
-<a href="https://www.linkedin.com/in/stefano-meschiari-46966242/"><i class="linkedin icon"></i> LinkedIn</a>
+<a href="mailto:stefano.meschiari@gmail.com" class="ui circular button"><i class="mail outline icon"></i> stefano.meschiari@gmail.com</a>
+<a href="https://github.com/stefano-meschiari" class="ui circular button"><i class="github icon"></i> GitHub</a>
+<a href="https://www.linkedin.com/in/stefano-meschiari-46966242/" class="ui circular button"><i class="linkedin icon"></i> LinkedIn</a>
 </div>
 <hr>
 
-I am an experienced data scientist with a background in Astrophysics research. I have worked on projects that involved analyzing complex datasets, building novel production ETL and machine learning platforms, researching new algorithms and approaches to attacking hard problems, and creating functional data tooling for other teams.
+I am an experienced data scientist with a background in scientific research. I have worked on projects that involved  researching new algorithms and approaches to attacking hard problems, analyzing complex, label-poor datasets, building novel production ETL and ML platforms, helping to bring intelligent capabilities to fruition for users, and creating functional data tooling.
 
-I enjoy working with cross-functional teams to create, polish, and evolve from napkin ideas to production. In particular, I love collaborating with product teams to coherently integrate data science into their vision, and helping them test out new concepts and visualizations with data science-driven prototypes.
+I enjoy working with cross-functional teams to create, polish, and evolve from napkin ideas to production. In particular, I love collaborating with product and design teams to coherently integrate data science into their vision, and helping them test out new concepts and visualizations with data science-driven prototypes and customer discovery.
 
 ### Experience
 
-#### *Feb 2019-present, [Duo Security](https://duo.com/labs)* Technical Lead, Data Science
-#### *July 2017-present, [Duo Security](https://duo.com/labs)* Senior Data Scientist
-* I am part of a stellar data science group at Duo. We are focused on creating new data science-powered solutions to help companies detect threats and protect themselves. <br>At Duo, I lead the technical development of the data science platform, which powers the UEBA product feature. Our platform uses Spark at scale to analyze data, build models, and surface possible threats and authentication anomalies.
+{% template resume_item.html %}
+---
+emphasis: green
+title: Technical Lead<br>
+period: Feb 2019-present
+title2: Senior Data Scientist
+period2: Aug 2017-Feb 2019
+company: Duo Security (Cisco)
+company_link: https://www.duosecurity.com
+---
+I lead the research and technical development of the data science platform that powers the <a href="https://duo.com/blog/duo-trust-monitor-is-here-to-make-risk-detection-easy" target="_blank">Duo Trust Monitor</a> product feature.
 
-#### *Feb 2016-June 2017, [Civitas Learning](https://www.civitaslearning.com)* Product Data Scientist 
-* Created and improved on prototype machine learning tools and pipelines to model student outcomes. 
+My work at Duo includes:
+* Develop pipeline components and infrastructure that analyze data, build models, and surface possible threats and authentication anomalies at scale, using Spark, SparkML, and H2O.
+* Research foundational supervised and unsupervised algorithms tailored to the security domain, with a particular attention to simplicity, explainability, and scalability. Translate internal domain expertise into expert rule layers and heuristics. Analyze our vast authentication dataset to mine new patterns of suspicious behavior.
+* Collaborate with the product and design teams to understand how to shape algorithms and visualizations to address with our customer needs, simplify their operations, and remove friction. Work with customers via interviews, observations, and testing advanced development of new capabilities.
+{% endtemplate %}
+
+{% template resume_item.html %}
+---
+emphasis: blue
+title: Product Data Scientist
+period: Feb. 2016-Jun. 2017
+company: Civitas Learning
+company_link: https://www.civitaslearning.com
+---
+* Created and improved on prototype machine learning tools and pipelines to model student outcomes.
 * Prototyped new product ideas and internal tooling that employ machine learning, novel summary statistics and visualizations.
 * Maintained and improved the custom modeling platform. Reduced training and scoring running time (and cloud costs) by half.
 * Independently developed components for end-to-end Data Science projects:
-  * Machine learning models (*linear models*, *random forest*, *gradient boosted trees*, and custom classification techniques using *R*, *Scala and Spark* and *JavaScript*). 
+  * Machine learning models and custom classification algorithms using *R*, *Scala and Spark* and *JavaScript*.
   * Back-end (*Node.JS/Express*, created new APIs and services exposing new functionality to internal services)
   * Front-end (*React*, *HighCharts*, and custom-built components and visualizations).
+{% endtemplate %}
 
-#### *2012-2016, [University of Texas at Austin](https://as.utexas.edu)* W. J. McDonald Postdoctoral Fellow
+{% template resume_item.html %}
+---
+title: W. J. McDonald Postdoctoral Fellow
+period: 2012-2016
+title2: SAVE/Point, Principal Investigator
+period2: 2014-2016
+company: UTexas, Austin
+company_link: https://as.utexas.edu
+---
 * Led the data analysis effort for the Lick-Carnegie science collaboration (~20 scientists across the United States). Analyzed time series data using my *Markov-Chain Monte Carlo* code, Systemic. Systemic has been used to discover more than 40 new planetary systems.
 * Wrote high-performance, parallelized codes to solve ordinary and partial differential equations modeling planet formation.
-
-#### *2014-2016, [University of Texas at Austin](https://as.utexas.edu)* SAVE/Point, Principal Investigator ####
-* Principal Investigator of SAVE/Point, a collaboration of astronomers and educators creating [cutting-edge edtech games, apps, and interactive touch kiosks](http://save-point.github.io), running on the latest Web technologies. 
-* Developed [Super Planet Crash](/projects#spc), an HTML5/JS game that was played more than 15 million times and was covered by The Verge, IO9, Huffington Post, and others.
-* Developed [Systemic Live](/projects#systemic), an HTML5/JS web app that teaches students about the process of data analysis and scientific discovery. It is used in MOOC classes in Coursera, and classes at Caltech, UF, UT, MIT, SJSU, UD, Yale, Columbia, UCSC, SFSU, and others.
-
-#### *2010-2011, VN7 Dynamic LP; 2013-2014, EFFEX Capital* Research Analyst/Contractor
-* Led the development of a sophisticated desktop application to monitor the real-time performance of strategies on high-frequency stock trading.
+* Developed [Super Planet Crash](/projects#spc), an HTML5/JS game that was played more than 15 million times and was covered by The Verge, IO9, Huffington Post, and others; and [Systemic Live](/projects#systemic), an HTML5/JS web app used at Caltech, UF, UT, MIT, SJSU, UD, Yale, Columbia, Coursera MOOC to teach students about data analysis and modeling.
+{% endtemplate %}
 
 ### Technical Skills
-* **Machine Learning**: Classification, regression, feature engineering, propensity score matching, building high-volume ETL and machine learning pipelines.
-* **Statistical Methods and Numerical Algorithms**: Hypothesis testing, bootstrapping, Markov-Chain Monte Carlo, numerical optimization using local and global methods, numerical simulations, integration of differential equations, time series analysis.
-* **Programming Languages**: 
-  * R (including `dplyr`, `tidyr`, `ggplot2`, `RMarkdown`, `caret`, `glmnet`, `xgboost`, and the `h2o` ML platform)
-  * Scala (including `Spark` and `SparkML`)  
-  * JavaScript (both backend and frontend, including `Express`, `React`, `HighCharts`)
-  * Java
-  * C and C++
-  * SQL
-  * Others: Lua, Matlab. Basic knowledge of Python, Fortran, Objective-C.
+* **Machine Learning**: Building supervised & unsupervised classification and regression pipelines via state of the art and custom algorithms; devising high-performance statistical and numerical methods; time series analysis and forecasting; architecting high-volume ETL and machine learning pipelines.
+* **Software engineering**: Building projects from prototypes to production using R, Scala, Python, JavaScript, Java, and C. Experienced in using SQL. Experienced in building functional front-end prototypes.
+* **Soft skills**: Cross-team collaboration, project management, and leadership; mentoring and advising.
 
 ### Education
 * 2012 -- **Doctor of Philosophy** (Astronomy & Astrophysics), University of California at Santa Cruz. Received Whitford Prize for highest achievement in research, coursework, and teaching.
@@ -70,8 +88,8 @@ I enjoy working with cross-functional teams to create, polish, and evolve from n
 
 ### Publications, Academic Honors and Awards
 * Published 8 first-author publications on time series analysis, numerical optimization, and Monte-Carlo simulations  (cited 224 times); a total of 17 refereed papers (cited 992 times). See [research page](/research).
-* 2014 -- Meschiari, S. (PI), Ludwig, R., Green, J., *Interactive Education Tools in the Public Square* (Award: $2,800, for purchasing iPad Air tablets and wall mounts)
-* 2014 -- Meschiari, S. (PI), Green, J., Ludwig, R., *Bringing the Tools of Research Direct to the UT Class- room: Systemic, a Virtual Lab for Students* (Award: $87,710)
+* 2014 -- Meschiari, S. (PI), Ludwig, R., Green, J., *Interactive Education Tools in the Public Square* (Award: $2,800, for creating an interactive outreach experience)
+* 2014 -- Meschiari, S. (PI), Green, J., Ludwig, R., *Bringing the Tools of Research Direct to the UT Classroom: Systemic, a Virtual Lab for Students* (Award: $87,710)
 * 2010 -- *Award for Excellence in Teaching*
 * 2008 -- *Whitford Prize* for graduate academic performance
 * 2006 -- *Regents' Fellow*, University of California

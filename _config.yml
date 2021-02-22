@@ -9,9 +9,9 @@
 title: Stefano Meschiari
 email: stefano.meschiari@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-   Stefano Meschiari's personal website. 
+   Stefano Meschiari's personal website.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://www.stefanom.org"
+url: "http://www.stefanom.io"
 twitter_username: RhymeWithEskimo
 github_username:  stefano-meschiari
 
@@ -20,4 +20,8 @@ markdown: kramdown
 exclude:
   - public/node_modules
 
-  
+
+plugins:
+  - jemoji
+  - jekyll-spaceship
+  - jekyll-jolt

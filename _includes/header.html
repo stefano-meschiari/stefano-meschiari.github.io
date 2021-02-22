@@ -2,9 +2,10 @@
     <nav id="nav" class="ui secondary pointing menu">
             {% for my_page in site.data.sidebar %}
             <a class="page item {% if page.title == my_page.title %}active{% endif %}"
+               style="{%if page.title == my_page.title %}background:#{{my_page.color}}{%endif%}"
                href="{% if my_page.external %}{{my_page.url}}{% else %}/{{ my_page.url }}{% endif %}"
                id="{{my_page.id}}">
-                {{ my_page.title | upcase }}
+                {{ my_page.title }}
             </a>
             {% endfor %}
     </nav>
@@ -17,7 +18,16 @@
     <a class="item {% if page.title == my_page.title %}active{% endif %}"
        href="{% if my_page.external %}{{my_page.url}}{% else %}/{{ my_page.url }}{% endif %}"
        id="{{my_page.id}}">
-        {{ my_page.title | upcase }}
+        {{ my_page.title }}
     </a>
     {% endfor %}
 </div>
+{% for my_page in site.data.sidebar %}
+{% if page.title == my_page.title %}
+<style>
+    a, a:visited {
+        color: #{{ my_page.color }};
+    }
+</style>
+{% endif %}
+{% endfor %}

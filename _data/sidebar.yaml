@@ -1,25 +1,29 @@
 - title: Home
-  url: 
+  url:
   id: home
-  
+  color: "3498db"
+
 - title: Resume
   url: resume
   id: resume
-  
-- title: Open-source Projects
+  color: "1abc9c"
+
+- title: Projects
   url: projects
   id: projects
-  
+  color: "e67e22"
+
 - title: GitHub
   url: https://github.com/stefano-meschiari
   external: true
   id: github
-  
+
 - title: Research & Outreach
   url: research
   id: research
-  
+  color: "e74c3c"
+
 - title: Blog
   url: blog
   id: blog
-
+  color: "9b59b6"

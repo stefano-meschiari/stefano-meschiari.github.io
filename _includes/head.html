@@ -27,12 +27,13 @@
    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
    ga('create', 'UA-47960829-8', 'auto');
-   ga('send', 'pageview');
-
+                  ga('send', 'pageview');
   </script>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-  
-  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,500,500italic,700,700italic|PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;300;400;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 </head>

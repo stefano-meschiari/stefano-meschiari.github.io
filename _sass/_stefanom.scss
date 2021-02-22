@@ -5,10 +5,18 @@ $accent-gradient-small: linear-gradient(to right, $belizeHole, $peterRiver);
 $accent-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
 $accent-shadow-small: 0px 2px 3px rgba(0, 0, 0, 0.2);
 
-$nav: #053358;
+$nav: #1B1C1D;
 
 a, a:visited {
   color: $accent;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+nav a {
+  font-family: $base-font-family;
 }
 
 #menu {
@@ -17,14 +25,24 @@ a, a:visited {
   display: none;
 }
 
+header {
+  background: $nav;
+}
+
 #nav {
   background: $nav;
-  padding: 4px;
-  
+  padding: 0.5rem;
+  max-width: calc(960px - (30px * 2));
+  margin:auto;
+  border-bottom:none;
+
   a {
     color: rgba(255, 255, 255, 0.8);
     margin: 2px;
+    font-weight: 400;
+    font-size: 1.2rem;
     border: none;
+    letter-spacing: 0.8px;
   }
 
   a.active {
@@ -32,6 +50,7 @@ a, a:visited {
     border: none;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: $accent-shadow;
+    font-weight: 900;
   }
 
   a:hover {
@@ -65,7 +84,7 @@ a, a:visited {
       text-align: initial;
     }
   }
-  
+
   #nav {
     display: none;
   }
@@ -75,23 +94,20 @@ a, a:visited {
   margin-bottom: 3rem;
 }
 
-.header, h1, h2, h3, h4, h5, h6 {
-  font-family: 'PT Sans Caption';
-}
 
 .projects {
   a.links {
     margin-top:1rem;
     text-transform:uppercase;
   }
-  
+
   .app-icon {
     float: left;
-    width: 80px;
+    width: 60px;
     margin-right: 0.8rem;
     margin-bottom: 0.5rem;
   }
-  
+
   .thumbnail {
     max-width: 40%;
     margin-left: 1rem;
@@ -110,16 +126,15 @@ a, a:visited {
     text-transform: uppercase;
   }
 }
-  
+
 h1.name {
   text-transform: uppercase;
-  font-weight:bold;
+  font-weight:900;
   font-size: 1.5rem;
   margin-bottom: 0;
 }
 
 h2.subtitle {
-  font-family: 'PT Sans';
   color: #969896;
   font-size:1.2rem;
   margin-bottom:0.5rem;
@@ -131,46 +146,45 @@ h3.header {
   font-size:1rem;
   padding-top:4px;
   padding-bottom:2px;
-  margin-bottom:1rem;
+  margin-bottom:0.25rem;
+  line-height:2rem;
+}
+
+.header {
+  font-family: $base-font-family !important;
 }
 
 .float-right {
   float:right;
 }
 
-.more {
-  background: $accent-gradient-small;
+.ui.button.more {
+  background: $accent-gradient-small !important;
   border:none;
-  display: inline-block;
   margin: 2px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) !important;
   padding:6px;
   padding-left:12px;
   padding-right:12px;
   margin-right: 6px;
   font-size:1rem;
-  text-transform:uppercase;
+  font-weight: 700;
   border-radius: 2px;
-  
+
   i.icon {
     width: initial;
     margin:0;
   }
 }
 
-.more:hover {
-  color: white;
-  box-shadow: $accent-shadow-small;
-  text-decoration: none;
+.ui.button {
+  font-family: $base-font-family;
 }
 
-.more:visited {
-  color:white;
-}
 
-.more.secondary {
-  background: $clouds;
-  color: $wetAsphalt;
+.ui.button.more.secondary {
+  background: $clouds !important;
+  color: $wetAsphalt !important;
   text-transform: initial;
 }
 
@@ -202,33 +216,24 @@ p.item {
 
 .dev img {
   margin-right:1rem;
-  height: 2.5rem;  
+  height: 2.5rem;
 }
 
 
 #resume {
   position: relative;
 
-  .links a {
-    background: $clouds;
-    padding: 6px;
-    padding-left: 12px;
-    padding-right: 12px;
-    color: black;
-    display: inline-block;
-    margin: 3px;
-  }
-
-  .links a:hover {
-    text-decoration: none;
-    background: $accent-gradient-small;
-    color: white;
-  }
-  
   h3 {
     font-weight: 200;
     font-size: 1.25rem;
-    border-bottom: 1px solid $divider;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .rail {
+    text-align: right;
+    margin-top: 1.5rem;
+    max-width: 200px;
   }
 
   h4 {
@@ -236,39 +241,13 @@ p.item {
     font-weight: bold;
     text-transform: uppercase;
     color: $asbestos;
-    margin-left: 2rem;
-    margin-right: 2rem;
     margin-bottom: 0.5rem;
-    
-    em {
-      position: absolute;
-      right: 2rem;
-      font-weight: initial;
-      text-transform: none;
-    }
 
     @include small() {
       em {
         position: initial;
         display: block;
       }
-    }
-  }
-
-  ul {
-    padding: 1rem;
-    background: rgb(240, 240, 240);
-    padding-left: 2rem;
-    margin: 0px;
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-
-    ul {
-      padding: 0px;
-      margin: 0px;
-      margin-left: 1rem;
     }
   }
 }

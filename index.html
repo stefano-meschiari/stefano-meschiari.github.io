@@ -5,7 +5,6 @@ icon: child
 permalink: /
 ---
 <div class="ui segment summary">
-    <img class="ui left floated image" src="img/stefano.jpg" width="200">
     <div class="float-right" id="social-links">
         <a class="ui button compact big circular icon" title="Email me" href="mailto:{{ site.data.env.email }}" target="_new">
             <i class="mail outline icon"></i>
@@ -27,43 +26,79 @@ permalink: /
     <h2 class="subtitle">Data Science Technical Lead at Duo Security</h2>
 
     <hr>
-    <p>Hello there! I am a Data Science Technical Leader at <a href="https://duo.com" target="_blank">Duo Security</a>. I am also a maker of <a href="projects">open-source scientific tools and games</a>, an open data enthusiast, and all-around tech geek.</p> <p> <a href="/research">As an astronomer</a>, I discovered new planets and worked on understanding how Tatooine-like planets (planets orbiting binary stars) formed.</p>
+    <img class="ui right floated image" src="img/stefano.jpg" width="200">
+    <p>Hello! I am a Data Science Technical Leader at <a href="https://duo.com" target="_blank">Duo Security</a> (Cisco
+        Systems). I am passionate about bringing machine learning to practical
+        <a href="https://duo.com/blog/duo-trust-monitor-is-here-to-make-risk-detection-easy"> applications</a> that are
+        genuinely useful and remove friction from people's lives.
+
+    <p>I am also a maker of <a href="projects">open-source scientific tools and games</a> (in various states of
+        un-maintenance), an enthusiast for open data and citizen science, and all-around tech geek.</p>
+    <p>In my past life as an astrophysicist, I discovered new planets and worked on understanding how Tatooine-like
+        planets (planets orbiting binary stars) formed.</p>
+
 </div>
-<div class="ui stackable two column relaxed grid" style="clear:both">    
+<div class="ui stackable two column relaxed grid" style="clear:both">
     <div class="column">
-        <div class="section">
-            <a href="resume" class="more float-right">
-                My Resume
-                <i class="angle right icon"></i>
-            </a>
+        <div class="ui segment">
             <h3 class="header">
                 Quick stats
+                <a href="resume" class="ui circular compact button float-right">
+                    Resume
+                    <i class="angle right icon"></i>
+                </a>
             </h3>
-            <p class="item">
+            <div class="ui relaxed list">
+        <p class="item">
                 <i class="us flag"></i>
-                Living in Austin, Texas
+                Living in Portland, Oregon
             </p>
             <p class="item">
                 <i class="italy flag"></i>
                 Hailing from Modena, Italy
             </p>
             <p class="item">
-                <i class="empty star icon"></i>
+                <i class="icon">🪐</i>
                 Astrophysics Ph.D.
             </p>
             <p class="item">
-                <i class="area chart icon"></i>
-                Data Scientist & Software developer
+                <i class="icon">:bar_chart:</i>
+                Data Scientist
             </p>
+            </div>
         </div>
-        <div class="section">
+        <div class="ui segment">
             <h3 class="header">
-                Interests
+                My Interests
             </h3>
-            
-            Machine learning, visualization, creating tooling for data analysis, web development, gamified education, product development, open data and open-source development, citizen science and science education.
-        </div>
-        <div class="section">
+            <div class="ui relaxed list">
+                <div class="ui item">
+                    <i class="top aligned icon">🔬</i>
+                    <div class="content">
+                        Researching novel ways to apply machine learning algorithms;
+                        bridging label-poor setups into classification problems;
+                        model evaluation.
+                    </div>
+                </div>
+                <div class="ui item">
+                    <i class="top aligned icon">🛡</i>
+                    <div class="content">
+                        Usable, explainable, and actionable security.
+                    </div>
+                </div>
+                <div class="ui item">
+                    <i class="top aligned icon">📚</i>
+                    <div class="content">
+                        Learning, mentoring, sharing knowledge.
+                    </div>
+                </div>
+                <div class="ui item">
+                    <i class="top aligned icon">💅</i>
+                    <div class="content">Making things pretty.</div>
+                </div>
+            </div>
+                </div>
+                <div class="ui segment">
             <h3 class="header">
                 Skills
             </h3>
@@ -74,7 +109,9 @@ permalink: /
                 </div>
                 <div class="content">
                     <p class="transition hidden">
-                        Expert in using R and the modern R package ecosystem for data analysis tasks and numerical prototyping, data visualizations, data wrangling, and as a glue language to interface with C, Java and Fortran packages. Proficient in Spark with Scala, PostgreSQL, and Matlab.
+                        I use the modern R package ecosystem for data analysis tasks and ML prototyping, data
+                        visualizations, data wrangling, and as a glue language to interface with C, Java and Fortran packages.
+                        I develop pipelines and infrastructure with Scala and Spark.
                     </p>
                 </div>
                 <div class="title">
@@ -88,31 +125,33 @@ permalink: /
                 </div>
                 <div class="title">
                     <i class="dropdown icon"></i>
-                    Web development
+
                 </div>
                 <div class="content">
                     <p class="transition hidden">
-                        Proficient in the ES6/Node.js ecosystem, including React, Express, Bootstrap. Other tools: Apache Cordova, PostgreSQL, Backbone.js, Paper.js, HighCharts, UIKit, and Semantic UI. 
+                        Proficient in the ES6/Node.js ecosystem, including React, Express, Bootstrap. Other tools: Apache Cordova, PostgreSQL, Backbone.js, Paper.js, HighCharts, UIKit, and Semantic UI.
                     </p>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <div class="column">
-        <div class="section">
-            <a href="projects" class="more float-right">All projects
-                <i class="angle right icon"></i>
-            </a>
+        <div class="ui segment">
             <h3 class="header">
+                <a href="projects" class="ui circular compact button float-right">
+                    Projects
+                    <i class="angle right icon"></i>
+                </a>
                 Stuff I've made
-            </h3>
+                </h3>
             <div class="ui items" id="projects">
                 {% for project in site.data.projects %}
                 {% if project.frontpage %}
+                <div class="ui divider"></div>
                 <div class="item">
                     <a class="ui tiny image {{ project.class }}" href="projects.html#{{ project.anchor }}">
-                        <img src="{{ site.baseurl }}{{ project.img }}" style="border-radius:10px">      
+                        <img src="{{ site.baseurl }}{{ project.img }}" style="border-radius:10px">
                     </a>
                     <div class="content">
                         <a class="header" href="projects.html#{{ project.anchor }}">
@@ -121,11 +160,11 @@ permalink: /
                         <div class="description">
                             {{ project.description }}
                             <p><a href="projects.html#{{ project.anchor }}">Read more...</a>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
                 {% endif %}
-                {% endfor %}                    
+                {% endfor %}
             </div>
         </div>
 
