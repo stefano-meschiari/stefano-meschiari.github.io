@@ -1,5 +1,5 @@
 
-#### First author
+##### **First author**
 * [The potential impact of groove modes on Type II planetary migration](https://scholar.google.com/scholar?q=The potential impact of groove modes on Type II planetary migration), **S Meschiari**, G Laughlin, *The Astrophysical Journal Letters*, 2008.
 
 
@@ -20,7 +20,7 @@
 
 * [Circumbinary planet formation in the Kepler-16 system. II. A toy model for in situ planet formation within a debris belt](https://scholar.google.com/scholar?q=Circumbinary planet formation in the Kepler-16 system. II. A toy model for in situ planet formation within a debris belt), **S Meschiari**, *The Astrophysical Journal*, 2014.
 
-#### Collaborations
+##### **Collaborations**
 * [Rapid heating of the atmosphere of an extrasolar planet](https://scholar.google.com/scholar?q=Rapid heating of the atmosphere of an extrasolar planet), G Laughlin, D Deming, J Langton, D Kasen, S Vogt, P Butler, E Rivera, **S Meschiari**, et al., *Nature*, 2009.
 
 
@@ -61,5 +61,3 @@
 
 
 * [A 12-year activity cycle for the nearby planet host star HD 219134](https://scholar.google.com/scholar?q=A 12-year activity cycle for the nearby planet host star HD 219134), MC Johnson, M Endl, WD Cochran, **S Meschiari**, P Robertson,  et al., *The Astrophysical Journal*, 2016.
-
-

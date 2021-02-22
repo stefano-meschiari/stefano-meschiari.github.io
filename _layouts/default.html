@@ -6,7 +6,7 @@
     <body>
 
         {% include header.html %}
-            <div class="page-content">
+            <div class="page-content {% if page.id %}{{page.id}}{% else %}{{ page.title | downcase }}{% endif %}">
                 <div class="wrapper">
                     {{ content }}
                 </div>

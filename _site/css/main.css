@@ -252,6 +252,15 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .highlight .il { color: #099; }
 
+/*
+
+Name: c-Tiles Eighties
+Author: Chris Kempson (http://chriskempson.com)
+
+Sass-variables template by Bram de Haan (https://github.com/atelierbram/c-tiles16)
+Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
 a, a:visited { color: #3498db; }
 
 p { line-height: 1.6em; }
@@ -274,6 +283,8 @@ header { background: #1B1C1D; }
 
 .summary { margin-bottom: 3rem; }
 
+.rainbow-divider { height: 2px; margin-top: 1rem; margin-bottom: 1rem; background-image: repeating-linear-gradient(to right, #f2777a 0px, #f99157 50px, #f99157 50px, #ffcc66 100px, #ffcc66 100px, #99cc99 150px, #99cc99 150px, #6699cc 200px, #cc99cc 200px); background-size: 100% 1px; background-repeat: no-repeat; }
+
 .projects a.links { margin-top: 1rem; text-transform: uppercase; }
 
 .projects .app-icon { float: left; width: 60px; margin-right: 0.8rem; margin-bottom: 0.5rem; }
@@ -291,6 +302,8 @@ h3.header { color: #7f8c8d; text-transform: uppercase; font-size: 1rem; padding-
 .header { font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
 
 .float-right { float: right; }
+
+.page-content.home { background: #f5f5f5; }
 
 .ui.button.more { background: linear-gradient(to right, #2980b9, #3498db) !important; border: none; margin: 2px; color: rgba(255, 255, 255, 0.9) !important; padding: 6px; padding-left: 12px; padding-right: 12px; margin-right: 6px; font-size: 1rem; font-weight: 700; border-radius: 2px; }
 

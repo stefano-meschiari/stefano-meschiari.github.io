@@ -24,17 +24,17 @@ permalink: /research/
 
 <a href="https://scholar.google.com/citations?user=r_wjpacAAAAJ&hl=en" class="ui button float-right">Google Scholar</a>
 
-### Research
+#### Research
 {% include papers.md %}
 
 <hr>
-## Outreach
+### Outreach
 
 #### Presentations
 
 **[Slides of my presentations](https://speakerdeck.com/exostefanom/)**
 
-#### Articles
+##### **Articles**
 _These are articles I wrote for the general public._
 <img src="/img/apf.jpg">
 
@@ -45,8 +45,8 @@ _These are articles I wrote for the general public._
 *   **[Growing planets around binary stars](http://blog.planethunters.org/2012/11/06/growing-planets-around-binary-stars/)** -- Guest post on Planet Hunters blog, Nov. 2012
 
 
-#### Press releases, media and interviews
-_These are articles that feature my work, or that I provided quotes for._
+##### **Press releases, media and interviews**
+_These are articles that featured my work, or that I provided quotes for._
 <img src="/img/hd32963.png">
 <img src="/img/giant.png">
 
