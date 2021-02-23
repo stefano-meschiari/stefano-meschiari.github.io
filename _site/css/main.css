@@ -271,15 +271,15 @@ nav a { font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-ser
 
 header { background: #1B1C1D; }
 
-#nav { background: #1B1C1D; padding: 0.5rem; max-width: calc(960px - (30px * 2)); margin: auto; border-bottom: none; }
+#nav { background: #1B1C1D; padding: 0.5rem; padding-left: 2rem; max-width: calc(960px - (30px * 2)); margin: auto; border-bottom: none; }
 
 #nav a { color: rgba(255, 255, 255, 0.8); margin: 2px; font-weight: 400; font-size: 1.2rem; border: none; letter-spacing: 0.8px; }
 
-#nav a.active { color: white; border: none; background: rgba(255, 255, 255, 0.2); box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1); font-weight: 900; }
+#nav a.active { color: white; border: none; background: rgba(255, 255, 255, 0.2); text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7); font-weight: 900; }
 
 #nav a:hover { border: none; box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1); background: rgba(255, 255, 255, 0.1); }
 
-@media screen and (max-width: 750px) { #menu { display: inline-block; } .summary { text-align: center; } .summary .image { display: inline !important; margin-right: 0px !important; float: initial !important; } .summary #social-links { text-align: center; float: initial; margin-bottom: 1rem; } .summary p { text-align: initial; } #nav { display: none; } }
+@media screen and (max-width: 750px) { #menu { display: inline-block; } #nav a { font-size: 1rem; padding-left: 10px; padding-right: 10px; padding-top: 7px; padding-bottom: 7px; } .summary { text-align: center; } .summary .image { display: inline !important; margin-right: 0px !important; float: initial !important; } .summary #social-links { text-align: center; float: initial; margin-bottom: 1rem; } .summary p { text-align: initial; } }
 
 .summary { margin-bottom: 3rem; }
 
@@ -342,5 +342,7 @@ p.item { margin-bottom: 0.4rem; }
 #systemic img { float: left; display: block; margin-right: 3rem; margin-bottom: 3rem; width: 75px; }
 
 .citations { display: block; float: right; background: #bbb; color: white; font-weight: bold; font-size: 0.8em; padding-left: 6px; padding-right: 6px; margin-left: 2em; margin-bottom: 1em; border-radius: 6px; }
+
+ul li { margin-bottom: 0.75em; }
 
 /*# sourceMappingURL=main.css.map */

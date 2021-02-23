@@ -20,11 +20,13 @@
   <link rel="stylesheet" href="/public/semantic/semantic.min.css">
   <link rel="stylesheet" href="/public/semantic/components/accordion.min.css">
   <link rel="stylesheet" href="/public/semantic/components/sidebar.min.css">
+  <link rel="stylesheet" href="/public/semantic/components/popup.min.css">
   <link rel="stylesheet" href="/css/main.css">
   <script type="text/javascript" src="/public/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="/public/semantic/semantic.min.js"></script>
   <script type="text/javascript" src="/public/semantic/components/accordion.min.js"></script>
   <script type="text/javascript" src="/public/semantic/components/sidebar.min.js"></script>
+  <script type="text/javascript" src="/public/semantic/components/popup.min.js"></script>
   <script>
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -72,42 +74,25 @@
             </a>
             
     </nav>
-    <button id="menu" class="more" onclick="$('.menu.sidebar').sidebar('toggle')">
-        <i class="sidebar icon"></i> Menu
-    </button>
 </header>
-<div class="ui left vertical menu sidebar">
-    
-    <a class="item active" href="/" id="home">
-        Home
-    </a>
-    
-    <a class="item " href="/resume" id="resume">
-        Resume
-    </a>
-    
-    <a class="item " href="/projects" id="projects">
-        Projects
-    </a>
-    
-    <a class="item " href="https://github.com/stefano-meschiari" id="github">
-        GitHub
-    </a>
-    
-    <a class="item " href="/research" id="research">
-        Research &amp; Outreach
-    </a>
-    
-    <a class="item " href="/blog" id="blog">
-        Blog
-    </a>
-    
-</div>
 
 
 <style>
     a, a:visited {
         color: #3498db;
+    }
+    a:hover {
+        background: #3498db22;
+        text-decoration: none;
+        padding-left: 3px;
+        margin-left: -3px;
+        padding-right: 3px;
+        margin-right: -3px;
+        border-radius: 3px;
+    }
+
+    .ui.button:hover {
+        background-color: #3498db44;
     }
 </style>
 
@@ -169,7 +154,7 @@
         <div class="ui segment">
             <h3 class="header">
                 Quick stats
-                <a href="resume" class="ui circular compact button float-right" data-tooltip="Always feel free to get in touch!">
+                <a href="resume" class="ui circular compact button float-right" data-content="Feel free to get in touch!">
                     Resume
                     <i class="angle right icon"></i>
                 </a>
@@ -188,7 +173,7 @@
                 Astrophysics Ph.D.
             </p>
             <p class="item">
-                <i class="icon"><img class="emoji" title=":bar_chart:" alt=":bar_chart:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ca.png" height="20" width="20"></i>
+                <i class="icon"><img class="emoji" title=":bar_chart:" alt=":bar_chart:" raw="📊" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ca.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))"></i>
                 Data Scientist
             </p>
             </div>
@@ -199,7 +184,7 @@
             </h3>
             <div class="ui relaxed list">
                 <div class="ui item">
-                    <i class="top aligned icon">🔬</i>
+                    <i class="top aligned icon">🤖</i>
                     <div class="content">
                         Researching novel ways to apply machine learning algorithms;
                         bridging label-poor setups into classification problems;
@@ -253,114 +238,115 @@
 
         </div>
     </div>
+
     <div class="column">
-        <div class="ui segment">
-            <h3 class="header">
-                <a href="projects" class="ui circular compact button float-right">
-                    Projects
-                    <i class="angle right icon"></i>
+    <div class="ui segment">
+        <h3 class="header">
+            <a href="projects" class="ui circular compact button float-right">
+                Projects
+                <i class="angle right icon"></i>
+            </a>
+            Stuff I've made
+            </h3>
+        <div class="ui items" id="projects">
+            
+            
+            <div class="ui divider"></div>
+            <div class="item project">
+                <a class="ui tiny image " href="projects.html#systemic">
+                    <img src="/img/systemic_live.png" style="border-radius:10px">
                 </a>
-                Stuff I've made
-                </h3>
-            <div class="ui items" id="projects">
-                
-                
-                <div class="ui divider"></div>
-                <div class="item">
-                    <a class="ui tiny image " href="projects.html#systemic">
-                        <img src="/img/systemic_live.png" style="border-radius:10px">
-                    </a>
-                    <div class="content">
-                        <a class="header" href="projects.html#systemic">
-                            Systemic
-                        </a>
-                        <div class="description">
-                            Discover exoplanets using real astronomical data.
-                            <p><a href="projects.html#systemic">Read more...</a>
-                        </p>
-</div>
+                <div class="content">
+                    <div class="header">
+                        Systemic
                     </div>
-                </div>
-                
-                
-                
-                <div class="ui divider"></div>
-                <div class="item">
-                    <a class="ui tiny image " href="projects.html#spc">
-                        <img src="/img/spc.png" style="border-radius:10px">
-                    </a>
-                    <div class="content">
-                        <a class="header" href="projects.html#spc">
-                            Super Planet Crash
-                        </a>
-                        <div class="description">
-                            Race against gravity to create a crowded planetary system.
-                            <p><a href="projects.html#spc">Read more...</a>
-                        </p>
+                    <div class="description">
+                        Discover exoplanets using real astronomical data.
+                        <p><a href="projects.html#systemic">Read more...</a>
+                    </p>
 </div>
-                    </div>
                 </div>
-                
-                
-                
-                <div class="ui divider"></div>
-                <div class="item">
-                    <a class="ui tiny image " href="projects.html#savepoint">
-                        <img src="/img/orbits.png" style="border-radius:10px">
-                    </a>
-                    <div class="content">
-                        <a class="header" href="projects.html#savepoint">
-                            Apps &amp; Games
-                        </a>
-                        <div class="description">
-                            I lead a collaboration of astronomers and educators dedicated to developing games and apps to teach astronomical concepts.
-                            <p><a href="projects.html#savepoint">Read more...</a>
-                        </p>
-</div>
-                    </div>
-                </div>
-                
-                
-                
-                <div class="ui divider"></div>
-                <div class="item">
-                    <a class="ui tiny image rounded" href="projects.html#aaa">
-                        <img src="/img/aaa.jpg" style="border-radius:10px">
-                    </a>
-                    <div class="content">
-                        <a class="header" href="projects.html#aaa">
-                            Ask an Astronomer
-                        </a>
-                        <div class="description">
-                            A website that connects teachers, students, and the general public to real astronomers.
-                            <p><a href="projects.html#aaa">Read more...</a>
-                        </p>
-</div>
-                    </div>
-                </div>
-                
-                
-                
-                <div class="ui divider"></div>
-                <div class="item">
-                    <a class="ui tiny image " href="projects.html#latex2exp">
-                        <img src="/img/latex2exp.png" style="border-radius:10px">
-                    </a>
-                    <div class="content">
-                        <a class="header" href="projects.html#latex2exp">
-                            latex2exp
-                        </a>
-                        <div class="description">
-                            A package to typeset math formulas in R using LaTeX notation.
-                            <p><a href="projects.html#latex2exp">Read more...</a>
-                        </p>
-</div>
-                    </div>
-                </div>
-                
-                
             </div>
+            
+            
+            
+            <div class="ui divider"></div>
+            <div class="item project">
+                <a class="ui tiny image " href="projects.html#spc">
+                    <img src="/img/spc.png" style="border-radius:10px">
+                </a>
+                <div class="content">
+                    <div class="header">
+                        Super Planet Crash
+                    </div>
+                    <div class="description">
+                        Race against gravity to create a crowded planetary system.
+                        <p><a href="projects.html#spc">Read more...</a>
+                    </p>
+</div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="ui divider"></div>
+            <div class="item project">
+                <a class="ui tiny image " href="projects.html#savepoint">
+                    <img src="/img/orbits.png" style="border-radius:10px">
+                </a>
+                <div class="content">
+                    <div class="header">
+                        Apps &amp; Games
+                    </div>
+                    <div class="description">
+                        I lead a collaboration of astronomers and educators dedicated to developing games and apps to teach astronomical concepts.
+                        <p><a href="projects.html#savepoint">Read more...</a>
+                    </p>
+</div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="ui divider"></div>
+            <div class="item project">
+                <a class="ui tiny image rounded" href="projects.html#aaa">
+                    <img src="/img/aaa.jpg" style="border-radius:10px">
+                </a>
+                <div class="content">
+                    <div class="header">
+                        Ask an Astronomer
+                    </div>
+                    <div class="description">
+                        A website that connects teachers, students, and the general public to real astronomers.
+                        <p><a href="projects.html#aaa">Read more...</a>
+                    </p>
+</div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="ui divider"></div>
+            <div class="item project">
+                <a class="ui tiny image " href="projects.html#latex2exp">
+                    <img src="/img/latex2exp.png" style="border-radius:10px">
+                </a>
+                <div class="content">
+                    <div class="header">
+                        latex2exp
+                    </div>
+                    <div class="description">
+                        A package to typeset math formulas in R using LaTeX notation.
+                        <p><a href="projects.html#latex2exp">Read more...</a>
+                    </p>
+</div>
+                </div>
+            </div>
+            
+            
         </div>
+    </div>
 
     </div>
 </div>

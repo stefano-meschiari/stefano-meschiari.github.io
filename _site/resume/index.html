@@ -20,11 +20,13 @@
   <link rel="stylesheet" href="/public/semantic/semantic.min.css">
   <link rel="stylesheet" href="/public/semantic/components/accordion.min.css">
   <link rel="stylesheet" href="/public/semantic/components/sidebar.min.css">
+  <link rel="stylesheet" href="/public/semantic/components/popup.min.css">
   <link rel="stylesheet" href="/css/main.css">
   <script type="text/javascript" src="/public/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="/public/semantic/semantic.min.js"></script>
   <script type="text/javascript" src="/public/semantic/components/accordion.min.js"></script>
   <script type="text/javascript" src="/public/semantic/components/sidebar.min.js"></script>
+  <script type="text/javascript" src="/public/semantic/components/popup.min.js"></script>
   <script>
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -72,37 +74,7 @@
             </a>
             
     </nav>
-    <button id="menu" class="more" onclick="$('.menu.sidebar').sidebar('toggle')">
-        <i class="sidebar icon"></i> Menu
-    </button>
 </header>
-<div class="ui left vertical menu sidebar">
-    
-    <a class="item " href="/" id="home">
-        Home
-    </a>
-    
-    <a class="item active" href="/resume" id="resume">
-        Resume
-    </a>
-    
-    <a class="item " href="/projects" id="projects">
-        Projects
-    </a>
-    
-    <a class="item " href="https://github.com/stefano-meschiari" id="github">
-        GitHub
-    </a>
-    
-    <a class="item " href="/research" id="research">
-        Research &amp; Outreach
-    </a>
-    
-    <a class="item " href="/blog" id="blog">
-        Blog
-    </a>
-    
-</div>
 
 
 
@@ -110,6 +82,19 @@
 <style>
     a, a:visited {
         color: #1abc9c;
+    }
+    a:hover {
+        background: #1abc9c22;
+        text-decoration: none;
+        padding-left: 3px;
+        margin-left: -3px;
+        padding-right: 3px;
+        margin-right: -3px;
+        border-radius: 3px;
+    }
+
+    .ui.button:hover {
+        background-color: #1abc9c44;
     }
 </style>
 
@@ -155,22 +140,24 @@ Downloadable resume coming back soon!
 <h3 id="experience">Experience</h3>
 
 <div class="ui segment green">
-    <div class="ui left close rail">
-        <h4>Technical Lead<br>
+<div class="ui divided grid">
+  <div class="four wide column">
+      <h4>Technical Lead<br>
 </h4>
-        <h5>Feb 2019-present</h5>
-        
-        <br>
-        <h4>Senior Data Scientist</h4>
-        <h5>Aug 2017-Feb 2019</h5>
-        
-        <br>
+      <h5>Feb 2019-present</h5>
+      
+      <br>
+      <h4>Senior Data Scientist</h4>
+      <h5>Aug 2017-Feb 2019</h5>
+      
+      <br>
 
-        <div class="links">
-            <a href="" target="_blank">Duo Security (Cisco)</a>
-        </div>
-    </div>
-    <p>I lead the research and technical development of the data science platform that powers the <a href="https://duo.com/blog/duo-trust-monitor-is-here-to-make-risk-detection-easy" target="_blank">Duo Trust Monitor</a> product feature.</p>
+      <div class="links">
+          <a href="" target="_blank">Duo Security (Cisco)</a>
+      </div>
+  </div>
+  <div class="twelve wide column">
+      <p>I lead the research and technical development of the data science platform that powers the <a href="https://duo.com/blog/duo-trust-monitor-is-here-to-make-risk-detection-easy" target="_blank">Duo Trust Monitor</a> product feature.</p>
 
 <p>My work at Duo includes:</p>
 <ul>
@@ -179,20 +166,25 @@ Downloadable resume coming back soon!
   <li>Collaborate with the product and design teams to understand how to shape algorithms and visualizations to address with our customer needs, simplify their operations, and remove friction. Work with customers via interviews, observations, and testing advanced development of new capabilities.</li>
 </ul>
 
+  </div>
+
+</div>
 </div>
 
 <div class="ui segment ">
-    <div class="ui left close rail">
-        <h4>Product Data Scientist</h4>
-        <h5>Feb. 2016-Jun. 2017</h5>
-        
-        <br>
+<div class="ui divided grid">
+  <div class="four wide column">
+      <h4>Product Data Scientist</h4>
+      <h5>Feb. 2016-Jun. 2017</h5>
+      
+      <br>
 
-        <div class="links">
-            <a href="" target="_blank">Civitas Learning</a>
-        </div>
-    </div>
-    <ul>
+      <div class="links">
+          <a href="" target="_blank">Civitas Learning</a>
+      </div>
+  </div>
+  <div class="twelve wide column">
+      <ul>
   <li>Created and improved on prototype machine learning tools and pipelines to model student outcomes.</li>
   <li>Prototyped new product ideas and internal tooling that employ machine learning, novel summary statistics and visualizations.</li>
   <li>Maintained and improved the custom modeling platform. Reduced training and scoring running time (and cloud costs) by half.</li>
@@ -205,29 +197,37 @@ Downloadable resume coming back soon!
   </li>
 </ul>
 
+  </div>
+
+</div>
 </div>
 
 <div class="ui segment ">
-    <div class="ui left close rail">
-        <h4>W. J. McDonald Postdoctoral Fellow</h4>
-        <h5>2012-2016</h5>
-        
-        <br>
-        <h4>SAVE/Point, Principal Investigator</h4>
-        <h5>2014-2016</h5>
-        
-        <br>
+<div class="ui divided grid">
+  <div class="four wide column">
+      <h4>W. J. McDonald Postdoctoral Fellow</h4>
+      <h5>2012-2016</h5>
+      
+      <br>
+      <h4>SAVE/Point, Principal Investigator</h4>
+      <h5>2014-2016</h5>
+      
+      <br>
 
-        <div class="links">
-            <a href="" target="_blank">UTexas, Austin</a>
-        </div>
-    </div>
-    <ul>
+      <div class="links">
+          <a href="" target="_blank">University of Texas at Austin</a>
+      </div>
+  </div>
+  <div class="twelve wide column">
+      <ul>
   <li>Led the data analysis effort for the Lick-Carnegie science collaboration (~20 scientists across the United States). Analyzed time series data using my <em>Markov-Chain Monte Carlo</em> code, Systemic. Systemic has been used to discover more than 40 new planetary systems.</li>
   <li>Wrote high-performance, parallelized codes to solve ordinary and partial differential equations modeling planet formation.</li>
   <li>Developed <a href="/projects#spc">Super Planet Crash</a>, an HTML5/JS game that was played more than 15 million times and was covered by The Verge, IO9, Huffington Post, and others; and <a href="/projects#systemic">Systemic Live</a>, an HTML5/JS web app used at Caltech, UF, UT, MIT, SJSU, UD, Yale, Columbia, Coursera MOOC to teach students about data analysis and modeling.</li>
 </ul>
 
+  </div>
+
+</div>
 </div>
 
 <div class="ui divider"></div>
@@ -256,8 +256,7 @@ Downloadable resume coming back soon!
 <h3 id="publications-academic-honors-and-awards">Publications, Academic Honors and Awards</h3>
 <ul>
   <li>Published 8 first-author publications on time series analysis, numerical optimization, and Monte-Carlo simulations  (cited 224 times); a total of 17 refereed papers (cited 992 times). See <a href="/research">research page</a>.</li>
-  <li>2014 – Meschiari, S. (PI), Ludwig, R., Green, J., <em>Interactive Education Tools in the Public Square</em> (Award: $2,800, for creating an interactive outreach experience)</li>
-  <li>2014 – Meschiari, S. (PI), Green, J., Ludwig, R., <em>Bringing the Tools of Research Direct to the UT Classroom: Systemic, a Virtual Lab for Students</em> (Award: $87,710)</li>
+  <li>2014 – Meschiari, S. (PI), Ludwig, R., Green, J., <em>Interactive Education Tools in the Public Square</em> (Award: $2,800, for creating an interactive outreach experience); <em>Bringing the Tools of Research Direct to the UT Classroom: Systemic, a Virtual Lab for Students</em> (Award: $87,710)</li>
   <li>2010 – <em>Award for Excellence in Teaching</em>
 </li>
   <li>2008 – <em>Whitford Prize</em> for graduate academic performance</li>

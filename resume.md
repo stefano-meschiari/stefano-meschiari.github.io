@@ -30,21 +30,26 @@ I enjoy working with cross-functional teams to create, polish, and evolve from n
 ### Experience
 {% for job in site.data.jobs %}
 <div class="ui segment {{job.emphasis}}">
-    <div class="ui left close rail">
-        <h4>{{job.title}}</h4>
-        <h5>{{job.period}}</h5>
-        {% if job.title2 %}
-        <br>
-        <h4>{{job.title2}}</h4>
-        <h5>{{job.period2}}</h5>
-        {% endif %}
-        <br>
+<div class="ui divided grid">
+  <div class="four wide column">
+      <h4>{{job.title}}</h4>
+      <h5>{{job.period}}</h5>
+      {% if job.title2 %}
+      <br>
+      <h4>{{job.title2}}</h4>
+      <h5>{{job.period2}}</h5>
+      {% endif %}
+      <br>
 
-        <div class="links">
-            <a href="{{templjobate.company_link}}" target="_blank">{{job.company}}</a>
-        </div>
-    </div>
-    {{ job.description | markdownify }}
+      <div class="links">
+          <a href="{{templjobate.company_link}}" target="_blank">{{job.company}}</a>
+      </div>
+  </div>
+  <div class="twelve wide column">
+      {{ job.description | markdownify }}
+  </div>
+
+</div>
 </div>
 {% endfor %}
 
@@ -66,8 +71,7 @@ I enjoy working with cross-functional teams to create, polish, and evolve from n
 
 ### Publications, Academic Honors and Awards
 * Published 8 first-author publications on time series analysis, numerical optimization, and Monte-Carlo simulations  (cited 224 times); a total of 17 refereed papers (cited 992 times). See [research page](/research).
-* 2014 -- Meschiari, S. (PI), Ludwig, R., Green, J., *Interactive Education Tools in the Public Square* (Award: $2,800, for creating an interactive outreach experience)
-* 2014 -- Meschiari, S. (PI), Green, J., Ludwig, R., *Bringing the Tools of Research Direct to the UT Classroom: Systemic, a Virtual Lab for Students* (Award: $87,710)
+* 2014 -- Meschiari, S. (PI), Ludwig, R., Green, J., *Interactive Education Tools in the Public Square* (Award: $2,800, for creating an interactive outreach experience); *Bringing the Tools of Research Direct to the UT Classroom: Systemic, a Virtual Lab for Students* (Award: $87,710)
 * 2010 -- *Award for Excellence in Teaching*
 * 2008 -- *Whitford Prize* for graduate academic performance
 * 2006 -- *Regents' Fellow*, University of California

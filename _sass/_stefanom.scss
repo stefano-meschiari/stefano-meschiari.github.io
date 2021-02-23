@@ -32,6 +32,7 @@ header {
 #nav {
   background: $nav;
   padding: 0.5rem;
+  padding-left: 2rem;
   max-width: calc(960px - (30px * 2));
   margin:auto;
   border-bottom:none;
@@ -49,7 +50,7 @@ header {
     color: white;
     border: none;
     background: rgba(255, 255, 255, 0.2);
-    box-shadow: $accent-shadow;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
     font-weight: 900;
   }
 
@@ -63,6 +64,14 @@ header {
 @include small() {
   #menu {
     display: inline-block;
+  }
+
+  #nav a {
+    font-size: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
 
   .summary {
@@ -83,10 +92,6 @@ header {
     p {
       text-align: initial;
     }
-  }
-
-  #nav {
-    display: none;
   }
 }
 
@@ -311,4 +316,8 @@ p.item {
   margin-left: 2em;
   margin-bottom: 1em;
   border-radius: 6px;
+}
+
+ul li {
+  margin-bottom: 0.75em;
 }

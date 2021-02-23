@@ -4,47 +4,13 @@ title: Home
 icon: child
 permalink: /
 ---
-<div class="ui segment summary">
-    <div class="float-right" id="social-links">
-        <a class="ui button compact big circular icon" title="Email me" href="mailto:{{ site.data.env.email }}" target="_new">
-            <i class="mail outline icon"></i>
-        </a>
-
-        <a class="ui button compact big circular icon" title="GitHub" href="https://github.com/stefano-meschiari" target="_new">
-            <i class="github icon"></i>
-        </a>
-
-        <a class="ui button compact big circular icon" href="https://twitter.com/{{ site.data.env.twitter }}" title="Tweet @exostefanom" target="_new">
-            <i class="twitter icon"></i>
-        </a>
-
-        <a class="ui button compact big circular icon" title="Linkedin" href="https://www.linkedin.com/in/stefano-meschiari-46966242/" target="_new">
-            <i class="linkedin icon"></i>
-        </a>
-    </div>
-    <h1 class="name">Stefano Meschiari, Ph.D.</h1>
-    <h2 class="subtitle">Data Science Technical Lead at Duo Security</h2>
-
-    <hr class="rainbow-divider"></hr>
-
-    <img class="ui right floated image" src="img/stefano.jpg" width="200">
-    <p>Hello! I am a Data Science Technical Leader at <a href="https://duo.com" target="_blank">Duo Security</a> (Cisco
-        Systems). I am passionate about bringing machine learning to practical
-        <a href="https://duo.com/blog/duo-trust-monitor-is-here-to-make-risk-detection-easy"> applications</a> that are
-        genuinely useful and remove friction from people's lives.
-
-    <p>I am also a maker of <a href="projects">open-source scientific tools and games</a> (in various states of
-        un-maintenance), an enthusiast for open data and citizen science, and all-around tech geek.</p>
-    <p>In my past life as an astrophysicist, I discovered new planets and worked on understanding how Tatooine-like
-        planets (planets orbiting binary stars) formed.</p>
-
-</div>
+{% include home/top-blurb.html %}
 <div class="ui stackable two column relaxed grid" style="clear:both">
     <div class="column">
         <div class="ui segment">
             <h3 class="header">
                 Quick stats
-                <a href="resume" class="ui circular compact button float-right" data-tooltip="Always feel free to get in touch!">
+                <a href="resume" class="ui circular compact button float-right" data-content="Feel free to get in touch!">
                     Resume
                     <i class="angle right icon"></i>
                 </a>
@@ -74,7 +40,7 @@ permalink: /
             </h3>
             <div class="ui relaxed list">
                 <div class="ui item">
-                    <i class="top aligned icon">🔬</i>
+                    <i class="top aligned icon">🤖</i>
                     <div class="content">
                         Researching novel ways to apply machine learning algorithms;
                         bridging label-poor setups into classification problems;
@@ -128,37 +94,8 @@ permalink: /
 
         </div>
     </div>
-    <div class="column">
-        <div class="ui segment">
-            <h3 class="header">
-                <a href="projects" class="ui circular compact button float-right">
-                    Projects
-                    <i class="angle right icon"></i>
-                </a>
-                Stuff I've made
-                </h3>
-            <div class="ui items" id="projects">
-                {% for project in site.data.projects %}
-                {% if project.frontpage %}
-                <div class="ui divider"></div>
-                <div class="item">
-                    <a class="ui tiny image {{ project.class }}" href="projects.html#{{ project.anchor }}">
-                        <img src="{{ site.baseurl }}{{ project.img }}" style="border-radius:10px">
-                    </a>
-                    <div class="content">
-                        <a class="header" href="projects.html#{{ project.anchor }}">
-                            {{ project.title }}
-                        </a>
-                        <div class="description">
-                            {{ project.description }}
-                            <p><a href="projects.html#{{ project.anchor }}">Read more...</a>
-                        </div>
-                    </div>
-                </div>
-                {% endif %}
-                {% endfor %}
-            </div>
-        </div>
+
+    {% include home/projects.html %}
 
     </div>
 </div>

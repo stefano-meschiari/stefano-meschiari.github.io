@@ -1,0 +1,31 @@
+<div class="column">
+    <div class="ui segment">
+        <h3 class="header">
+            <a href="projects" class="ui circular compact button float-right">
+                Projects
+                <i class="angle right icon"></i>
+            </a>
+            Stuff I've made
+            </h3>
+        <div class="ui items" id="projects">
+            {% for project in site.data.projects %}
+            {% if project.frontpage %}
+            <div class="ui divider"></div>
+            <div class="item project">
+                <a class="ui tiny image {{ project.class }}" href="projects.html#{{ project.anchor }}">
+                    <img src="{{ site.baseurl }}{{ project.img }}" style="border-radius:10px">
+                </a>
+                <div class="content">
+                    <div class="header">
+                        {{ project.title }}
+                    </div>
+                    <div class="description">
+                        {{ project.description }}
+                        <p><a href="projects.html#{{ project.anchor }}">Read more...</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>

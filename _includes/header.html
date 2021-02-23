@@ -9,24 +9,25 @@
             </a>
             {% endfor %}
     </nav>
-    <button id="menu" class="more" onClick="$('.menu.sidebar').sidebar('toggle')">
-        <i class="sidebar icon"></i> Menu
-    </button>
 </header>
-<div class="ui left vertical menu sidebar">
-    {% for my_page in site.data.sidebar %}
-    <a class="item {% if page.title == my_page.title %}active{% endif %}"
-       href="{% if my_page.external %}{{my_page.url}}{% else %}/{{ my_page.url }}{% endif %}"
-       id="{{my_page.id}}">
-        {{ my_page.title }}
-    </a>
-    {% endfor %}
-</div>
 {% for my_page in site.data.sidebar %}
 {% if page.title == my_page.title %}
 <style>
     a, a:visited {
         color: #{{ my_page.color }};
+    }
+    a:hover {
+        background: #{{ my_page.color }}22;
+        text-decoration: none;
+        padding-left: 3px;
+        margin-left: -3px;
+        padding-right: 3px;
+        margin-right: -3px;
+        border-radius: 3px;
+    }
+
+    .ui.button:hover {
+        background-color: #{{my_page.color}}44;
     }
 </style>
 {% endif %}

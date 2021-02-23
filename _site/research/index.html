@@ -20,11 +20,13 @@
   <link rel="stylesheet" href="/public/semantic/semantic.min.css">
   <link rel="stylesheet" href="/public/semantic/components/accordion.min.css">
   <link rel="stylesheet" href="/public/semantic/components/sidebar.min.css">
+  <link rel="stylesheet" href="/public/semantic/components/popup.min.css">
   <link rel="stylesheet" href="/css/main.css">
   <script type="text/javascript" src="/public/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="/public/semantic/semantic.min.js"></script>
   <script type="text/javascript" src="/public/semantic/components/accordion.min.js"></script>
   <script type="text/javascript" src="/public/semantic/components/sidebar.min.js"></script>
+  <script type="text/javascript" src="/public/semantic/components/popup.min.js"></script>
   <script>
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -72,37 +74,7 @@
             </a>
             
     </nav>
-    <button id="menu" class="more" onclick="$('.menu.sidebar').sidebar('toggle')">
-        <i class="sidebar icon"></i> Menu
-    </button>
 </header>
-<div class="ui left vertical menu sidebar">
-    
-    <a class="item " href="/" id="home">
-        Home
-    </a>
-    
-    <a class="item " href="/resume" id="resume">
-        Resume
-    </a>
-    
-    <a class="item " href="/projects" id="projects">
-        Projects
-    </a>
-    
-    <a class="item " href="https://github.com/stefano-meschiari" id="github">
-        GitHub
-    </a>
-    
-    <a class="item active" href="/research" id="research">
-        Research &amp; Outreach
-    </a>
-    
-    <a class="item " href="/blog" id="blog">
-        Blog
-    </a>
-    
-</div>
 
 
 
@@ -116,6 +88,19 @@
 <style>
     a, a:visited {
         color: #e74c3c;
+    }
+    a:hover {
+        background: #e74c3c22;
+        text-decoration: none;
+        padding-left: 3px;
+        margin-left: -3px;
+        padding-right: 3px;
+        margin-right: -3px;
+        border-radius: 3px;
+    }
+
+    .ui.button:hover {
+        background-color: #e74c3c44;
     }
 </style>
 
