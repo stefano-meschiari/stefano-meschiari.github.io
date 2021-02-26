@@ -261,7 +261,7 @@ Sass-variables template by Bram de Haan (https://github.com/atelierbram/c-tiles1
 Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
 
 */
-a, a:visited { color: #3498db; }
+a, a:visited { color: #3498db; border-radius: 3px; }
 
 p { line-height: 1.6em; }
 
@@ -269,9 +269,7 @@ nav a { font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-ser
 
 #menu { margin-left: 15px; margin-top: 15px; display: none; }
 
-header { background: #1B1C1D; }
-
-#nav { background: #1B1C1D; padding: 0.5rem; padding-left: 2rem; max-width: calc(960px - (30px * 2)); margin: auto; border-bottom: none; }
+#nav { background: #1B1C1D; padding: 0.5rem; margin: auto; border-bottom: none; }
 
 #nav a { color: rgba(255, 255, 255, 0.8); margin: 2px; font-weight: 400; font-size: 1.2rem; border: none; letter-spacing: 0.8px; }
 
@@ -344,5 +342,13 @@ p.item { margin-bottom: 0.4rem; }
 .citations { display: block; float: right; background: #bbb; color: white; font-weight: bold; font-size: 0.8em; padding-left: 6px; padding-right: 6px; margin-left: 2em; margin-bottom: 1em; border-radius: 6px; }
 
 ul li { margin-bottom: 0.75em; }
+
+article.post { margin-top: 3em; margin-bottom: 3em; }
+
+article.post h1 { font-weight: 700; }
+
+article.post img, article.post figure iframe, article.post .embed { border: 1px solid #e5e3e3; display: block; margin: auto; margin-top: 2em; }
+
+article.post .caption { font-style: italic; margin-bottom: 2em; text-align: center; color: #aaa; }
 
 /*# sourceMappingURL=main.css.map */

@@ -27,6 +27,7 @@
   <script type="text/javascript" src="/public/semantic/components/accordion.min.js"></script>
   <script type="text/javascript" src="/public/semantic/components/sidebar.min.js"></script>
   <script type="text/javascript" src="/public/semantic/components/popup.min.js"></script>
+  <script type="text/javascript" src="/public/semantic/components/visibility.min.js"></script>
   <script>
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -41,40 +42,96 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;300;400;700;900&amp;family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+  <script>
+    $(document).ready(function() {
+     $('.main.menu').visibility({
+        type: 'fixed'
+      });
+    })
+  </script>
 </head>
 
 
     <body>
 
-        <header>
-    <nav id="nav" class="ui secondary pointing menu">
-            
-            <a class="page item " style="" href="/" id="home">
-                Home
-            </a>
-            
-            <a class="page item " style="" href="/resume" id="resume">
-                Resume
-            </a>
-            
-            <a class="page item " style="" href="/projects" id="projects">
-                Projects
-            </a>
-            
-            <a class="page item active" style="background:#" href="https://github.com/stefano-meschiari" id="github">
-                GitHub
-            </a>
-            
-            <a class="page item " style="" href="/research" id="research">
-                Research &amp; Outreach
-            </a>
-            
-            <a class="page item " style="" href="/blog" id="blog">
-                Blog
-            </a>
-            
-    </nav>
-</header>
+        <nav id="nav" class="ui main menu">
+    <div class="ui text container">
+        
+        <style>
+            #nav a.home.page.active {
+                background:#3498dbee;
+            }
+            #nav a.home.page.item:hover {
+                background:#3498dbaa;
+            }
+        </style>
+        <a class="page item home " href="/">
+            Home
+        </a>
+        
+        <style>
+            #nav a.resume.page.active {
+                background:#1abc9cee;
+            }
+            #nav a.resume.page.item:hover {
+                background:#1abc9caa;
+            }
+        </style>
+        <a class="page item resume " href="/resume">
+            Resume
+        </a>
+        
+        <style>
+            #nav a.projects.page.active {
+                background:#e67e22ee;
+            }
+            #nav a.projects.page.item:hover {
+                background:#e67e22aa;
+            }
+        </style>
+        <a class="page item projects " href="/projects">
+            Projects
+        </a>
+        
+        <style>
+            #nav a.github.page.active {
+                background:#f1c40fee;
+            }
+            #nav a.github.page.item:hover {
+                background:#f1c40faa;
+            }
+        </style>
+        <a class="page item github active" href="https://github.com/stefano-meschiari">
+            GitHub
+        </a>
+        
+        <style>
+            #nav a.research.page.active {
+                background:#e74c3cee;
+            }
+            #nav a.research.page.item:hover {
+                background:#e74c3caa;
+            }
+        </style>
+        <a class="page item research " href="/research">
+            Research &amp; Outreach
+        </a>
+        
+        <style>
+            #nav a.blog.page.active {
+                background:#e74c3cee;
+            }
+            #nav a.blog.page.item:hover {
+                background:#e74c3caa;
+            }
+        </style>
+        <a class="page item blog " href="/blog">
+            Blog
+        </a>
+        
+        <span></span>
+    </div>
+</nav>
 
 
 
@@ -85,10 +142,10 @@
 
 <style>
     a, a:visited {
-        color: #;
+        color: #f1c40f;
     }
     a:hover {
-        background: #22;
+        background: #f1c40f22;
         text-decoration: none;
         padding-left: 3px;
         margin-left: -3px;
@@ -98,7 +155,7 @@
     }
 
     .ui.button:hover {
-        background-color: #44;
+        background-color: #f1c40f44;
     }
 </style>
 

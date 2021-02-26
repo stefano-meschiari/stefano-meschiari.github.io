@@ -1,15 +1,22 @@
-<header>
-    <nav id="nav" class="ui secondary pointing menu">
-            {% for my_page in site.data.sidebar %}
-            <a class="page item {% if page.title == my_page.title %}active{% endif %}"
-               style="{%if page.title == my_page.title %}background:#{{my_page.color}}{%endif%}"
-               href="{% if my_page.external %}{{my_page.url}}{% else %}/{{ my_page.url }}{% endif %}"
-               id="{{my_page.id}}">
-                {{ my_page.title }}
-            </a>
-            {% endfor %}
-    </nav>
-</header>
+<nav id="nav" class="ui main menu">
+    <div class="ui text container">
+        {% for my_page in site.data.sidebar %}
+        <style>
+            #nav a.{{my_page.id}}.page.active {
+                background:#{{my_page.color}}ee;
+            }
+            #nav a.{{my_page.id}}.page.item:hover {
+                background:#{{my_page.color}}aa;
+            }
+        </style>
+        <a class="page item {{my_page.id}} {% if page.title == my_page.title %}active{% endif %}"
+            href="{% if my_page.external %}{{my_page.url}}{% else %}/{{ my_page.url }}{% endif %}">
+            {{ my_page.title }}
+        </a>
+        {% endfor %}
+        <span></span>
+    </div>
+</nav>
 {% for my_page in site.data.sidebar %}
 {% if page.title == my_page.title %}
 <style>

@@ -17,6 +17,7 @@
   url: https://github.com/stefano-meschiari
   external: true
   id: github
+  color: "f1c40f"
 
 - title: Research & Outreach
   url: research
@@ -26,4 +27,4 @@
 - title: Blog
   url: blog
   id: blog
-  color: "9b59b6"
+  color: "e74c3c"

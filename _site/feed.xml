@@ -6,9 +6,127 @@
 </description>
     <link>http://www.stefanom.io//</link>
     <atom:link href="http://www.stefanom.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 Feb 2021 07:40:52 -0800</pubDate>
-    <lastBuildDate>Tue, 23 Feb 2021 07:40:52 -0800</lastBuildDate>
+    <pubDate>Fri, 26 Feb 2021 14:59:09 -0800</pubDate>
+    <lastBuildDate>Fri, 26 Feb 2021 14:59:09 -0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>Rarity of Jupiter-like planets means planetary systems exactly like ours may be scarce</title>
+        <description>&lt;p&gt;Is our little corner of the galaxy a special place? As of this date, we’ve &lt;a href=&quot;http://exoplanets.org&quot;&gt;discovered more than 1,500 exoplanets&lt;/a&gt;: planets orbiting stars other than our sun. Thousands more will be added to the list in the coming years as we confirm planetary candidates by alternative, independent methods.&lt;/p&gt;
+
+&lt;p&gt;In the hunt for other planets, we’re especially interested in those that might potentially host life. So we focus our modern exoplanet surveys on planets that might be similar to Earth: low-mass, rocky and with just the right temperature to allow for liquid water. But what about the other planets in the solar system? The &lt;a href=&quot;https://en.wikipedia.org/wiki/Copernican_principle&quot;&gt;Copernican principle&lt;/a&gt; – the idea that the Earth and the solar system are not unique or special in the universe – suggests the architecture of our planetary system should be common. But it doesn’t seem to be.
+&lt;img src=&quot;https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/105306/width668/image-20151210-7425-1kd373r.png&quot; alt=&quot;A mass-period diagram. Each dot marks the mass and orbital period of a confirmed exoplanet.&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;caption&quot;&gt;A mass-period diagram. Each dot marks the mass and orbital period of a confirmed exoplanet.&lt;/div&gt;
+
+&lt;p&gt;The figure above, called a &lt;em&gt;mass-period diagram&lt;/em&gt;, provides a visual way to compare the planets of our solar system with those we’ve spotted farther away. It charts the orbital periods (the time it takes for a planet to make one trip around its central star) and the masses of the planets discovered so far, compared with the properties of solar system planets.&lt;/p&gt;
+
+&lt;p&gt;Planets like Earth, Jupiter, Saturn and Uranus occupy “empty” parts of the diagram – we haven’t found other planets with similar masses and orbits so far. At face value, this would indicate that the majority of planetary systems do not resemble our own solar system.&lt;/p&gt;
+
+&lt;p&gt;The solar system lacks close-in planets (planets with orbital periods between a few and a few tens of days) and super-Earths (a class of planets with masses a few times the mass of the Earth often detected in other planetary systems). On the other hand, it does feature several long-period gaseous planets with very nearly circular orbits (Jupiter, Saturn, Uranus and Neptune).&lt;/p&gt;
+
+&lt;p&gt;Part of this difference is due to selection effects: close-in, massive planets are easier to discover than far-out, low-mass planets. In light of this discovery bias, astronomers &lt;a href=&quot;http://aasnova.org/2015/09/25/how-normal-is-our-solar-system/&quot;&gt;Rebecca Martin and Mario Livio&lt;/a&gt; convincingly argue that our solar system is actually &lt;a href=&quot;http://dx.doi.org/10.1088/0004-637X/810/2/105&quot;&gt;more typical than it seems at first glance&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There is a sticking point, however: Jupiter still stands out. It’s an outlier based both on its orbital location (with a corresponding period of about 12 years) and its very-close-to-circular orbit. Understanding whether Jupiter’s relative uniqueness is a real feature, or another product of selection effects, has real implications for our understanding of exoplanets.&lt;/p&gt;
+&lt;figure&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/3afEX8a2jPg?wmode=transparent&amp;amp;start=0&quot; width=&quot;440&quot; height=&quot;260&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;&lt;/figure&gt;
+&lt;div class=&quot;caption&quot;&gt;Jupiter as seen by the Hubble Space Telescope.&lt;/div&gt;
+
+&lt;h2&gt;Throwing its weight around&lt;/h2&gt;
+&lt;p&gt;According to our understanding of how our solar system formed, Jupiter shaped much of the other planets’ early history. Due to its gravity, it influenced the &lt;a href=&quot;http://www.sciencedaily.com/releases/2011/06/110605132437.htm&quot;&gt;formation of Mars&lt;/a&gt; and Saturn. It potentially facilitated the development of life by shielding Earth from cosmic collisions that would have delayed or extinguished it, and by funneling water-rich bodies towards it. And its gravity &lt;a href=&quot;http://doi.org/10.1073/pnas.1423252112&quot;&gt;likely swept the inner solar system of solid debris&lt;/a&gt;. Thanks to this clearing action, Jupiter might have prevented the formation of super-Earth planets with massive atmospheres, thereby ensuring that the inner solar system is populated with small, rocky planets with thin atmospheres.&lt;/p&gt;
+
+&lt;p&gt;Without Jupiter, it looks unlikely that we’d be here. As a consequence, figuring out if Jupiter is a relatively common type of planet might be crucial to understanding whether terrestrial planets with a similar formation environment as Earth are abundant in the galaxy.&lt;/p&gt;
+
+&lt;p&gt;Despite their relative heft, it’s a challenge to discover Jupiter analogs – those planets with periods and masses similar to Jupiter’s. Astronomers typically discover them using an indirect detection technique called the &lt;a href=&quot;https://en.wikipedia.org/wiki/Doppler_spectroscopy&quot;&gt;Doppler radial velocity method&lt;/a&gt;. The gravitational pull of the planet causes tiny shifts in the wavelength of features in the spectrum of the star, in a distinctive, periodic pattern. We can detect these shifts by periodically capturing the star’s light with a telescope and turning it into a spectrum with &lt;a href=&quot;https://www2.keck.hawaii.edu/inst/hires/&quot;&gt;a spectrograph&lt;/a&gt;. This periodic signal, based on a planet’s long orbital period, can require monitoring a star over many years, even decades.&lt;/p&gt;
+&lt;h1&gt;Are Jupiter-like planets rare?&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;http://arxiv.org/abs/1512.00417&quot;&gt;In a recent paper&lt;/a&gt;, Dominick Rowan, a high school senior from New York, and his coauthors (including astronomers from the University of Texas, the University of California at Santa Cruz and me) analyzed the Doppler data for more than 1,100 stars. Each star was observed with the &lt;a href=&quot;http://www.keckobservatory.org/&quot;&gt;Keck Observatory telescope&lt;/a&gt; in Hawaii; many of them had been monitored for a decade or more. To analyze the data, he used the &lt;a href=&quot;https://www.r-project.org&quot;&gt;open-source statistical environment R&lt;/a&gt; together with a freely available application that I developed, called &lt;a href=&quot;http://www.stefanom.org/systemic&quot;&gt;Systemic&lt;/a&gt;. Many universities use an &lt;a href=&quot;http://www.stefanom.org/systemic-live&quot;&gt;online version&lt;/a&gt; to teach how to analyze astronomical data.&lt;/p&gt;
+
+&lt;p&gt;Our team studied the available data for each star and calculated the probability that a Jupiter-like planet could have been missed – either because not enough data are available, or because the data are not of high enough quality. To do this, we simulated hundreds of millions of possible scenarios. Each was created with a computer algorithm and represents a set of alternative possible observations. This procedure makes it possible to infer how many Jupiter analogs (both discovered and undiscovered) orbited the sample of 1,100 stars.
+&lt;img src=&quot;https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/105134/width668/image-20151209-15552-1nqxyfv.png&quot; alt=&quot;Orbit of the newly discovered Jupiter-mass planet orbiting the star HD 32963, compared to the orbits of Earth and Jupiter around the sun.&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;caption&quot;&gt;Orbit of the newly discovered Jupiter-mass planet orbiting the star HD 32963, compared to the orbits of Earth and Jupiter around the Sun.&lt;/div&gt;
+
+&lt;p&gt;While carrying out this analysis, we discovered a &lt;a href=&quot;http://exoplanet.eu/catalog/hd_32963_b/&quot;&gt;new Jupiter-like planet&lt;/a&gt; orbiting HD 32963, which is a star very similar to the sun in terms of age and physical properties. To make this discovery, we analyzed each star with an automated algorithm that tried to uncover periodic signals potentially associated with the presence of a planet.&lt;/p&gt;
+
+&lt;p&gt;We pinpointed the frequency of Jupiter analogs across the survey at approximately 3%. This result is broadly consistent with previous estimates, which were based on a smaller set of stars or a different discovery technique. It greatly strengthens earlier predictions because we took &lt;em&gt;decades&lt;/em&gt; of observations into account in the simulations.&lt;/p&gt;
+
+&lt;p&gt;This result has several consequences. First, the relative rarity of Jupiter-like planets indicates that true solar system analogs should themselves be rare. By extension, given the important role that Jupiter played at all stages of the formation of the solar system, Earth-like habitable planets with similar formation history to our solar system will be rare.&lt;/p&gt;
+
+&lt;p&gt;Finally, it also underscores that Jupiter-like planets do not form as readily around stars as other types of planets do. It could be because not enough solid material is available, or because these gas giants migrate closer to the central stars very efficiently. &lt;a href=&quot;http://astrobites.org/2015/08/18/giant-planets-from-far-out-there/&quot;&gt;Recent planet-formation simulations&lt;/a&gt; tentatively bear out the latter explanation.&lt;/p&gt;
+
+&lt;p&gt;Long-running, ongoing surveys will continue to help us understand the architecture of the outer regions of planetary systems. Programs including the Keck planet search and the &lt;a href=&quot;http://arxiv.org/abs/1512.02965&quot;&gt;McDonald Planet Search&lt;/a&gt; have been accumulating data for decades. Discovering ice giants similar to Uranus and Neptune will be even tougher than tracking down these Jupiter analogs. Because of their long orbital periods (84 and 164 years) and the very small Doppler shifts they induce on their central stars (tens of times smaller than a Jupiter-like planet), the detection of Uranus and Neptune analogs lies far in the future.&lt;/p&gt;
+
+&lt;p&gt;This article was originally published on &lt;a href=&quot;http://theconversation.com&quot;&gt;The Conversation&lt;/a&gt;. Read the &lt;a href=&quot;https://theconversation.com/rarity-of-jupiter-like-planets-means-planetary-systems-exactly-like-ours-may-be-scarce-52116&quot;&gt;original article&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 13 Dec 2015 00:00:00 -0800</pubDate>
+        <link>http://www.stefanom.io//astronomy/2015/12/13/rarity-of-jupiter-like-planets-means-planetary-systems-exactly-like-ours-may-be-scarce.html</link>
+        <guid isPermaLink="true">http://www.stefanom.io//astronomy/2015/12/13/rarity-of-jupiter-like-planets-means-planetary-systems-exactly-like-ours-may-be-scarce.html</guid>
+        
+        <category>citizen_science</category>
+        
+        <category>exoplanets</category>
+        
+        <category>HD32963</category>
+        
+        <category>planet_formation</category>
+        
+        <category>R</category>
+        
+        
+        <category>astronomy</category>
+        
+      </item>
+    
+      <item>
+        <title>Colliding N-body spheres: Particle Mayhem!
+</title>
+        <description>&lt;iframe id=&quot;iframe-nbody&quot; class=&quot;embed&quot; style=&quot;min-width: 100%&quot; src=&quot;http://www.stefanom.org/wgc/test_nbody.html?hide=true&quot; width=&quot;300&quot; height=&quot;700&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;When Giants Collide — WGC for short — is one of the “fun” projects I am working on. Once finished, it will be a small in-browser simulator where you can collide giant planets together (with some degree of realism). You can see my progress on my &lt;a href=&quot;https://github.com/stefano-meschiari/WhenGiantsCollide&quot;&gt;GitHub repo&lt;/a&gt; and the series of &lt;a href=&quot;http://www.stefanom.org/category/when-giants-collide/&quot; target=&quot;_blank&quot;&gt;blog posts under this category.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In this little demo app, you can run an N-body simulation in your browser where you make two spheres made of point masses “collide”. You can tweak various parameters (collision speed,  impact parameter, distance and number of particles) to change the outcome of the simulation.&lt;/p&gt;
+
+&lt;h3&gt;Underneath it all: TreeSPH.js&lt;/h3&gt;
+&lt;p&gt;The app above is powered by the portion of WGC’s code that computes the gravitational force between a set of point particles (&lt;a href=&quot;http://www.scholarpedia.org/article/N-body_simulations_(gravitational)&quot; target=&quot;_blank&quot;&gt;a gravitational N-body system&lt;/a&gt;). The gravitational force is computed using the &lt;a title=&quot;An interactive Barnes-Hut tree&quot; href=&quot;http://www.stefanom.org/bh-tree/&quot; target=&quot;_blank&quot;&gt;Barnes-Hut tree gravity algorithm&lt;/a&gt;, and the coordinates of the points are evolved using a third-order embedded Runge-Kutta algorithm. The code is available in the &lt;a href=&quot;https://github.com/stefano-meschiari/WhenGiantsCollide&quot; target=&quot;_blank&quot;&gt;GitHub repo&lt;/a&gt; for WGC.&lt;/p&gt;
+
+&lt;p&gt;I am now working on writing the hydrodynamical part (via the &lt;a href=&quot;http://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics&quot; target=&quot;_blank&quot;&gt;SPH algorithm&lt;/a&gt;), which will let me simulate the collision between two gaseous spheres. The resulting library will be called &lt;strong&gt;treesph.js&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;treesph.js &lt;/strong&gt;will be an open-source JavaScript library able to power small-scale hydrodynamical simulations — either in the browser (through web workers), or within a JavaScript environment (e.g. Node.js). It comes with:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a library to set up initial equilibrium conditions (e.g. Lane-Emden spheres, or N-body spheres with isotropic velocity dispersion);&lt;/li&gt;
+  &lt;li&gt;a canvas-based library to plot and animate the simulation snapshots;&lt;/li&gt;
+  &lt;li&gt;a fast library for operating on vectors and matrices that minimizes allocations and copying, and other math routines.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Performance notes&lt;/h3&gt;
+&lt;p&gt;While playing with the app, you may be wondering (a) why there is a “buffering” stage before you can see the evolution of the system, and (b) why so few particles?&lt;/p&gt;
+&lt;h4&gt;Buffering: it's all about delayed gratification&lt;/h4&gt;
+&lt;p&gt;The app animates the particle motion at 30 frames per second. This requirement places a hard and fast constraint: if you want to compute the particle motion at each frame request, then the computation must take less than 1/30th of a second, otherwise the webpage will freeze as the JavaScript engine tries to catch up with the accumulated frame requests. For reasonable number of particles (say, 100 or more — see below) and the time steps required by the above app, this requirement is &lt;em&gt;way &lt;/em&gt;overshot.&lt;/p&gt;
+
+&lt;p&gt;This issue can be ameliorated by running the numerical computation in a separate thread (&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers&quot; target=&quot;_blank&quot;&gt;a web worker&lt;/a&gt;), and drawing frames on the main thread as soon as they are computed. This is still not as optimal: while it solves the UI freezing issue, the particle motion will appear very jerky as it will be animated at (typically) less than a frame per second!&lt;/p&gt;
+
+&lt;p&gt;In order to solve this issue, I created a small JavaScript library (&lt;strong&gt;streamingcontroller.js&lt;/strong&gt;; available in the same &lt;a href=&quot;https://github.com/stefano-meschiari/WhenGiantsCollide&quot; target=&quot;_blank&quot;&gt;GitHub repo&lt;/a&gt;, documentation upcoming). &lt;strong&gt;Streamingcontroller.js &lt;/strong&gt;first estimates the expected wall time — the time in seconds — needed to complete the simulation. Then, within the web worker thread, it “buffers” the simulation snapshots by adding them to a pool of snapshots. Once the buffer is big enough that the simulation can be run in real time without hiccups, the library starts streaming the snapshots back to the main thread where the animation is drawn. In the main thread, a second buffer receives the snapshots; the second buffer is then emptied at 30 frames per second.&lt;/p&gt;
+&lt;h4&gt;More particles, pretty please?&lt;/h4&gt;
+&lt;p&gt;The default setting of the app is to animate 250 particles (125 per sphere). Why so few, when typical number of particles quoted for &lt;em&gt;N&lt;/em&gt;-body simulations routinely exceed millions — or &lt;a href=&quot;http://www.mpa-garching.mpg.de/galform/virgo/millennium/index.shtml&quot; target=&quot;_blank&quot;&gt;even billions!&lt;/a&gt; — of particles?&lt;/p&gt;
+
+&lt;p&gt;There are three bottlenecks at work. The first is obvious: the code isn’t fully optimized and profiled yet, and I am certain there is room for improvement. I am writing a small math library of common mathematical routines called &lt;strong&gt;math.js &lt;/strong&gt;(also in the same &lt;a href=&quot;https://github.com/stefano-meschiari/WhenGiantsCollide&quot; target=&quot;_blank&quot;&gt;GitHub repo&lt;/a&gt;) which will be fully optimized for V8.&lt;/p&gt;
+
+&lt;p&gt;The second is also obvious: simulations with lots of particles are usually run at full-speed, on multiple cores, and in the background. These simulations can save their snapshots, to be plotted and animated at the end of the run. An online app (or game) with real-time requirements (or, say, a &amp;lt;1 minute buffering time) doesn’t have this kind of luxury!&lt;/p&gt;
+
+&lt;p&gt;The third is the worst hurdle, and it is inherent to the nature of JavaScript: &lt;a href=&quot;http://sealedabstract.com/rants/why-mobile-web-apps-are-slow/&quot; target=&quot;_blank&quot;&gt;JavaScript is slow&lt;/a&gt;. I am not a JavaScript guru by any means, but I do have a good amount of experience writing performant numerical code in a variety of languages (mostly C). While JavaScript is typically fast enough for most tasks on the web, it is&lt;i&gt; &lt;/i&gt;&lt;strong&gt;slow&lt;/strong&gt; on personal computers and even &lt;strong&gt;slower&lt;/strong&gt; on mobile platforms for physically-motivated, accurate simulations. In its present form, it is not well-suited to run these kinds of numerical tasks as quickly as the underlying hardware allows. Although JavaScript interpreters have been improving by leaps and bounds, and careful code can exploit some of these optimizations, they are hitting a wall of &lt;a href=&quot;http://sealedabstract.com/wp-content/uploads/2013/07/Screen-Shot-2013-07-09-at-3.59.43-PM.png&quot; target=&quot;_blank&quot;&gt;diminishing returns&lt;/a&gt;. Since JavaScript is the only runtime available on browsers, it is the ultimate bottleneck.&lt;/p&gt;
+
+&lt;p&gt;You can check out the other demos using code from WGC in &lt;a href=&quot;http://www.stefanom.org/wgc&quot; target=&quot;_blank&quot;&gt;this webpage&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 Aug 2014 00:00:00 -0700</pubDate>
+        <link>http://www.stefanom.io//astronomy/2014/08/07/colliding-n-body-spheres-particle-mayhem.html</link>
+        <guid isPermaLink="true">http://www.stefanom.io//astronomy/2014/08/07/colliding-n-body-spheres-particle-mayhem.html</guid>
+        
+        <category>visualization</category>
+        
+        <category>when-giants-collide</category>
+        
+        
+        <category>astronomy</category>
+        
+      </item>
     
   </channel>
 </rss>

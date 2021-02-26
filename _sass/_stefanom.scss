@@ -9,6 +9,7 @@ $nav: #1B1C1D;
 
 a, a:visited {
   color: $accent;
+  border-radius: 3px;
 }
 
 p {
@@ -25,15 +26,9 @@ nav a {
   display: none;
 }
 
-header {
-  background: $nav;
-}
-
 #nav {
   background: $nav;
   padding: 0.5rem;
-  padding-left: 2rem;
-  max-width: calc(960px - (30px * 2));
   margin:auto;
   border-bottom:none;
 
@@ -320,4 +315,26 @@ p.item {
 
 ul li {
   margin-bottom: 0.75em;
+}
+
+article.post {
+  margin-top: 3em;
+  margin-bottom: 3em;
+
+  h1 {
+    font-weight: 700;
+  }
+
+  img, figure iframe, .embed {
+    border: 1px solid $divider;
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+  }
+  .caption {
+    font-style: italic;
+    margin-bottom: 2em;
+    text-align:center;
+    color: #aaa;
+  }
 }
