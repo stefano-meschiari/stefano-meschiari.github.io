@@ -6,16 +6,21 @@
 </description>
     <link>http://www.stefanom.io//</link>
     <atom:link href="http://www.stefanom.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 26 Feb 2021 16:40:20 -0800</pubDate>
-    <lastBuildDate>Fri, 26 Feb 2021 16:40:20 -0800</lastBuildDate>
+    <pubDate>Fri, 26 Feb 2021 16:51:38 -0800</pubDate>
+    <lastBuildDate>Fri, 26 Feb 2021 16:51:38 -0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
         <title>Rarity of Jupiter-like planets means planetary systems exactly like ours may be scarce</title>
-        <description>&lt;p&gt;Is our little corner of the galaxy a special place? As of this date, we’ve &lt;a href=&quot;http://exoplanets.org&quot;&gt;discovered more than 1,500 exoplanets&lt;/a&gt;: planets orbiting stars other than our sun. Thousands more will be added to the list in the coming years as we confirm planetary candidates by alternative, independent methods.&lt;/p&gt;
+        <description>&lt;p&gt;[&lt;em&gt;This short article I wrote has been published on &lt;a href=&quot;https://theconversation.com/rarity-of-jupiter-like-planets-means-planetary-systems-exactly-like-ours-may-be-scarce-52116&quot; target=&quot;_blank&quot;&gt;The Conversation&lt;/a&gt;  UK.&lt;/em&gt;]&lt;/p&gt;
 
-&lt;p&gt;In the hunt for other planets, we’re especially interested in those that might potentially host life. So we focus our modern exoplanet surveys on planets that might be similar to Earth: low-mass, rocky and with just the right temperature to allow for liquid water. But what about the other planets in the solar system? The &lt;a href=&quot;https://en.wikipedia.org/wiki/Copernican_principle&quot;&gt;Copernican principle&lt;/a&gt; – the idea that the Earth and the solar system are not unique or special in the universe – suggests the architecture of our planetary system should be common. But it doesn’t seem to be.
-&lt;img src=&quot;https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/105306/width668/image-20151210-7425-1kd373r.png&quot; alt=&quot;A mass-period diagram. Each dot marks the mass and orbital period of a confirmed exoplanet.&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Is our little corner of the galaxy a special place? As of this date, we’ve &lt;a href=&quot;http://exoplanets.org&quot;&gt;discovered more than 1,500 exoplanets&lt;/a&gt;: planets orbiting stars other than our sun. Thousands more will be added to the list in the coming years as we confirm planetary candidates by alternative, independent methods.&lt;/p&gt;
+
+&lt;p&gt;In the hunt for other planets, we’re especially interested in those that might potentially host life. So we focus our modern exoplanet surveys on planets that might be similar to Earth: low-mass, rocky and with just the right temperature to allow for liquid water. But what about the other planets in the solar system? The &lt;a href=&quot;https://en.wikipedia.org/wiki/Copernican_principle&quot;&gt;Copernican principle&lt;/a&gt; – the idea that the Earth and the solar system are not unique or special in the universe – suggests the architecture of our planetary system should be common. But it doesn’t seem to be.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/105306/width668/image-20151210-7425-1kd373r.png&quot; alt=&quot;A mass-period diagram. Each dot marks the mass and orbital period of a confirmed exoplanet.&quot; /&gt;&lt;/p&gt;
 &lt;div class=&quot;caption&quot;&gt;A mass-period diagram. Each dot marks the mass and orbital period of a confirmed exoplanet.&lt;/div&gt;
 
 &lt;p&gt;The figure above, called a &lt;em&gt;mass-period diagram&lt;/em&gt;, provides a visual way to compare the planets of our solar system with those we’ve spotted farther away. It charts the orbital periods (the time it takes for a planet to make one trip around its central star) and the masses of the planets discovered so far, compared with the properties of solar system planets.&lt;/p&gt;
@@ -81,6 +86,7 @@
 
 &lt;p&gt;When Giants Collide — WGC for short — is one of the “fun” projects I am working on. Once finished, it will be a small in-browser simulator where you can collide giant planets together (with some degree of realism). You can see my progress on my &lt;a href=&quot;https://github.com/stefano-meschiari/WhenGiantsCollide&quot;&gt;GitHub repo&lt;/a&gt; and the series of &lt;a href=&quot;http://www.stefanom.org/category/when-giants-collide/&quot; target=&quot;_blank&quot;&gt;blog posts under this category.&lt;/a&gt;&lt;/p&gt;
 
+&lt;!--more--&gt;
 &lt;p&gt;In this little demo app, you can run an N-body simulation in your browser where you make two spheres made of point masses “collide”. You can tweak various parameters (collision speed,  impact parameter, distance and number of particles) to change the outcome of the simulation.&lt;/p&gt;
 
 &lt;h3&gt;Underneath it all: TreeSPH.js&lt;/h3&gt;
@@ -134,6 +140,7 @@
 
 &lt;p&gt;The following is a short article about the &lt;a href=&quot;http://news.ucsc.edu/2014/03/apf-telescope.html&quot; target=&quot;_blank&quot;&gt;Automated Planet Finder&lt;/a&gt;, &lt;a href=&quot;/systemic-live&quot; target=&quot;_blank&quot;&gt;Systemic&lt;/a&gt; and &lt;a href=&quot;/spc&quot; target=&quot;_blank&quot;&gt;Super Planet Crash&lt;/a&gt;. We recently announced the first batch of exoplanets that were discovered in the first few months of science operation of APF. The first two systems (&lt;a href=&quot;http://www.oklo.org/HD141399.pdf&quot; target=&quot;_blank&quot;&gt;HD141399&lt;/a&gt; and &lt;a href=&quot;http://www.oklo.org/GL687.pdf&quot; target=&quot;_blank&quot;&gt;Gliese 687&lt;/a&gt;) have been submitted and will be available on astro-ph shortly.&lt;/p&gt;
 
+&lt;!--more--&gt;
 &lt;h1&gt;Telescope apps help amateurs hunt for exoplanets&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/45886/width668/q5bhnrtr-1396989823.jpg&quot; /&gt;
 &lt;small&gt;&lt;a href=&quot;www.lauriehatch.com&quot; target=&quot;_blank&quot;&gt;Laurie Hatch&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;

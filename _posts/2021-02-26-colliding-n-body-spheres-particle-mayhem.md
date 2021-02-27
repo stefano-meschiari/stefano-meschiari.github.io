@@ -17,6 +17,7 @@ sitemap: false
 
 When Giants Collide — WGC for short — is one of the "fun" projects I am working on. Once finished, it will be a small in-browser simulator where you can collide giant planets together (with some degree of realism). You can see my progress on my <a href="https://github.com/stefano-meschiari/WhenGiantsCollide">GitHub repo</a> and the series of <a href="http://www.stefanom.org/category/when-giants-collide/" target="_blank">blog posts under this category.</a>
 
+<!--more-->
 In this little demo app, you can run an N-body simulation in your browser where you make two spheres made of point masses "collide". You can tweak various parameters (collision speed,  impact parameter, distance and number of particles) to change the outcome of the simulation.
 
 <h3>Underneath it all: TreeSPH.js</h3>

@@ -14,9 +14,14 @@ tags:
   - R
 published: true
 ---
+[<em>This short article I wrote has been published on <a href="https://theconversation.com/rarity-of-jupiter-like-planets-means-planetary-systems-exactly-like-ours-may-be-scarce-52116" target="_blank">The Conversation</a>  UK.</em>]
+
 Is our little corner of the galaxy a special place? As of this date, we’ve <a href="http://exoplanets.org">discovered more than 1,500 exoplanets</a>: planets orbiting stars other than our sun. Thousands more will be added to the list in the coming years as we confirm planetary candidates by alternative, independent methods.
 
 In the hunt for other planets, we’re especially interested in those that might potentially host life. So we focus our modern exoplanet surveys on planets that might be similar to Earth: low-mass, rocky and with just the right temperature to allow for liquid water. But what about the other planets in the solar system? The <a href="https://en.wikipedia.org/wiki/Copernican_principle">Copernican principle</a> – the idea that the Earth and the solar system are not unique or special in the universe – suggests the architecture of our planetary system should be common. But it doesn’t seem to be.
+
+<!--more-->
+
 <img src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/105306/width668/image-20151210-7425-1kd373r.png" alt="A mass-period diagram. Each dot marks the mass and orbital period of a confirmed exoplanet." />
 <div class="caption">A mass-period diagram. Each dot marks the mass and orbital period of a confirmed exoplanet.</div>
 
