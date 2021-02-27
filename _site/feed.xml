@@ -6,8 +6,8 @@
 </description>
     <link>http://www.stefanom.io//</link>
     <atom:link href="http://www.stefanom.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 26 Feb 2021 14:59:09 -0800</pubDate>
-    <lastBuildDate>Fri, 26 Feb 2021 14:59:09 -0800</lastBuildDate>
+    <pubDate>Fri, 26 Feb 2021 16:40:20 -0800</pubDate>
+    <lastBuildDate>Fri, 26 Feb 2021 16:40:20 -0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -122,6 +122,65 @@
         <category>visualization</category>
         
         <category>when-giants-collide</category>
+        
+        
+        <category>astronomy</category>
+        
+      </item>
+    
+      <item>
+        <title>The Automated Planet Finder, Systemic and Super Planet Crash</title>
+        <description>&lt;p&gt;[&lt;em&gt;This short article I wrote has been published on &lt;a href=&quot;https://theconversation.com/telescope-apps-help-amateurs-hunt-for-exoplanets-24925&quot; target=&quot;_blank&quot;&gt;The Conversation&lt;/a&gt;  UK.&lt;/em&gt;]&lt;/p&gt;
+
+&lt;p&gt;The following is a short article about the &lt;a href=&quot;http://news.ucsc.edu/2014/03/apf-telescope.html&quot; target=&quot;_blank&quot;&gt;Automated Planet Finder&lt;/a&gt;, &lt;a href=&quot;/systemic-live&quot; target=&quot;_blank&quot;&gt;Systemic&lt;/a&gt; and &lt;a href=&quot;/spc&quot; target=&quot;_blank&quot;&gt;Super Planet Crash&lt;/a&gt;. We recently announced the first batch of exoplanets that were discovered in the first few months of science operation of APF. The first two systems (&lt;a href=&quot;http://www.oklo.org/HD141399.pdf&quot; target=&quot;_blank&quot;&gt;HD141399&lt;/a&gt; and &lt;a href=&quot;http://www.oklo.org/GL687.pdf&quot; target=&quot;_blank&quot;&gt;Gliese 687&lt;/a&gt;) have been submitted and will be available on astro-ph shortly.&lt;/p&gt;
+
+&lt;h1&gt;Telescope apps help amateurs hunt for exoplanets&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/45886/width668/q5bhnrtr-1396989823.jpg&quot; /&gt;
+&lt;small&gt;&lt;a href=&quot;www.lauriehatch.com&quot; target=&quot;_blank&quot;&gt;Laurie Hatch&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;People around the world are being invited to learn how to hunt for planets, using &lt;a href=&quot;http://mcdonaldobservatory.org/news/releases/2014/04/07&quot;&gt;two new online apps&lt;/a&gt; devised by scientists at the University of Texas at Austin and UC Santa Cruz.&lt;/p&gt;
+
+&lt;p&gt;The apps use data from the &lt;a href=&quot;http://news.ucsc.edu/2014/03/apf-telescope.html&quot;&gt;Automated Planet Finder&lt;/a&gt; (APF), Lick Observatory’s newest telescope. The APF is one of the first &lt;a href=&quot;http://arxiv.org/abs/1402.6684&quot;&gt;robotically operated telescopes&lt;/a&gt; monitoring stars throughout the entire sky. It is optimised for the detection of planets orbiting nearby stars – the so-called exoplanets.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stefanom.org/systemic-live/&quot;&gt;Systemic&lt;/a&gt; is an app that collects observations from APF and other observatories and makes them available to the general public. Anyone can access a simplified interface and follow the steps that astronomers take to tease a planetary signal out of the tiny Doppler shifts collected by the telescope.&lt;/p&gt;
+
+&lt;p&gt;Students and amateurs can learn about the process of scientific discovery from their own web browsers, and even conduct their own analysis of the data to validate planet discoveries.&lt;/p&gt;
+
+&lt;p&gt;The second app, &lt;a href=&quot;http://www.stefanom.org/spc&quot;&gt;SuperPlanetCrash&lt;/a&gt;, is a simple but addictive game that animates the orbits of planetary systems as a “digital orrery”. Users can play for points and create their own planetary systems, which often end up teetering towards instabilities that eject planets away from their parent stars.&lt;/p&gt;
+&lt;h2&gt;First catch&lt;/h2&gt;
+&lt;p&gt;Despite only being in operation for a few months, APF has already been used to discover new planetary systems.&lt;/p&gt;
+
+&lt;p&gt;Night after night, the telescope autonomously selects a list of interesting target stars, based on their position in the sky and observing conditions. The telescope collects light from each target star. The light is then split into a rainbow of colours, called a spectrum. Superimposed on the spectrum is a pattern of dark features, called absorption lines, which is unique to the chemical makeup of the star.&lt;/p&gt;
+
+&lt;p&gt;When a planet orbits one of the target stars, its gravitational pull on the star causes the absorption lines to shift back and forth. &lt;a href=&quot;https://www.youtube.com/watch?v=ElU7r4AwUug&quot;&gt;Astronomers can then interpret&lt;/a&gt; the amplitude and periodicity of these shifts to indirectly work out the orbit and the mass of each planet.&lt;/p&gt;
+
+&lt;p&gt;This method of detecting exoplanets is dubbed the Doppler (or Radial Velocity) technique, named after the physical effect causing the shift of the absorption lines. The Doppler technique has been extremely productive over the past two decades, leading to the discovery of more than 400 planet candidates orbiting nearby stars – including the first exoplanet orbiting a star similar to our own Sun, &lt;a href=&quot;http://www.bbc.co.uk/science/space/universe/key_places/51_pegasi&quot;&gt;51 Pegasi&lt;/a&gt;. To conclusively detect a planetary candidate, each star has to be observed for long stretches of time (months to years) in order to rule out other possible explanations.&lt;/p&gt;
+
+&lt;p&gt;The APF has now found two new planetary systems surrounding the stars HD141399 and Gliese 687.&lt;/p&gt;
+
+&lt;p&gt;HD141399 hosts four giant, gaseous planets of comparable size to Jupiter. The orbits of the innermost three giant planets are dramatically more compact than the giant planets in our Solar System (Jupiter, Saturn, Uranus and Neptune).&lt;/p&gt;
+
+&lt;p&gt;Gliese 687 is a small, red star hosting a Neptune-mass planet orbiting very close to the star: it only takes about 40 days for the planet to complete a full revolution around the star.&lt;/p&gt;
+
+&lt;p&gt;Team leader Steve Vogt of the University of California, Santa Cruz has dubbed both of these almost “garden variety” planetary systems, and indeed, they are quite similar to some of the systems discovered over the last few years. However, what look like distinctly unglamorous planetary systems now can still pose a puzzle to scientists.&lt;/p&gt;
+&lt;h2&gt;The new normal&lt;/h2&gt;
+&lt;p&gt;The planetary systems discovered so far are typically very different from our own solar system. More than half of the nearby stars are thought to be accompanied by Neptune-mass or smaller planets, many orbiting closer than Mercury is to the Sun. In our solar system, on the other hand, there is a very clear demarcation between small, rocky planets close to the Sun (from Mercury to Mars) and giant planets far from the Sun (from Jupiter to Neptune). This perhaps suggests that planetary systems like the one we live in are an uncommon outcome of the process of planet formation.&lt;/p&gt;
+
+&lt;p&gt;Only further discoveries can clarify whether planetary systems architected like our own are as uncommon as they appear to be. These observations will need to span many years of careful collection of Doppler shifts. Since the APF facility is primarily dedicated to Doppler observations, it is expected to make key contributions to exoplanetary science.&lt;/p&gt;
+
+&lt;p&gt;The two apps produced by the APF team make amateur scientists part of the hunt. These applications join the nascent movement of “citizen science”, which enable the general public to understand and even contribute to scientific research, either by lending a hand in &lt;a href=&quot;http://www.planethunters.org&quot;&gt;analyzing massive sets of scientific data&lt;/a&gt; or by &lt;a href=&quot;http://www.milkywayproject.org&quot;&gt;flagging interesting datasets&lt;/a&gt; that warrant further collection of data.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;The Conversation&quot; height=&quot;1&quot; src=&quot;https://counter.theconversation.edu.au/content/24925/count.gif&quot; width=&quot;1&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 16 Apr 2014 00:00:00 -0700</pubDate>
+        <link>http://www.stefanom.io//astronomy/2014/04/16/the-automated-planet-finder-systemic-and-super-planet-crash.html</link>
+        <guid isPermaLink="true">http://www.stefanom.io//astronomy/2014/04/16/the-automated-planet-finder-systemic-and-super-planet-crash.html</guid>
+        
+        <category>systemic</category>
+        
+        <category>spc</category>
+        
+        <category>telescopes</category>
         
         
         <category>astronomy</category>

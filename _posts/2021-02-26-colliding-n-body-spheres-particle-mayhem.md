@@ -4,7 +4,7 @@ title: |
   Colliding N-body spheres: Particle Mayhem!
 author: Stefano Meschiari
 date: 2014-08-07
-description:
+description: Having fun with physics simulations in the browser
 image:
 category: astronomy
 tags:
