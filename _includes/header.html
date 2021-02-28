@@ -1,15 +1,8 @@
 <nav id="nav" class="ui main menu">
     <div class="ui text container">
+        <span></span>
         {% for my_page in site.data.sidebar %}
-        <style>
-            #nav a.{{my_page.id}}.page.active {
-                background:#{{my_page.color}}ee;
-            }
-            #nav a.{{my_page.id}}.page.item:hover {
-                background:#{{my_page.color}}aa;
-            }
-        </style>
-        <a class="page item {{my_page.id}} {% if page.title == my_page.title %}active{% endif %}"
+        <a class="page item {{my_page.id}}"
             href="{% if my_page.external %}{{my_page.url}}{% else %}/{{ my_page.url }}{% endif %}">
             {{ my_page.title }}
         </a>
@@ -17,8 +10,9 @@
         <span></span>
     </div>
 </nav>
+
 {% for my_page in site.data.sidebar %}
-{% if page.title == my_page.title %}
+{% if page.title == my_page.title or (my_page.id == "blog" and page.category) %}
 <style>
     a, a:visited {
         color: #{{ my_page.color }};
@@ -35,6 +29,13 @@
 
     .ui.button:hover {
         background-color: #{{my_page.color}}44;
+    }
+
+    #nav a.{{my_page.id}}.page {
+        background:#{{my_page.color}}ee;
+    }
+    #nav a.{{my_page.id}}.page.item:hover {
+        background:#{{my_page.color}}aa;
     }
 </style>
 {% endif %}

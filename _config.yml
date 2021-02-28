@@ -10,6 +10,7 @@ github_username:  stefano-meschiari
 
 # Build settings
 markdown: kramdown
+mathjax: true
 exclude:
   - public/node_modules
 

@@ -261,6 +261,8 @@ Sass-variables template by Bram de Haan (https://github.com/atelierbram/c-tiles1
 Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
 
 */
+html { font-size: 16px; }
+
 a, a:visited { color: #3498db; border-radius: 3px; }
 
 p { line-height: 1.6em; }
@@ -271,11 +273,13 @@ nav a { font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-ser
 
 #nav { background: #1B1C1D; padding: 0.5rem; margin: auto; border-bottom: none; }
 
-#nav a { color: rgba(255, 255, 255, 0.8); margin: 2px; font-weight: 400; font-size: 1.2rem; border: none; letter-spacing: 0.8px; }
+#nav a { color: rgba(255, 255, 255, 0.8); margin: 2px; font-weight: 400; border: none; letter-spacing: 0.8px; font-size: 14px; font-weight: 700; }
 
 #nav a.active { color: white; border: none; background: rgba(255, 255, 255, 0.2); text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7); font-weight: 900; }
 
 #nav a:hover { border: none; box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1); background: rgba(255, 255, 255, 0.1); }
+
+#nav .container { width: initial; }
 
 @media screen and (max-width: 750px) { #menu { display: inline-block; } #nav a { font-size: 1rem; padding-left: 10px; padding-right: 10px; padding-top: 7px; padding-bottom: 7px; } .summary { text-align: center; } .summary .image { display: inline !important; margin-right: 0px !important; float: initial !important; } .summary #social-links { text-align: center; float: initial; margin-bottom: 1rem; } .summary p { text-align: initial; } }
 
@@ -343,12 +347,16 @@ p.item { margin-bottom: 0.4rem; }
 
 ul li { margin-bottom: 0.75em; }
 
-article.post { margin-top: 3em; margin-bottom: 3em; }
+article #blog .post { margin-top: 3em; margin-bottom: 3em; }
 
-article.post h1 { font-weight: 700; }
+article #blog .post h1 { font-weight: 700; }
 
-article.post img, article.post figure iframe, article.post .embed { border: 1px solid #e5e3e3; display: block; margin: auto; margin-top: 2em; }
+article #blog .post img, article #blog .post figure iframe, article #blog .post .embed { border: 1px solid #e5e3e3; display: block; margin: auto; margin-top: 2em; margin-bottom: 2em; }
 
-article.post .caption { font-style: italic; margin-bottom: 2em; text-align: center; color: #aaa; }
+article #blog .post .post-description { font-style: italic; }
+
+article #blog .post .caption { font-style: italic; margin-bottom: 2em; text-align: center; color: #aaa; }
+
+article #blog .post .with-tooltip { border-bottom: 1px dotted #aaa; }
 
 /*# sourceMappingURL=main.css.map */

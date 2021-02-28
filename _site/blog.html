@@ -28,15 +28,11 @@
   <script type="text/javascript" src="/public/semantic/components/sidebar.min.js"></script>
   <script type="text/javascript" src="/public/semantic/components/popup.min.js"></script>
   <script type="text/javascript" src="/public/semantic/components/visibility.min.js"></script>
-  <script>
-   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-   ga('create', 'UA-47960829-8', 'auto');
-                  ga('send', 'pageview');
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
+
   <link rel="canonical" href="http://www.stefanom.io//blog.html">
   <link rel="alternate" type="application/rss+xml" title="Stefano Meschiari" href="http://www.stefanom.io//feed.xml">
 
@@ -48,6 +44,11 @@
         type: 'fixed'
       });
     })
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
   </script>
 </head>
 
@@ -56,82 +57,36 @@
 
         <nav id="nav" class="ui main menu">
     <div class="ui text container">
+        <span></span>
         
-        <style>
-            #nav a.home.page.active {
-                background:#3498dbee;
-            }
-            #nav a.home.page.item:hover {
-                background:#3498dbaa;
-            }
-        </style>
-        <a class="page item home " href="/">
+        <a class="page item home" href="/">
             Home
         </a>
         
-        <style>
-            #nav a.resume.page.active {
-                background:#1abc9cee;
-            }
-            #nav a.resume.page.item:hover {
-                background:#1abc9caa;
-            }
-        </style>
-        <a class="page item resume " href="/resume">
+        <a class="page item resume" href="/resume">
             Resume
         </a>
         
-        <style>
-            #nav a.projects.page.active {
-                background:#e67e22ee;
-            }
-            #nav a.projects.page.item:hover {
-                background:#e67e22aa;
-            }
-        </style>
-        <a class="page item projects " href="/projects">
+        <a class="page item projects" href="/projects">
             Projects
         </a>
         
-        <style>
-            #nav a.github.page.active {
-                background:#f1c40fee;
-            }
-            #nav a.github.page.item:hover {
-                background:#f1c40faa;
-            }
-        </style>
-        <a class="page item github " href="https://github.com/stefano-meschiari">
+        <a class="page item github" href="https://github.com/stefano-meschiari">
             GitHub
         </a>
         
-        <style>
-            #nav a.research.page.active {
-                background:#e74c3cee;
-            }
-            #nav a.research.page.item:hover {
-                background:#e74c3caa;
-            }
-        </style>
-        <a class="page item research " href="/research">
+        <a class="page item research" href="/research">
             Research &amp; Outreach
         </a>
         
-        <style>
-            #nav a.blog.page.active {
-                background:#e74c3cee;
-            }
-            #nav a.blog.page.item:hover {
-                background:#e74c3caa;
-            }
-        </style>
-        <a class="page item blog active" href="/blog">
+        <a class="page item blog" href="/blog">
             Blog
         </a>
         
         <span></span>
     </div>
 </nav>
+
 
 
 
@@ -161,6 +116,13 @@
     .ui.button:hover {
         background-color: #e74c3c44;
     }
+
+    #nav a.blog.page {
+        background:#e74c3cee;
+    }
+    #nav a.blog.page.item:hover {
+        background:#e74c3caa;
+    }
 </style>
 
 
@@ -173,7 +135,37 @@
             
 <article class="post">
     <header class="post-header">
-        <h1 class="title"><a href="/astronomy/2015/12/13/rarity-of-jupiter-like-planets-means-planetary-systems-exactly-like-ours-may-be-scarce.html">Rarity of Jupiter-like planets means planetary systems exactly like ours may be scarce</a></h1>
+        <p class="post-meta">
+            <time datetime="">
+                Feb 25, 2021
+            </time>
+            
+            • Stefano Meschiari
+            
+        </p>
+        <h1 class="title"><a href="/notes/2021/02/25/monitoring-concept-drift-in-absence-of-labels.html">Concept Drift</a></h1>
+    </header>
+
+    <p class="excerpt">
+    </p>
+<p>It’s very rare for both the underlying generative processes that produce the <span class="with-tooltip" data-tooltip="server accesses, yearly sales, movie ratings, ...">raw data</span>, and the <span class="with-tooltip" data-tooltip="APIs, software, cloud services, ...">systems</span> we use to measure, transform, and store that raw data, to be static and unchanging. More commonly, they evolve: distributions shift, relationships and constraints between the different dimensions of the data drift and break, and assumptions about the semantics of certain attributes cease to be valid. Those shifts can happen on different timescales, and sometimes in abrupt ways.</p>
+
+<p>This can have a profound effect on machine learning models. In the best case scenario, predictive performance might be degraded; a monitoring component might be able to detect this regression, attribute it to a specific root cause, and trigger a retrain using a different dataset. In the worst case, it will serve catastrophically non-sensical results.</p>
+
+<h2 id="what-is-concept-drift">What is concept drift?</h2>
+<p><strong>Concept drift</strong> is a shift in the relationship between covariates ($X$) and the target variable ($y$). There is concept drift when the joint distribution $p(X, y)$ is changing (therefore, it also encompasses data drift – changing $p(X)$ – and label shift – changing $p(y)$).</p>
+
+<p>The “concept” in the name is the latent <em>context</em> that defined that relationship between $X$ and $y$. Concept drift might cover both a slow trend, where $p(X, y)$ might evolve over a long timescale, and situations where the data changed abruptly due to discontinuous changes in the data generation mechanism.</p>
+
+<p>In a <em>supervised</em> domain (where the label $y$ is known), concept drift typically manifests itself in reduced predictive performance. In an <em>unsupervised</em> domain (where the labels are not known, or only a small subset is known, or they are only captured after substantial latency), even <em>recognizing</em> this problem is more challenging. In the unsupervised domain, the only observables are the covariates; since $y$ is latent, any concurrent shift in the relationship of the covariates with the notion of anomaly will need to be reduced to changes in $p(X)$ set, or induced via external knowledge.</p>
+
+    
+    <a class="ui button" href="/notes/2021/02/25/monitoring-concept-drift-in-absence-of-labels.html">Continue reading</a>
+</article>
+<div class="ui divider"></div>
+
+<article class="post">
+    <header class="post-header">
         <p class="post-meta">
             <time datetime="">
                 Dec 13, 2015
@@ -182,6 +174,7 @@
             • Stefano Meschiari
             
         </p>
+        <h1 class="title"><a href="/astronomy/2015/12/13/rarity-of-jupiter-like-planets-means-planetary-systems-exactly-like-ours-may-be-scarce.html">Rarity of Jupiter-like planets means planetary systems exactly like ours may be scarce</a></h1>
     </header>
 
     <p class="excerpt">
@@ -200,8 +193,31 @@
 
 <article class="post">
     <header class="post-header">
-        <h1 class="title"><a href="/astronomy/2014/08/07/colliding-n-body-spheres-particle-mayhem.html">Colliding N-body spheres: Particle Mayhem!
-</a></h1>
+        <p class="post-meta">
+            <time datetime="">
+                Feb 15, 2015
+            </time>
+            
+            • Stefano Meschiari
+            
+        </p>
+        <h1 class="title"><a href="/astronomy/2015/02/15/astrotrends-weasel-words.html">AstroTRENDS: Weasel words</a></h1>
+    </header>
+
+    <p class="excerpt">
+    </p>
+<p><img class=" wp-image-1234 aligncenter" alt="Credit: Cliff" src="/img/blog/weasel.jpg">
+I added a bunch of new keywords to <a title="AstroTRENDS: A new tool to track astronomy topics in the literature" href="http://www.stefanom.org/astrotrends-a-new-tool-to-track-astronomy-topics-in-the-literature/">AstroTRENDS</a>, mostly suggested by friends and people in the community who had read my Facebook post.</p>
+
+<p>A thought I had yesterday is the following: has the astronomical literature become more speculative, and perhaps less committed to audacious claims, in recent times? It is difficult to test this hypothesis   by merely querying ADS for abstract keywords. It would certainly be better served by a <a href="http://en.wikipedia.org/wiki/Natural_language_processing" target="_blank"><em>natural-language processing</em></a> analysis of the full text, although this is just my uninformed speculation.</p>
+
+    
+    <a class="ui button" href="/astronomy/2015/02/15/astrotrends-weasel-words.html">Continue reading</a>
+</article>
+<div class="ui divider"></div>
+
+<article class="post">
+    <header class="post-header">
         <p class="post-meta">
             <time datetime="">
                 Aug 7, 2014
@@ -210,6 +226,8 @@
             • Stefano Meschiari
             
         </p>
+        <h1 class="title"><a href="/astronomy/2014/08/07/colliding-n-body-spheres-particle-mayhem.html">Colliding N-body spheres: Particle Mayhem!
+</a></h1>
     </header>
 
     <p class="excerpt">
@@ -226,7 +244,6 @@
 
 <article class="post">
     <header class="post-header">
-        <h1 class="title"><a href="/astronomy/2014/04/16/the-automated-planet-finder-systemic-and-super-planet-crash.html">The Automated Planet Finder, Systemic and Super Planet Crash</a></h1>
         <p class="post-meta">
             <time datetime="">
                 Apr 16, 2014
@@ -235,6 +252,7 @@
             • Stefano Meschiari
             
         </p>
+        <h1 class="title"><a href="/astronomy/2014/04/16/the-automated-planet-finder-systemic-and-super-planet-crash.html">The Automated Planet Finder, Systemic and Super Planet Crash</a></h1>
     </header>
 
     <p class="excerpt">

@@ -7,6 +7,10 @@ $accent-shadow-small: 0px 2px 3px rgba(0, 0, 0, 0.2);
 
 $nav: #1B1C1D;
 
+html {
+  font-size: 16px;
+}
+
 a, a:visited {
   color: $accent;
   border-radius: 3px;
@@ -36,9 +40,10 @@ nav a {
     color: rgba(255, 255, 255, 0.8);
     margin: 2px;
     font-weight: 400;
-    font-size: 1.2rem;
     border: none;
     letter-spacing: 0.8px;
+    font-size: 14px;
+    font-weight: 700;
   }
 
   a.active {
@@ -53,6 +58,10 @@ nav a {
     border: none;
     box-shadow: $accent-shadow;
     background: rgba(255, 255, 255, 0.1);
+  }
+
+  .container {
+    width: initial;
   }
 }
 
@@ -317,7 +326,7 @@ ul li {
   margin-bottom: 0.75em;
 }
 
-article.post {
+article #blog .post {
   margin-top: 3em;
   margin-bottom: 3em;
 
@@ -330,11 +339,21 @@ article.post {
     display: block;
     margin: auto;
     margin-top: 2em;
+    margin-bottom: 2em;
   }
+
+  .post-description {
+    font-style: italic;
+  }
+
   .caption {
     font-style: italic;
     margin-bottom: 2em;
     text-align:center;
     color: #aaa;
+  }
+
+  .with-tooltip {
+    border-bottom: 1px dotted #aaa;
   }
 }

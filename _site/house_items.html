@@ -28,15 +28,11 @@
   <script type="text/javascript" src="/public/semantic/components/sidebar.min.js"></script>
   <script type="text/javascript" src="/public/semantic/components/popup.min.js"></script>
   <script type="text/javascript" src="/public/semantic/components/visibility.min.js"></script>
-  <script>
-   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-   ga('create', 'UA-47960829-8', 'auto');
-                  ga('send', 'pageview');
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
+
   <link rel="canonical" href="http://www.stefanom.io//house_items">
   <link rel="alternate" type="application/rss+xml" title="Stefano Meschiari" href="http://www.stefanom.io//feed.xml">
 
@@ -48,6 +44,11 @@
         type: 'fixed'
       });
     })
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
   </script>
 </head>
 
@@ -56,82 +57,36 @@
 
         <nav id="nav" class="ui main menu">
     <div class="ui text container">
+        <span></span>
         
-        <style>
-            #nav a.home.page.active {
-                background:#3498dbee;
-            }
-            #nav a.home.page.item:hover {
-                background:#3498dbaa;
-            }
-        </style>
-        <a class="page item home " href="/">
+        <a class="page item home" href="/">
             Home
         </a>
         
-        <style>
-            #nav a.resume.page.active {
-                background:#1abc9cee;
-            }
-            #nav a.resume.page.item:hover {
-                background:#1abc9caa;
-            }
-        </style>
-        <a class="page item resume " href="/resume">
+        <a class="page item resume" href="/resume">
             Resume
         </a>
         
-        <style>
-            #nav a.projects.page.active {
-                background:#e67e22ee;
-            }
-            #nav a.projects.page.item:hover {
-                background:#e67e22aa;
-            }
-        </style>
-        <a class="page item projects " href="/projects">
+        <a class="page item projects" href="/projects">
             Projects
         </a>
         
-        <style>
-            #nav a.github.page.active {
-                background:#f1c40fee;
-            }
-            #nav a.github.page.item:hover {
-                background:#f1c40faa;
-            }
-        </style>
-        <a class="page item github " href="https://github.com/stefano-meschiari">
+        <a class="page item github" href="https://github.com/stefano-meschiari">
             GitHub
         </a>
         
-        <style>
-            #nav a.research.page.active {
-                background:#e74c3cee;
-            }
-            #nav a.research.page.item:hover {
-                background:#e74c3caa;
-            }
-        </style>
-        <a class="page item research " href="/research">
+        <a class="page item research" href="/research">
             Research &amp; Outreach
         </a>
         
-        <style>
-            #nav a.blog.page.active {
-                background:#e74c3cee;
-            }
-            #nav a.blog.page.item:hover {
-                background:#e74c3caa;
-            }
-        </style>
-        <a class="page item blog " href="/blog">
+        <a class="page item blog" href="/blog">
             Blog
         </a>
         
         <span></span>
     </div>
 </nav>
+
 
 
 

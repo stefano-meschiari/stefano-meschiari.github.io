@@ -2,7 +2,7 @@
 layout: post
 title: Rarity of Jupiter-like planets means planetary systems exactly like ours may
   be scarce
-description: I teamed up with a very, very smart high school student
+description: That time I teamed up with a very, very smart high school student.
 date: 2015-12-13
 author: Stefano Meschiari
 category: astronomy
