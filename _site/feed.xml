@@ -6,8 +6,8 @@
 </description>
     <link>http://www.stefanom.io//</link>
     <atom:link href="http://www.stefanom.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Feb 2021 10:38:41 -0800</pubDate>
-    <lastBuildDate>Sat, 27 Feb 2021 10:38:41 -0800</lastBuildDate>
+    <pubDate>Mon, 01 Mar 2021 16:09:42 -0800</pubDate>
+    <lastBuildDate>Mon, 01 Mar 2021 16:09:42 -0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -17,7 +17,7 @@
 &lt;p&gt;This can have a profound effect on machine learning models. In the best case scenario, predictive performance might be degraded; a monitoring component might be able to detect this regression, attribute it to a specific root cause, and trigger a retrain using a different dataset. In the worst case, it will serve catastrophically non-sensical results.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-is-concept-drift&quot;&gt;What is concept drift?&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Concept drift&lt;/strong&gt; is a shift in the relationship between covariates ($X$) and the target variable ($y$). There is concept drift when the joint distribution $p(X, y)$ is changing (therefore, it also encompasses data drift – changing $p(X)$ – and label shift – changing $p(y)$).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Concept drift&lt;/strong&gt; is a shift in the mutual relationship between covariates ($X$) and the target variable ($y$) being modeled. Concept drift happens when the &lt;em&gt;joint distribution&lt;/em&gt; $p(X, y)$ of the test dataset changed compared to a reference dataset. Therefore, it also encompasses &lt;span data-tooltip=&quot;i.e. changing p(X)&quot;&gt;data drift&lt;/span&gt; and &lt;span data-tooltip=&quot;i.e. changing p(y)&quot;&gt;label shift&lt;/span&gt;.&lt;/p&gt;
 
 &lt;p&gt;The “concept” in the name is the latent &lt;em&gt;context&lt;/em&gt; that defined that relationship between $X$ and $y$. Concept drift might cover both a slow trend, where $p(X, y)$ might evolve over a long timescale, and situations where the data changed abruptly due to discontinuous changes in the data generation mechanism.&lt;/p&gt;
 
@@ -143,7 +143,10 @@ I added a bunch of new keywords to &lt;a title=&quot;AstroTRENDS: A new tool to 
       <item>
         <title>Colliding N-body spheres: Particle Mayhem!
 </title>
-        <description>&lt;iframe id=&quot;iframe-nbody&quot; class=&quot;embed&quot; style=&quot;min-width: 100%&quot; src=&quot;http://www.stefanom.org/wgc/test_nbody.html?hide=true&quot; width=&quot;300&quot; height=&quot;700&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;http://www.stefanom.org/wgc/test_nbody.html&quot; class=&quot;ui fluid button&quot;&gt;
+&lt;i class=&quot;play icon&quot;&gt;&lt;/i&gt;
+Play
+&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;When Giants Collide — WGC for short — is one of the “fun” projects I am working on. Once finished, it will be a small in-browser simulator where you can collide giant planets together (with some degree of realism). You can see my progress on my &lt;a href=&quot;https://github.com/stefano-meschiari/WhenGiantsCollide&quot;&gt;GitHub repo&lt;/a&gt; and the series of &lt;a href=&quot;http://www.stefanom.org/category/when-giants-collide/&quot; target=&quot;_blank&quot;&gt;blog posts under this category.&lt;/a&gt;&lt;/p&gt;
 

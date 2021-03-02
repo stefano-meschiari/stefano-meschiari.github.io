@@ -357,6 +357,6 @@ article #blog .post .post-description { font-style: italic; }
 
 article #blog .post .caption { font-style: italic; margin-bottom: 2em; text-align: center; color: #aaa; }
 
-article #blog .post .with-tooltip { border-bottom: 1px dotted #aaa; }
+article #blog .post span[data-tooltip] { border-bottom: 1px dotted #aaa; }
 
 /*# sourceMappingURL=main.css.map */

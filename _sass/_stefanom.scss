@@ -353,7 +353,7 @@ article #blog .post {
     color: #aaa;
   }
 
-  .with-tooltip {
+  span[data-tooltip] {
     border-bottom: 1px dotted #aaa;
   }
 }

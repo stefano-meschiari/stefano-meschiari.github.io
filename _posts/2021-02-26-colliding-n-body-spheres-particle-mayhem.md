@@ -13,7 +13,10 @@ tags:
 published: true
 sitemap: false
 ---
-<iframe id="iframe-nbody" class="embed" style="min-width: 100%" src="http://www.stefanom.org/wgc/test_nbody.html?hide=true" width="300" height="700" scrolling="no"></iframe>
+<a href="http://www.stefanom.org/wgc/test_nbody.html" class="ui fluid button">
+<i class="play icon"></i>
+Play
+</a>
 
 When Giants Collide — WGC for short — is one of the "fun" projects I am working on. Once finished, it will be a small in-browser simulator where you can collide giant planets together (with some degree of realism). You can see my progress on my <a href="https://github.com/stefano-meschiari/WhenGiantsCollide">GitHub repo</a> and the series of <a href="http://www.stefanom.org/category/when-giants-collide/" target="_blank">blog posts under this category.</a>
 
