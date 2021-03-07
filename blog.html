@@ -17,6 +17,10 @@ icon: edit
         <h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
     </header>
 
+    {% if post.splash %}
+    <img src="/img/blog/{{post.splash}}" alt="Splash image for post">
+    {% endif %}
+
     <p class="excerpt">
     {{ post.excerpt }}
     </p>

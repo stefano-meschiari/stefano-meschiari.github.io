@@ -135,24 +135,22 @@
             • Stefano Meschiari
             
         </p>
-        <h1 class="title"><a href="/notes/2021/02/25/monitoring-concept-drift-in-absence-of-labels.html">Concept Drift</a></h1>
+        <h1 class="title"><a href="/notes/2021/02/25/concept_drift.html">Concept Drift</a></h1>
     </header>
+
+    
+    <img src="/img/blog/concept_drift/splash.png" alt="Splash image for post">
+    
 
     <p class="excerpt">
     </p>
-<p>It’s very rare for both the underlying generative processes that produce the <span class="with-tooltip" data-tooltip="server accesses, yearly sales, movie ratings, ...">raw data</span>, and the <span class="with-tooltip" data-tooltip="APIs, software, cloud services, ...">systems</span> we use to measure, transform, and store that raw data, to be static and unchanging. More commonly, they evolve: distributions shift, relationships and constraints between the different dimensions of the data drift and break, and assumptions about the semantics of certain attributes cease to be valid. Those shifts can happen on different timescales, and sometimes in abrupt ways.</p>
+<p>It’s very rare for both the underlying generative processes that produce the <span class="with-tooltip" data-tooltip="server accesses, yearly sales, movie ratings, ...">raw data</span>, and the <span class="with-tooltip" data-tooltip="APIs, software, cloud services, ...">systems</span> we use to measure, transform, and store that raw data, to be static and unchanging. More commonly, they evolve: distributions shift, relationships and constraints between the different dimensions of the data drift and break, data stops being available, and assumptions about the semantics of certain attributes cease to be valid. Multiple of those shifts can happen on different timescales, and sometimes in abrupt ways.</p>
 
-<p>This can have a profound effect on machine learning models. In the best case scenario, predictive performance might be degraded; a monitoring component might be able to detect this regression, attribute it to a specific root cause, and trigger a retrain using a different dataset. In the worst case, it will serve catastrophically non-sensical results.</p>
+<p>This can have a profound effect on machine learning models. An underlying assumption of machine learning models is that the state of the world observed at training time is representative of the environment and time at which the model is deployed. When that assumption is invalid, <em>in the best case scenario</em>, predictive performance might be degraded; a monitoring component might be able to detect this regression, attribute it to a specific root cause, and trigger a retrain using a different dataset. In the worst case, it will serve catastrophically non-sensical results.</p>
 
-<h2 id="what-is-concept-drift">What is concept drift?</h2>
-<p><strong>Concept drift</strong> is a shift in the mutual relationship between covariates ($X$) and the target variable ($y$) being modeled. Concept drift happens when the <em>joint distribution</em> $p(X, y)$ of the test dataset changed compared to a reference dataset. Therefore, it also encompasses <span data-tooltip="i.e. changing p(X)">data drift</span> and <span data-tooltip="i.e. changing p(y)">label shift</span>.</p>
-
-<p>The “concept” in the name is the latent <em>context</em> that defined that relationship between $X$ and $y$. Concept drift might cover both a slow trend, where $p(X, y)$ might evolve over a long timescale, and situations where the data changed abruptly due to discontinuous changes in the data generation mechanism.</p>
-
-<p>In a <em>supervised</em> domain (where the label $y$ is known), concept drift typically manifests itself in reduced predictive performance. In an <em>unsupervised</em> domain (where the labels are not known, or only a small subset is known, or they are only captured after substantial latency), even <em>recognizing</em> this problem is more challenging. In the unsupervised domain, the only observables are the covariates; since $y$ is latent, any concurrent shift in the relationship of the covariates with the notion of anomaly will need to be reduced to changes in $p(X)$ set, or induced via external knowledge.</p>
 
     
-    <a class="ui button" href="/notes/2021/02/25/monitoring-concept-drift-in-absence-of-labels.html">Continue reading</a>
+    <a class="ui button" href="/notes/2021/02/25/concept_drift.html">Continue reading</a>
 </article>
 <div class="ui divider"></div>
 
@@ -168,6 +166,8 @@
         </p>
         <h1 class="title"><a href="/astronomy/2015/12/13/rarity-of-jupiter-like-planets-means-planetary-systems-exactly-like-ours-may-be-scarce.html">Rarity of Jupiter-like planets means planetary systems exactly like ours may be scarce</a></h1>
     </header>
+
+    
 
     <p class="excerpt">
     </p>
@@ -196,6 +196,8 @@
         <h1 class="title"><a href="/astronomy/2015/02/15/astrotrends-weasel-words.html">AstroTRENDS: Weasel words</a></h1>
     </header>
 
+    
+
     <p class="excerpt">
     </p>
 <p><img class=" wp-image-1234 aligncenter" alt="Credit: Cliff" src="/img/blog/weasel.jpg">
@@ -221,6 +223,8 @@ I added a bunch of new keywords to <a title="AstroTRENDS: A new tool to track as
         <h1 class="title"><a href="/astronomy/2014/08/07/colliding-n-body-spheres-particle-mayhem.html">Colliding N-body spheres: Particle Mayhem!
 </a></h1>
     </header>
+
+    
 
     <p class="excerpt">
     </p>
@@ -249,6 +253,8 @@ Play
         </p>
         <h1 class="title"><a href="/astronomy/2014/04/16/the-automated-planet-finder-systemic-and-super-planet-crash.html">The Automated Planet Finder, Systemic and Super Planet Crash</a></h1>
     </header>
+
+    
 
     <p class="excerpt">
     </p>

@@ -12,6 +12,11 @@ layout: default
   </header>
 
   <div class="post-content" itemprop="articleBody">
+
+    {% if page.splash %}
+    <img src="/img/blog/{{page.splash}}" alt="Splash image for post">
+    {% endif %}
+
     {{ content }}
   </div>
 

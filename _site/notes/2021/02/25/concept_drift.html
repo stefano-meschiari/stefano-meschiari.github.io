@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Stefano Meschiari — Concept Drift</title>
+  <meta name="description" content="It’s very rare for both the underlying generative processes that produce the raw data, and the systems we use to measure, transform, and store that raw data,...">
+
+  <meta property="og:title" content="Concept Drift">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.stefanom.io//notes/2021/02/25/concept_drift.html">
+  <meta property="og:image" content="http://www.stefanom.io/img/stefano.jpg">
+  <meta name="google-site-verification" content="QsBlz5VRu-Ey-cC4xjPU9Fts_iuunkzWCZABJzYhlN4">
+
+  <link rel="stylesheet" href="/public/semantic/semantic.min.css">
+  <link rel="stylesheet" href="/public/semantic/components/accordion.min.css">
+  <link rel="stylesheet" href="/public/semantic/components/sidebar.min.css">
+  <link rel="stylesheet" href="/public/semantic/components/popup.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <script type="text/javascript" src="/public/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/public/semantic/semantic.min.js"></script>
+
+  <link rel="canonical" href="http://www.stefanom.io//notes/2021/02/25/concept_drift.html">
+  <link rel="alternate" type="application/rss+xml" title="Stefano Meschiari" href="http://www.stefanom.io//feed.xml">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;300;400;700;900&amp;family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+  <script>
+    $(document).ready(function() {
+     $('.main.menu').visibility({
+        type: 'fixed'
+      });
+    })
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+    <body>
+
+        <nav id="nav" class="ui main menu">
+    <div class="ui text container">
+        <span></span>
+        
+        <a class="page item home" href="/">
+            Home
+        </a>
+        
+        <a class="page item resume" href="/resume">
+            Resume
+        </a>
+        
+        <a class="page item projects" href="/projects">
+            Projects
+        </a>
+        
+        <a class="page item github" href="https://github.com/stefano-meschiari">
+            GitHub
+        </a>
+        
+        <a class="page item research" href="/research">
+            Research &amp; Outreach
+        </a>
+        
+        <a class="page item blog" href="/blog">
+            Blog
+        </a>
+        
+        <span></span>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    a, a:visited {
+        color: #e74c3c;
+    }
+    a:hover {
+        background: #e74c3c22;
+        text-decoration: none;
+        padding-left: 3px;
+        margin-left: -3px;
+        padding-right: 3px;
+        margin-right: -3px;
+        border-radius: 3px;
+    }
+
+    .ui.button:hover {
+        background-color: #e74c3c44;
+    }
+
+    #nav a.blog.page {
+        background:#e74c3cee;
+    }
+    #nav a.blog.page.item:hover {
+        background:#e74c3caa;
+    }
+</style>
+
+
+
+            <div class="page-content /notes/2021/02/25/concept_drift">
+                <div class="wrapper">
+                    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Concept Drift</h1>
+    
+    <p class="post-meta"><time datetime="2021-02-25T00:00:00-08:00" itemprop="datePublished">Feb 25, 2021</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Stefano Meschiari</span></span></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+
+    
+    <img src="/img/blog/concept_drift/splash.png" alt="Splash image for post">
+    
+
+    <p>It’s very rare for both the underlying generative processes that produce the <span class="with-tooltip" data-tooltip="server accesses, yearly sales, movie ratings, ...">raw data</span>, and the <span class="with-tooltip" data-tooltip="APIs, software, cloud services, ...">systems</span> we use to measure, transform, and store that raw data, to be static and unchanging. More commonly, they evolve: distributions shift, relationships and constraints between the different dimensions of the data drift and break, data stops being available, and assumptions about the semantics of certain attributes cease to be valid. Multiple of those shifts can happen on different timescales, and sometimes in abrupt ways.</p>
+
+<p>This can have a profound effect on machine learning models. An underlying assumption of machine learning models is that the state of the world observed at training time is representative of the environment and time at which the model is deployed. When that assumption is invalid, <em>in the best case scenario</em>, predictive performance might be degraded; a monitoring component might be able to detect this regression, attribute it to a specific root cause, and trigger a retrain using a different dataset. In the worst case, it will serve catastrophically non-sensical results.</p>
+
+<!--more-->
+
+<h2 id="what-is-concept-drift">What is concept drift?</h2>
+<p><strong>Concept drift</strong> is a shift in the relationship between covariates ($X$; the features used in the model) and the target variable ($y$; the variable being modeled). Concept drift can be characterized by comparing the <em>joint distribution</em> $p(X, y)$ of the test dataset changed compared to a reference dataset. It also encompasses <span data-tooltip="i.e. changing p(X)">data drift</span> and <span data-tooltip="i.e. changing p(y)">label shift</span>.</p>
+
+<p>The “concept” in the name is the latent <em>context</em> that defined that relationship between $X$ and $y$.</p>
+
+<p><img src="/img/blog/concept_drift/types_of_drift.png" alt="types of drift"></p>
+<div class="caption">Four structural types of drift. Žliobaitė, “Learning under Concept Drift.”</div>
+
+<p>Concept drift might encompass a lot of situations:</p>
+<ul>
+  <li>a sudden change in context, where the data changed abruptly due to discontinuous changes in the data generation mechanism;</li>
+  <li>a gradual drift, where a new contexts is gradually introduced;</li>
+  <li>an incremental drift, where the context smoothly transitions to a new baseline;</li>
+  <li>a periodic drift, where a context might periodically be reintroduced.</li>
+</ul>
+
+<p>In a <em>supervised</em> domain (where the label $y$ is known immediately, or close to), concept drift typically manifests itself in reduced predictive performance. More often, concept drift happens in an <em>unsupervised</em> domain: at inference time, once the model is deployed, we might have access to only a small subset of labels, or they are only captured after substantial latency. Because of that, the problem might not become apparent for some time; all the while, the model has been serving incorrect predictions due to concept drift.</p>
+
+<p>Furthermore, the lack of labels presents an additional hurdle. Take a fraud detection problem: certain fraudulent behaviors might masquerade as benign by mimicking benign behavior observed in the train dataset. The features might not have changed, but the <em>relationship</em> of the model features and the (now latent) concept of fraud has.</p>
+
+<h2 id="measuring-concept-drift">Measuring concept drift</h2>
+<p><img src="/img/blog/concept_drift/windows.png" alt="Two different setups for windows"></p>
+<div class="caption">Different setups for laying out a reference (blue) and test (orange) window.</div>
+
+<p>There are several mechanisms for measuring concept drift proposed in the literature. A typical heuristic consists in measuring the difference in the distribution of the data, as measured within a <em>reference</em> window and a <em>test</em> window taken at different times. A number of different window layouts should be selected. <em>Adjacent sliding windows</em> (where the reference and test windows are one after the other) measure recent, abrupt change, while <em>fix-slide windows</em> compare a fixed reference window and a sliding window, measuring longer-term drift.</p>
+
+<p><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.121.1055">Dasu et al.</a> propose the <a href="https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence">Kullback-Leibler (KL) divergence</a> to quantify the “distance” between the two distributions. Briefly, for two distributions $p$ and $q$, the KL-divergence measures the expectation value of the logarithmic difference between them, weighted by $p$:</p>
+
+\[D(p\|q) = \sum_x p(x) \log\frac{p(x)}{q(x)}\]
+
+<p>Things to note about the KL divergence:</p>
+<ul>
+  <li>it is non-parametric;</li>
+  <li>it is not symmetric between $p$ and $q$;</li>
+  <li>it diverges to infinity when $p \neq 0, q = 0$, which can interpreted as “an event that was deemed as possible by $p$ is impossible per $q$, therefore these distributions are maximally different”.</li>
+</ul>
+
+<p>In practice, the latter situation often happens when sampling a distribution from a finite dataset; in that case, one could <em>smooth</em> the distribution to account for unseen values. This is concretely done by adding “pseudocounts” to every bin.</p>
+
+<p>In R, the <a href="https://www.rdocumentation.org/packages/entropy/versions/1.2.1/topics/entropy.Dirichlet">entropy</a> package implements the function <code class="language-plaintext highlighter-rouge">KL.Dirichlet</code> which computes the KL-divergence with added pseudocounts.</p>
+
+<h2 id="taking-action">Taking action</h2>
+<p>Once a way to measure the difference between distributions has been established, one needs to choose a threshold for the <em>significance</em> of the difference. Once that bar is reached, and we recognize that concept drift is happening, a variety of automated strategies could be set up:</p>
+
+<ul>
+  <li>retraining the model;</li>
+  <li>reducing the size of the training data, to reduce the “inertia” of the model and respond more quickly to change;</li>
+  <li>weighting recent samples more heavily;</li>
+  <li>if the drift is known to be periodic, inducing that knowledge in the model.</li>
+</ul>
+
+  </div>
+
+</article>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+                </div>
+            </div>
+
+        <footer class="site-footer">
+</footer>
+<script type="text/javascript">
+ $('.ui.accordion').accordion();
+</script>
+
+
+    </body>
+
+</html>

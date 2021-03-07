@@ -326,7 +326,7 @@ ul li {
   margin-bottom: 0.75em;
 }
 
-article #blog .post {
+article.post {
   margin-top: 3em;
   margin-bottom: 3em;
 
@@ -334,8 +334,7 @@ article #blog .post {
     font-weight: 700;
   }
 
-  img, figure iframe, .embed {
-    border: 1px solid $divider;
+  img {
     display: block;
     margin: auto;
     margin-top: 2em;
