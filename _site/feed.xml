@@ -6,15 +6,15 @@
 </description>
     <link>http://www.stefanom.io//</link>
     <atom:link href="http://www.stefanom.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 Mar 2021 19:34:47 -0800</pubDate>
-    <lastBuildDate>Sat, 06 Mar 2021 19:34:47 -0800</lastBuildDate>
+    <pubDate>Sat, 06 Mar 2021 22:32:18 -0800</pubDate>
+    <lastBuildDate>Sat, 06 Mar 2021 22:32:18 -0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
-        <title>Concept Drift</title>
+        <title>Learning under Concept Drift</title>
         <description>&lt;p&gt;It’s very rare for both the underlying generative processes that produce the &lt;span class=&quot;with-tooltip&quot; data-tooltip=&quot;server accesses, yearly sales, movie ratings, ...&quot;&gt;raw data&lt;/span&gt;, and the &lt;span class=&quot;with-tooltip&quot; data-tooltip=&quot;APIs, software, cloud services, ...&quot;&gt;systems&lt;/span&gt; we use to measure, transform, and store that raw data, to be static and unchanging. More commonly, they evolve: distributions shift, relationships and constraints between the different dimensions of the data drift and break, data stops being available, and assumptions about the semantics of certain attributes cease to be valid. Multiple of those shifts can happen on different timescales, and sometimes in abrupt ways.&lt;/p&gt;
 
-&lt;p&gt;This can have a profound effect on machine learning models. An underlying assumption of machine learning models is that the state of the world observed at training time is representative of the environment and time at which the model is deployed. When that assumption is invalid, &lt;em&gt;in the best case scenario&lt;/em&gt;, predictive performance might be degraded; a monitoring component might be able to detect this regression, attribute it to a specific root cause, and trigger a retrain using a different dataset. In the worst case, it will serve catastrophically non-sensical results.&lt;/p&gt;
+&lt;p&gt;This can have a profound effect on machine learning models. An underlying assumption of machine learning models is that the state of the world observed at training time is representative of the environment and time at which the model is deployed. When that assumption is invalid, &lt;em&gt;in the best case scenario&lt;/em&gt;, predictive performance might be degraded; a monitoring component might be able to detect this regression, attribute it to a specific root cause, and trigger a retrain using a different dataset. In the worst case, it will continue to silently, happily serve non-sensical results.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -42,11 +42,13 @@
 &lt;p&gt;&lt;img src=&quot;/img/blog/concept_drift/windows.png&quot; alt=&quot;Two different setups for windows&quot; /&gt;&lt;/p&gt;
 &lt;div class=&quot;caption&quot;&gt;Different setups for laying out a reference (blue) and test (orange) window.&lt;/div&gt;
 
-&lt;p&gt;There are several mechanisms for measuring concept drift proposed in the literature. A typical heuristic consists in measuring the difference in the distribution of the data, as measured within a &lt;em&gt;reference&lt;/em&gt; window and a &lt;em&gt;test&lt;/em&gt; window taken at different times. A number of different window layouts should be selected. &lt;em&gt;Adjacent sliding windows&lt;/em&gt; (where the reference and test windows are one after the other) measure recent, abrupt change, while &lt;em&gt;fix-slide windows&lt;/em&gt; compare a fixed reference window and a sliding window, measuring longer-term drift.&lt;/p&gt;
+&lt;p&gt;There are several mechanisms for measuring concept drift proposed in the literature. A typical heuristic consists in measuring the difference in the probability distribution of the data, as measured within a &lt;em&gt;reference&lt;/em&gt; window and a &lt;em&gt;test&lt;/em&gt; window spanning a later time range. A number of different window layouts and sizes should be selected. &lt;em&gt;Adjacent sliding windows&lt;/em&gt; (where the reference and test windows are one after the other) measure recent, abrupt change, while &lt;em&gt;fix-slide windows&lt;/em&gt; compare a fixed reference window and a sliding window, measuring longer-term drift.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.121.1055&quot;&gt;Dasu et al.&lt;/a&gt; propose the &lt;a href=&quot;https://en.wikipedia.org/wiki/Kullback–Leibler_divergence&quot;&gt;Kullback-Leibler (KL) divergence&lt;/a&gt; to quantify the “distance” between the two distributions. Briefly, for two distributions $p$ and $q$, the KL-divergence measures the expectation value of the logarithmic difference between them, weighted by $p$:&lt;/p&gt;
 
 \[D(p\|q) = \sum_x p(x) \log\frac{p(x)}{q(x)}\]
+
+&lt;p&gt;Concretely, one could assign $p$ as the distribution of the variable(s) of interest within the reference window, and $q$ with the test window.&lt;/p&gt;
 
 &lt;p&gt;Things to note about the KL divergence:&lt;/p&gt;
 &lt;ul&gt;
@@ -55,12 +57,14 @@
   &lt;li&gt;it diverges to infinity when $p \neq 0, q = 0$, which can interpreted as “an event that was deemed as possible by $p$ is impossible per $q$, therefore these distributions are maximally different”.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In practice, the latter situation often happens when sampling a distribution from a finite dataset; in that case, one could &lt;em&gt;smooth&lt;/em&gt; the distribution to account for unseen values. This is concretely done by adding “pseudocounts” to every bin.&lt;/p&gt;
+&lt;p&gt;In practice, the latter situation often happens when sampling a distribution from a finite dataset; in that case, one should &lt;em&gt;smooth&lt;/em&gt; the distribution to account for unseen values. This is concretely done by adding “pseudocounts” to every bin.&lt;/p&gt;
 
 &lt;p&gt;In R, the &lt;a href=&quot;https://www.rdocumentation.org/packages/entropy/versions/1.2.1/topics/entropy.Dirichlet&quot;&gt;entropy&lt;/a&gt; package implements the function &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KL.Dirichlet&lt;/code&gt; which computes the KL-divergence with added pseudocounts.&lt;/p&gt;
 
 &lt;h2 id=&quot;taking-action&quot;&gt;Taking action&lt;/h2&gt;
-&lt;p&gt;Once a way to measure the difference between distributions has been established, one needs to choose a threshold for the &lt;em&gt;significance&lt;/em&gt; of the difference. Once that bar is reached, and we recognize that concept drift is happening, a variety of automated strategies could be set up:&lt;/p&gt;
+&lt;p&gt;Once a way to measure the difference between distributions has been established, a threshold should be chosen to establish the &lt;em&gt;significance&lt;/em&gt; of the difference.&lt;/p&gt;
+
+&lt;p&gt;When that bar is reached, and we conclude that concept drift is happening, a variety of automated strategies could be set up:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;retraining the model;&lt;/li&gt;

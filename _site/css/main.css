@@ -347,16 +347,18 @@ p.item { margin-bottom: 0.4rem; }
 
 ul li { margin-bottom: 0.75em; }
 
-article.post { margin-top: 3em; margin-bottom: 3em; }
+#blog .post { margin-top: 3em; margin-bottom: 3em; }
 
-article.post h1 { font-weight: 700; }
+#blog .post h1 { font-weight: 700; }
 
-article.post img { display: block; margin: auto; margin-top: 2em; margin-bottom: 2em; }
+#blog .post img { display: block; margin: auto; margin-top: 2em; margin-bottom: 2em; }
 
-article.post .post-description { font-style: italic; }
+#blog .post .post-description { font-style: italic; }
 
-article.post .caption { font-style: italic; margin-bottom: 2em; text-align: center; color: #aaa; }
+#blog .post .tags { float: right; }
 
-article.post span[data-tooltip] { border-bottom: 1px dotted #aaa; }
+#blog .post .caption { font-style: italic; margin-bottom: 2em; text-align: center; color: #aaa; }
+
+#blog .post span[data-tooltip] { border-bottom: 1px dotted #aaa; }
 
 /*# sourceMappingURL=main.css.map */

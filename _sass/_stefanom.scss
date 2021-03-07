@@ -326,7 +326,7 @@ ul li {
   margin-bottom: 0.75em;
 }
 
-article.post {
+#blog .post {
   margin-top: 3em;
   margin-bottom: 3em;
 
@@ -343,6 +343,10 @@ article.post {
 
   .post-description {
     font-style: italic;
+  }
+
+  .tags {
+    float: right;
   }
 
   .caption {
