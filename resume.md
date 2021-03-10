@@ -21,7 +21,7 @@ Downloadable resume coming back soon!
 </div>
 <hr>
 
-I am an experienced data scientist with a background in scientific research. I have worked on projects that involved  researching new algorithms and approaches to attacking hard problems, analyzing complex, label-poor datasets, building novel production ETL and ML platforms, helping to bring intelligent capabilities to fruition for users, and creating functional data tooling.
+I am an experienced data scientist with a background in scientific research. I have worked on projects that involved  researching new algorithms and approaches to attacking hard problems, analyzing complex, label-poor datasets, building novel production ETL and ML platforms, helping to bring intelligent capabilities to fruition for users, and creating functional data tooling. I am comfortable with bootstrapping new problems, and figuring out how to chip away at uncertainty, clarify and better define the solution space, and measure success.
 
 I enjoy working with cross-functional teams to create, polish, and evolve from napkin ideas to production. In particular, I love collaborating with product and design teams to coherently integrate data science into their vision, and helping them test out new concepts and visualizations with data science-driven prototypes and customer discovery.
 
@@ -56,7 +56,7 @@ I enjoy working with cross-functional teams to create, polish, and evolve from n
 <div class="ui divider"></div>
 
 ### Technical Skills
-* **Machine Learning**: Building supervised & unsupervised classification and regression pipelines via state of the art and custom algorithms; devising high-performance statistical and numerical methods; time series analysis and forecasting; architecting high-volume ETL and machine learning pipelines.
+* **Machine Learning**: Building supervised & unsupervised classification and regression pipelines via state of the art and custom algorithms; devising high-performance statistical and numerical methods that run in production clusters; time series analysis and forecasting; architecting high-volume ETL and machine learning pipelines.
 * **Software engineering**: Building projects from prototypes to production using R, Scala, Python, JavaScript, Java, and C. Experienced in using SQL. Experienced in building functional front-end prototypes.
 * **Soft skills**: Cross-team collaboration, project management, and leadership; mentoring and advising.
 
