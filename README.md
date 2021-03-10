@@ -1,3 +1,5 @@
-# http://stefano-meschiari.github.io
+# [Website](http://stefano-meschiari.github.io)
 
-My personal website. It was built using Semantic UI, with some customizations.
+My personal website. It is built on top of [Jekyll](https://jekyllrb.com). It uses CSS classes and some JavaScript components from [Semantic UI](https://semantic-ui.com).
+
+
