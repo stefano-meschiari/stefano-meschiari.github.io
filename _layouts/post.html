@@ -19,6 +19,16 @@ layout: default
       {% endif %}
 
       {{ content }}
+
+      {% if page.changes %}
+      <hr>
+      <h4>History of changes</h4>
+      <ul>
+        {% for change in page.changes %}
+        <li>{{change}}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     </div>
 
   </article>

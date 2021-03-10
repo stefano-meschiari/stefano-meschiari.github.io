@@ -361,4 +361,10 @@ ul li { margin-bottom: 0.75em; }
 
 #blog .post span[data-tooltip] { border-bottom: 1px dotted #aaa; }
 
+#blog .post sup[role=doc-noteref]:before { content: '['; }
+
+#blog .post sup[role=doc-noteref]:after { content: ']'; }
+
+#blog .post sup[role=doc-noteref] { top: initial; font-size: 1em; font-weight: bold; }
+
 /*# sourceMappingURL=main.css.map */

@@ -6,27 +6,29 @@
 </description>
     <link>http://www.stefanom.io//</link>
     <atom:link href="http://www.stefanom.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 Mar 2021 22:32:18 -0800</pubDate>
-    <lastBuildDate>Sat, 06 Mar 2021 22:32:18 -0800</lastBuildDate>
+    <pubDate>Tue, 09 Mar 2021 19:00:04 -0800</pubDate>
+    <lastBuildDate>Tue, 09 Mar 2021 19:00:04 -0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
         <title>Learning under Concept Drift</title>
-        <description>&lt;p&gt;It’s very rare for both the underlying generative processes that produce the &lt;span class=&quot;with-tooltip&quot; data-tooltip=&quot;server accesses, yearly sales, movie ratings, ...&quot;&gt;raw data&lt;/span&gt;, and the &lt;span class=&quot;with-tooltip&quot; data-tooltip=&quot;APIs, software, cloud services, ...&quot;&gt;systems&lt;/span&gt; we use to measure, transform, and store that raw data, to be static and unchanging. More commonly, they evolve: distributions shift, relationships and constraints between the different dimensions of the data drift and break, data stops being available, and assumptions about the semantics of certain attributes cease to be valid. Multiple of those shifts can happen on different timescales, and sometimes in abrupt ways.&lt;/p&gt;
+        <description>&lt;p&gt;It’s very rare for both the underlying generative processes that produce the &lt;span class=&quot;with-tooltip&quot; data-tooltip=&quot;server accesses, yearly sales, movie ratings, ...&quot;&gt;raw data&lt;/span&gt;, and the &lt;span class=&quot;with-tooltip&quot; data-tooltip=&quot;APIs, software, cloud services, ...&quot;&gt;systems&lt;/span&gt; we use to measure, transform, and store that raw data, to be static and unchanging. More commonly, they evolve: distributions shift, relationships and constraints between the different dimensions of the data drift and break, data stops being available, and assumptions about the semantics of certain attributes cease to be valid. Multiple of those shifts can be happening on different timescales, and sometimes in abrupt ways.&lt;/p&gt;
 
-&lt;p&gt;This can have a profound effect on machine learning models. An underlying assumption of machine learning models is that the state of the world observed at training time is representative of the environment and time at which the model is deployed. When that assumption is invalid, &lt;em&gt;in the best case scenario&lt;/em&gt;, predictive performance might be degraded; a monitoring component might be able to detect this regression, attribute it to a specific root cause, and trigger a retrain using a different dataset. In the worst case, it will continue to silently, happily serve non-sensical results.&lt;/p&gt;
+&lt;p&gt;This can have a profound effect on machine learning models. An underlying assumption of machine learning models is that the state of the world observed at training time is representative of the environment at which the model is deployed (typically, some time after training). When that assumption is invalid, &lt;em&gt;in the best case scenario&lt;/em&gt;, predictive performance might be degraded; a monitoring component might be able to detect this regression, attribute it to a specific root cause, and trigger a retrain using a different dataset. In the worst case, it will continue to silently, happily serve non-sensical results.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;what-is-concept-drift&quot;&gt;What is concept drift?&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Concept drift&lt;/strong&gt; is a shift in the relationship between covariates ($X$; the features used in the model) and the target variable ($y$; the variable being modeled). Concept drift can be characterized by comparing the &lt;em&gt;joint distribution&lt;/em&gt; $p(X, y)$ of the test dataset changed compared to a reference dataset. It also encompasses &lt;span data-tooltip=&quot;i.e. changing p(X)&quot;&gt;data drift&lt;/span&gt; and &lt;span data-tooltip=&quot;i.e. changing p(y)&quot;&gt;label shift&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Below, I wrote some notes about how concept drift is defined, how it is detected, and how ML systems can cope with it.&lt;/p&gt;
 
-&lt;p&gt;The “concept” in the name is the latent &lt;em&gt;context&lt;/em&gt; that defined that relationship between $X$ and $y$.&lt;/p&gt;
+&lt;h2 id=&quot;what-is-concept-drift&quot;&gt;What is concept drift?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Concept drift&lt;/strong&gt; is a shift in the relationship between covariates ($X$; the features used in the model) and the target variable ($y$; the variable being modeled). The “concept” in the name is the latent &lt;em&gt;context&lt;/em&gt; that defined that relationship.&lt;/p&gt;
+
+&lt;p&gt;Concept drift can be characterized by comparing the &lt;em&gt;joint distribution&lt;/em&gt; $p(X, y)$ of the test dataset, and assessing how much it changed compared to a reference dataset. It also encompasses &lt;span data-tooltip=&quot;i.e. changing p(X)&quot;&gt;data drift&lt;/span&gt; and &lt;span data-tooltip=&quot;i.e. changing p(y)&quot;&gt;label shift&lt;/span&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/blog/concept_drift/types_of_drift.png&quot; alt=&quot;types of drift&quot; /&gt;&lt;/p&gt;
 &lt;div class=&quot;caption&quot;&gt;Four structural types of drift. Žliobaitė, “Learning under Concept Drift.”&lt;/div&gt;
 
-&lt;p&gt;Concept drift might encompass a lot of situations:&lt;/p&gt;
+&lt;p&gt;In &lt;sup id=&quot;fnref:zliobaite&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:zliobaite&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, concept drift encompasses:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;a sudden change in context, where the data changed abruptly due to discontinuous changes in the data generation mechanism;&lt;/li&gt;
   &lt;li&gt;a gradual drift, where a new contexts is gradually introduced;&lt;/li&gt;
@@ -39,14 +41,16 @@
 &lt;p&gt;Furthermore, the lack of labels presents an additional hurdle. Take a fraud detection problem: certain fraudulent behaviors might masquerade as benign by mimicking benign behavior observed in the train dataset. The features might not have changed, but the &lt;em&gt;relationship&lt;/em&gt; of the model features and the (now latent) concept of fraud has.&lt;/p&gt;
 
 &lt;h2 id=&quot;measuring-concept-drift&quot;&gt;Measuring concept drift&lt;/h2&gt;
+
+&lt;h3 id=&quot;distance-between-distributions&quot;&gt;Distance between distributions&lt;/h3&gt;
+&lt;p&gt;There are several techniques for measuring concept drift proposed in the literature. A typical heuristic consists of measuring the difference in the probability distribution of the data, as sampled within a &lt;em&gt;reference&lt;/em&gt; window and a &lt;em&gt;test&lt;/em&gt; window spanning a later time range. To fully capture different types of concept drift, a variety of window layouts and sizes should be selected. &lt;em&gt;Adjacent sliding windows&lt;/em&gt; (where the reference and test windows are one after the other) measure recent, abrupt change, while &lt;em&gt;fix-slide windows&lt;/em&gt; compare a fixed reference window and a sliding window, measuring longer-term drift.&lt;/p&gt;
+
 &lt;p&gt;&lt;img src=&quot;/img/blog/concept_drift/windows.png&quot; alt=&quot;Two different setups for windows&quot; /&gt;&lt;/p&gt;
 &lt;div class=&quot;caption&quot;&gt;Different setups for laying out a reference (blue) and test (orange) window.&lt;/div&gt;
 
-&lt;p&gt;There are several mechanisms for measuring concept drift proposed in the literature. A typical heuristic consists in measuring the difference in the probability distribution of the data, as measured within a &lt;em&gt;reference&lt;/em&gt; window and a &lt;em&gt;test&lt;/em&gt; window spanning a later time range. A number of different window layouts and sizes should be selected. &lt;em&gt;Adjacent sliding windows&lt;/em&gt; (where the reference and test windows are one after the other) measure recent, abrupt change, while &lt;em&gt;fix-slide windows&lt;/em&gt; compare a fixed reference window and a sliding window, measuring longer-term drift.&lt;/p&gt;
+&lt;p&gt;&lt;sup id=&quot;fnref:dasu&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:dasu&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; propose the &lt;a href=&quot;https://en.wikipedia.org/wiki/Kullback–Leibler_divergence&quot;&gt;Kullback-Leibler (KL) divergence&lt;/a&gt; to quantify the “distance” between the two distributions. Briefly, for two distributions $p$ and $q$, the KL-divergence measures the expectation value of the logarithmic difference between them, weighted by $p$:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.121.1055&quot;&gt;Dasu et al.&lt;/a&gt; propose the &lt;a href=&quot;https://en.wikipedia.org/wiki/Kullback–Leibler_divergence&quot;&gt;Kullback-Leibler (KL) divergence&lt;/a&gt; to quantify the “distance” between the two distributions. Briefly, for two distributions $p$ and $q$, the KL-divergence measures the expectation value of the logarithmic difference between them, weighted by $p$:&lt;/p&gt;
-
-\[D(p\|q) = \sum_x p(x) \log\frac{p(x)}{q(x)}\]
+\[D(p\|q) = \sum_x p(x) \log_2\frac{p(x)}{q(x)}\]
 
 &lt;p&gt;Concretely, one could assign $p$ as the distribution of the variable(s) of interest within the reference window, and $q$ with the test window.&lt;/p&gt;
 
@@ -61,8 +65,36 @@
 
 &lt;p&gt;In R, the &lt;a href=&quot;https://www.rdocumentation.org/packages/entropy/versions/1.2.1/topics/entropy.Dirichlet&quot;&gt;entropy&lt;/a&gt; package implements the function &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KL.Dirichlet&lt;/code&gt; which computes the KL-divergence with added pseudocounts.&lt;/p&gt;
 
+&lt;p&gt;An alternative measure to the KL divergence is the &lt;a href=&quot;https://en.wikipedia.org/wiki/Jensen–Shannon_divergence&quot;&gt;Jensen-Shannon (JS) divergence&lt;/a&gt;. The JS divergence is a smoothed, symmetrized version of the KL divergence, defined as:&lt;/p&gt;
+
+\[JS(p \| q) = \frac{KL(p \| \frac{p+q}{2}) + KL(q \| \frac{p+q}{2})}{2}\]
+
+&lt;p&gt;The JS divergence is bounded within $0 \leq JS \leq 1$, and does not diverge when one of the distributions is zero (or close to zero) and the other is non-zero.&lt;/p&gt;
+
+&lt;p&gt;It can be trivially implemented using the KL divergence formula:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;entropy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Returns the empirical JS distance between two&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# vectors of counts.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;JS_empirical&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;freqs.empirical&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;freqs.empirical&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fm&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KL.plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;log2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+           &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KL.plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;log2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;comparing-performance-of-learners&quot;&gt;Comparing performance of learners&lt;/h3&gt;
+&lt;p&gt;Another option for detecting concept drift – if labels are available – is to keep track of performance metrics of models on unseen data, such as AUC/AUPR, F1, and Brier scores.&lt;/p&gt;
+
+&lt;p&gt;&lt;sup id=&quot;fnref:bach&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:bach&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; proposes a system that pairs two online learners: a &lt;em&gt;stable&lt;/em&gt; learner $S$, trained on a growing window of data encompassing all the examples seen up to time $t$, and a &lt;em&gt;reactive&lt;/em&gt; learner $R_w$ trained on a sliding window of fixed length $w$. The stable learner outperforms the reactive learner as long as the concept is constant, but will start mispredicting as the data transitions to a new concept. Since $R_w$ is trained on a smaller window, it can react more quickly and act as a lagging indicator of drift.&lt;/p&gt;
+
+&lt;p&gt;As a heuristic, the system keeps track of the number of incoming examples predicted correctly by $R_w$ and incorrectly by $S$; once that number passes a certain threshold, the training window of $S$ is clipped to be the same as $R$ before starting to grow again.&lt;/p&gt;
+
 &lt;h2 id=&quot;taking-action&quot;&gt;Taking action&lt;/h2&gt;
-&lt;p&gt;Once a way to measure the difference between distributions has been established, a threshold should be chosen to establish the &lt;em&gt;significance&lt;/em&gt; of the difference.&lt;/p&gt;
+&lt;p&gt;Once a way to recognize concept drift has been established, a threshold should be chosen to establish the &lt;em&gt;significance&lt;/em&gt; of the change, in order to distinguish actual drift from random noise.&lt;/p&gt;
 
 &lt;p&gt;When that bar is reached, and we conclude that concept drift is happening, a variety of automated strategies could be set up:&lt;/p&gt;
 
@@ -70,8 +102,23 @@
   &lt;li&gt;retraining the model;&lt;/li&gt;
   &lt;li&gt;reducing the size of the training data, to reduce the “inertia” of the model and respond more quickly to change;&lt;/li&gt;
   &lt;li&gt;weighting recent samples more heavily;&lt;/li&gt;
-  &lt;li&gt;if the drift is known to be periodic, inducing that knowledge in the model.&lt;/li&gt;
+  &lt;li&gt;if the drift is known to be periodic, inducing that knowledge in the model. For instance, if a new cohort of customers is onboarded every three months, it can be helpful to include a time-dependent term in the model, or sample training examples from a longer baseline.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:zliobaite&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Žliobaitė, “Learning under Concept Drift.” &lt;a href=&quot;#fnref:zliobaite&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:dasu&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Dasu, “An Information-Theoretic Approach to Detecting Changes in MultiDimensional Data Streams.” &lt;a href=&quot;#fnref:dasu&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:bach&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Bach and Maloof, “Paired Learners for Concept Drift.” &lt;a href=&quot;#fnref:bach&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Thu, 25 Feb 2021 00:00:00 -0800</pubDate>
         <link>http://www.stefanom.io//notes/2021/02/25/concept_drift.html</link>

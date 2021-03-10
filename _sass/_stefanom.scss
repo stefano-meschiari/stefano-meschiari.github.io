@@ -359,4 +359,19 @@ ul li {
   span[data-tooltip] {
     border-bottom: 1px dotted #aaa;
   }
+
+  sup[role=doc-noteref]:before {
+    content: '[';
+  }
+
+  sup[role=doc-noteref]:after {
+    content: ']';
+  }
+
+  sup[role=doc-noteref] {
+    top: initial;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
 }
