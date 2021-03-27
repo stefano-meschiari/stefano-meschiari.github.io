@@ -3,7 +3,7 @@ layout: post
 title: The Automated Planet Finder, Systemic and Super Planet Crash
 date: 2014-04-16
 description: A 2.4 meter telescope that runs robotically
-image:
+splash: /jupiter_rarity/orbits.png
 category: astronomy
 tags:
     - systemic
@@ -54,5 +54,3 @@ The planetary systems discovered so far are typically very different from our ow
 Only further discoveries can clarify whether planetary systems architected like our own are as uncommon as they appear to be. These observations will need to span many years of careful collection of Doppler shifts. Since the APF facility is primarily dedicated to Doppler observations, it is expected to make key contributions to exoplanetary science.
 
 The two apps produced by the APF team make amateur scientists part of the hunt. These applications join the nascent movement of “citizen science”, which enable the general public to understand and even contribute to scientific research, either by lending a hand in <a href="http://www.planethunters.org">analyzing massive sets of scientific data</a> or by <a href="http://www.milkywayproject.org">flagging interesting datasets</a> that warrant further collection of data.
-
-<img alt="The Conversation" height="1" src="https://counter.theconversation.edu.au/content/24925/count.gif" width="1">

@@ -13,7 +13,7 @@
   description: Race against gravity to create a crowded planetary system.
   img: img/spc.png
   frontpage: true
-  
+
 - title: Apps & Games
   url: http://save-point.herokuapp.com/dashboard/users.php?login=demo
   external: true
@@ -21,16 +21,7 @@
   description: I lead a collaboration of astronomers and educators dedicated to developing games and apps to teach astronomical concepts.
   img: img/orbits.png
   frontpage: true
-  
-- title: Ask an Astronomer
-  url: http://askanastronomer.org
-  external: true
-  anchor: aaa
-  class: rounded
-  description: A website that connects teachers, students, and the general public to real astronomers.
-  img: img/aaa.jpg
-  frontpage: true
-  
+
 - title: latex2exp
   url: https://github.com/stefano-meschiari/latex2exp
   external: true
@@ -38,4 +29,3 @@
   description: A package to typeset math formulas in R using LaTeX notation.
   img: img/latex2exp.png
   frontpage: true
-  

@@ -6,12 +6,12 @@
 </description>
     <link>http://www.stefanom.io//</link>
     <atom:link href="http://www.stefanom.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 Mar 2021 19:29:35 -0800</pubDate>
-    <lastBuildDate>Tue, 09 Mar 2021 19:29:35 -0800</lastBuildDate>
+    <pubDate>Sat, 27 Mar 2021 13:54:48 -0700</pubDate>
+    <lastBuildDate>Sat, 27 Mar 2021 13:54:48 -0700</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
-        <title>Learning under Concept Drift</title>
+        <title>Learning under Concept Drift: ML during interesting times</title>
         <description>&lt;p&gt;It’s very rare for both the underlying generative processes that produce the &lt;span class=&quot;with-tooltip&quot; data-tooltip=&quot;server accesses, yearly sales, movie ratings, ...&quot;&gt;raw data&lt;/span&gt;, and the &lt;span class=&quot;with-tooltip&quot; data-tooltip=&quot;APIs, software, cloud services, ...&quot;&gt;systems&lt;/span&gt; we use to measure, transform, and store that raw data, to be static and unchanging. More commonly, they evolve: distributions shift, relationships and constraints between the different dimensions of the data drift and break, data stops being available, and assumptions about the semantics of certain attributes cease to be valid. Multiple of those shifts can be happening on different timescales, and sometimes in abrupt ways.&lt;/p&gt;
 
 &lt;p&gt;This can have a profound effect on machine learning models. An underlying assumption of machine learning models is that the state of the world observed at training time is representative of the environment at which the model is deployed (typically, some time after training). When that assumption is invalid, &lt;em&gt;in the best case scenario&lt;/em&gt;, predictive performance might be degraded; a monitoring component might be able to detect this regression, attribute it to a specific root cause, and trigger a retrain using a different dataset. In the worst case, it will continue to silently, happily serve non-sensical results.&lt;/p&gt;
@@ -206,7 +206,7 @@
     
       <item>
         <title>AstroTRENDS: Weasel words</title>
-        <description>&lt;p&gt;&lt;img class=&quot; wp-image-1234 aligncenter&quot; alt=&quot;Credit: Cliff&quot; src=&quot;/img/blog/weasel.jpg&quot; /&gt;
+        <description>&lt;p&gt;&lt;img alt=&quot;Credit: Cliff&quot; src=&quot;/img/blog/weasel.jpg&quot; /&gt;
 I added a bunch of new keywords to &lt;a title=&quot;AstroTRENDS: A new tool to track astronomy topics in the literature&quot; href=&quot;http://www.stefanom.org/astrotrends-a-new-tool-to-track-astronomy-topics-in-the-literature/&quot;&gt;AstroTRENDS&lt;/a&gt;, mostly suggested by friends and people in the community who had read my Facebook post.&lt;/p&gt;
 
 &lt;p&gt;A thought I had yesterday is the following: has the astronomical literature become more speculative, and perhaps less committed to audacious claims, in recent times? It is difficult to test this hypothesis   by merely querying ADS for abstract keywords. It would certainly be better served by a &lt;a href=&quot;http://en.wikipedia.org/wiki/Natural_language_processing&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;natural-language processing&lt;/em&gt;&lt;/a&gt; analysis of the full text, although this is just my uninformed speculation.
@@ -242,10 +242,7 @@ I added a bunch of new keywords to &lt;a title=&quot;AstroTRENDS: A new tool to 
       <item>
         <title>Colliding N-body spheres: Particle Mayhem!
 </title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://www.stefanom.org/wgc/test_nbody.html&quot; class=&quot;ui fluid button&quot;&gt;
-&lt;i class=&quot;play icon&quot;&gt;&lt;/i&gt;
-Play
-&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;iframe style=&quot;display: block; margin:auto; border: 1px solid silver;&quot; src=&quot;/public/wgc/test_nbody.html?v=0&quot; width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;When Giants Collide — WGC for short — is one of the “fun” projects I am working on. Once finished, it will be a small in-browser simulator where you can collide giant planets together (with some degree of realism). You can see my progress on my &lt;a href=&quot;https://github.com/stefano-meschiari/WhenGiantsCollide&quot;&gt;GitHub repo&lt;/a&gt; and the series of &lt;a href=&quot;http://www.stefanom.org/category/when-giants-collide/&quot; target=&quot;_blank&quot;&gt;blog posts under this category.&lt;/a&gt;&lt;/p&gt;
 
@@ -298,6 +295,153 @@ Play
       </item>
     
       <item>
+        <title>A JavaScript benchmark: Barnes-Hut gravity</title>
+        <description>&lt;iframe src=&quot;/public/wgc/test_gravity.html?v=0&quot; width=&quot;600&quot; height=&quot;650&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;[&lt;em&gt;Updated on March 2021 with new devices!&lt;/em&gt;]&lt;/p&gt;
+
+&lt;p&gt;In one of my last posts (&lt;a href=&quot;/astronomy/2014/07/16/barnes-hut.html&quot;&gt;An interactive Barnes-Hut tree&lt;/a&gt;) I talked briefly about one of the “fun” projects I’m working on, When Giants Collide (work in progress, &lt;a href=&quot;https://github.com/stefano-meschiari/WhenGiantsCollide&quot;&gt;GitHub repo&lt;/a&gt;), and promised myself to blog about its development as I went along. I just finished refining the algorithm for building the tree and calculating the gravitational force.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;The small app above is a benchmark pitting the Barnes-Hut algorithm for computing gravity (&lt;a href=&quot;http://en.wikipedia.org/wiki/Barnes–Hut_simulation&quot; target=&quot;_blank&quot;&gt;an O(N log(N)) algorithm&lt;/a&gt;) against a brute-force direct summation (an O(N^2) algorithm). It calculates the gravitational field of a random collection of particles using both methods for N = 256 to N = 16,384; a lower amount of time spent indicates a faster algorithm. The time used to compute the gravitational force is averaged over 12 iterations to minimize fluctuations. Results are plotted in real time. Try to toggle the logarithmic axis to see the actual difference between an $O(N^2)$ and an $O(N \log N)$ algorithm!&lt;/p&gt;
+
+&lt;p&gt;Lastly, it calculates an overall “score” for the JavaScript interpreter by only running the Barnes-Hut algorithm for N = 16,384. You can see a table of scores for a few different browsers and devices I have access to (lower is better). If you’d like, &lt;a href=&quot;mailto:stefano.meschiari@gmail.com&quot;&gt;send me your score&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3&gt;Scores (lower is better)&lt;/h3&gt;
+
+&lt;table class=&quot;ui celled table structured&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Device&lt;/th&gt;&lt;th&gt;Running on&lt;/th&gt;&lt;th&gt;Score&lt;/th&gt;&lt;th&gt;Relative to MacBook Pro, 2012, Chrome 36&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td rowspan=&quot;2&quot;&gt;MacBook Air (M1, 2020), 11.2.3&lt;/td&gt;
+      &lt;td&gt;Safari 14.0.3&lt;/td&gt;
+      &lt;td&gt;5,275&lt;/td&gt;
+      &lt;td&gt;0.36x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Chrome 89&lt;/td&gt;
+      &lt;td&gt;6,850&lt;/td&gt;
+      &lt;td&gt;0.46x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td rowspan=&quot;4&quot;&gt;MacBook Pro (Retina, late 2012), 10.9.4&lt;/td&gt;
+      &lt;td&gt;Chrome 36&lt;/td&gt;
+      &lt;td&gt;14,641&lt;/td&gt;
+      &lt;td&gt;1.0x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Safari 7.0.5&lt;/td&gt;
+      &lt;td&gt;17,541&lt;/td&gt;
+      &lt;td&gt;1.2x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Firefox 30&lt;/td&gt;
+      &lt;td&gt;18,866&lt;/td&gt;
+      &lt;td&gt;1.3x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Node 0.10.29&lt;/td&gt;
+      &lt;td&gt;21,858&lt;/td&gt;
+      &lt;td&gt;1.5x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td rowspan=&quot;2&quot;&gt;iPhone 5S, 7.1.2&lt;/td&gt;
+      &lt;td&gt;Safari&lt;/td&gt;
+      &lt;td&gt;63,841&lt;/td&gt;
+      &lt;td&gt;4.4x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mercury (no JIT)&lt;/td&gt;
+      &lt;td&gt;561,033&lt;/td&gt;
+      &lt;td&gt;38.3x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;iPhone 5C, 7.1.2&lt;/td&gt;
+      &lt;td&gt;Safari&lt;/td&gt;
+      &lt;td&gt;147,141&lt;/td&gt;
+      &lt;td&gt;10.0x&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3&gt;Some observations about JavaScript optimization&lt;/h3&gt;
+&lt;p&gt;Chrome turned out to be the fastest browser at this particular benchmark. Surprisingly, a previous version of the same code was actually the  slowest on my MacBook – almost 6x as slow as Safari! That was quite unexpected, as in my (limited) experience building web apps Chrome tends to edge out other browsers in terms of JavaScript execution speed.&lt;/p&gt;
+
+&lt;p&gt;So I waded a little bit more into my code to understand what was making my code so inefficient. This &lt;a href=&quot;https://developers.google.com/speed/articles/optimizing-javascript&quot; target=&quot;_blank&quot;&gt;Google optimization guide&lt;/a&gt; and &lt;a href=&quot;http://www.html5rocks.com/en/tutorials/speed/v8/&quot; target=&quot;_blank&quot;&gt;this post on HTML5Rocks&lt;/a&gt; (specifically talking about optimizing for V8, the just-in-time compiler embedded in Chrome) proved very useful. What I learned:&lt;/p&gt;
+&lt;ol&gt;
+ 	&lt;li&gt;Use the idiomatic JavaScript style for creating classes (using prototypes, new, straightforward constructors etc.) instead of using an object factory and closures.&lt;/li&gt;
+ 	&lt;li&gt;Avoid creating closures, when possible.&lt;/li&gt;
+ 	&lt;li&gt;Use node.js to profile the application and identify functions that are not getting optimized (using &lt;em&gt;--trace-opt&lt;/em&gt;).&lt;/li&gt;
+ 	&lt;li&gt;Both Safari and Firefox had good baseline scores even &lt;i&gt;before&lt;/i&gt; these optimizations. I found it quite surprising that V8 was much more fastidious about my code than the other JavaScript engines.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Another finding was how much slower alternative browsers (e.g. Chrome, Mercury) are on iOS. Alternative browsers use the same engine as Safari, but they don’t have access to&lt;a href=&quot;http://daringfireball.net/2011/03/nitro_ios_43&quot; target=&quot;_blank&quot;&gt; Nitro’s Just-In-Time compilation&lt;/a&gt; – this means that they will be quite a bit slower than Safari on a computationally-intensive benchmark. How much slower? On my iPhone 5S, almost a factor of 10!&lt;/p&gt;
+
+&lt;h3&gt;Web workers are awesome&lt;/h3&gt;
+&lt;p&gt;The benchmark runs in a different thread, so that the page itself remains responsive. This is accomplished using Web Workers, a relatively new technology that allows the page to spin off threads to do computation-heavy work. &lt;a href=&quot;http://caniuse.com/webworkers&quot; target=&quot;_blank&quot;&gt;It’s quite well supported&lt;/a&gt;, and I found it pretty easy to learn (&lt;a href=&quot;http://stackoverflow.com/questions/21408510/chrome-cant-load-web-worker&quot; target=&quot;_blank&quot;&gt;aside from some surprising quirks&lt;/a&gt;). I plan on spinning off some of the tasks in &lt;a title=&quot;Systemic Live&quot; href=&quot;http://www.stefanom.org/systemic-live/&quot;&gt;Systemic Live&lt;/a&gt; – which currently either block the interface or use timers – into Web Workers (it’ll be a quite a bit of work, so don’t hold your breath).&lt;/p&gt;
+</description>
+        <pubDate>Thu, 24 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://www.stefanom.io//astronomy/2014/07/24/barnes-hut-benchmark.html</link>
+        <guid isPermaLink="true">http://www.stefanom.io//astronomy/2014/07/24/barnes-hut-benchmark.html</guid>
+        
+        <category>astronomy</category>
+        
+        <category>javascript</category>
+        
+        <category>gravity</category>
+        
+        <category>algorithms</category>
+        
+        <category>benchmark</category>
+        
+        
+        <category>astronomy</category>
+        
+      </item>
+    
+      <item>
+        <title>An interactive Barnes-Hut tree</title>
+        <description>&lt;iframe src=&quot;/public/wgc/test_tree.html?v=0&quot; width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I’ve recently started experimenting with a new  visualization that I think will turn out pretty darn cool. Its draft name is &lt;a href=&quot;http://en.wikipedia.org/wiki/When_Worlds_Collide&quot; target=&quot;_blank&quot;&gt;When Giants Collide.&lt;/a&gt; When  Giants Collide will address a common request from planetary crashers: “&lt;em&gt;Can I see what happens when two giant planets collide”&lt;/em&gt;?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;When Giants Collide will be a super-simple JavaScript app (so it will run in your browser) that will simulate the collision of two massive spheres of gas. The simulation will have to model both gravity and the dynamics of the gas: to address this, I’ve been dusting off and reviewing an old &lt;a href=&quot;http://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics&quot; target=&quot;_blank&quot;&gt;Smoothed-Particle Hydrodynamics&lt;/a&gt; (SPH) code I worked on for a brief period in graduate school. SPH is a very simple technique for cheaply simulating gas flows with good spatial accuracy, and is somewhat straightforward to code. There are some shortcuts that have to be taken, too – large time steps, low particle counts, and more (e.g., a polytropic equation of state for the gas giants; more on this in future posts). These shortcuts come at the expense of realism, but will enable fast, smooth animation in the browser.&lt;/p&gt;
+
+&lt;h3&gt;Gravity with the  Barnes-Hut algorithm&lt;/h3&gt;
+&lt;p&gt;Gravity is an essential ingredient of When Giants Collide! Even with very low particle counts (say, &lt;em&gt;N &lt;/em&gt;= 1000), a brute force calculation that just sums up the mutual gravitational force between particles won’t do if you want to run the simulation at 60 frames per second. Direct summing is an N^2 operation:
+&lt;script src=&quot;https://gist.github.com/stefano-meschiari/875fdfde63eba2cb620d.js&quot;&gt;&lt;/script&gt;
+(this is a simple force accumulator written in R).&lt;/p&gt;
+
+&lt;p&gt;A better way that involves only a slightly more complicated algorithm is to use the &lt;a href=&quot;http://adsabs.harvard.edu/abs/1986Natur.324..446B&quot; target=&quot;_blank&quot;&gt;Barnes-Hut algorithm&lt;/a&gt; (a short Nature paper with more than 1,000 citations!). The algorithm involves recursively subdividing space into cubes and loading them with particles, such that every cube contains either 0 or 1 particles. This is represented in code with an oct-tree structure.  Once such a tree is constructed, one can calculate the gravitational force on a given particle in the brute-force way for close particles, and in an approximate way for distant particles; whether to use one or the other is determined by walking the tree down from the top. An excellent explanation (with great visuals!) is provided &lt;a href=&quot;http://arborjs.org/docs/barnes-hut&quot; target=&quot;_blank&quot;&gt;in this article&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The other advantage is that, once the tree has been already built for the gravity calculation, it can be used to identify the nearest neighbors of a given particle through the same tree-walking procedure. The nearest neighbors are needed for the hydrodynamical part of the SPH algorithm (see, e.g., this review article by &lt;a href=&quot;http://adsabs.harvard.edu/abs/2009NewAR..53...78R&quot; target=&quot;_blank&quot;&gt;Stefan Rosswog&lt;/a&gt; or this one by &lt;a href=&quot;http://adsabs.harvard.edu/abs/2012JCoPh.231..759P&quot; target=&quot;_blank&quot;&gt;Daniel Price&lt;/a&gt;).&lt;/p&gt;
+&lt;h3&gt;An interactive tree&lt;/h3&gt;
+&lt;p&gt;Below is an interactive JavaScript applet that subdivides space with the Barnes-Hut algorithm. You can add new points by clicking on the surface, or using the buttons to add new, random ones.&lt;/p&gt;
+
+&lt;p&gt;The code for building the Barnes-Hut tree from an array of 3D positions is available at the &lt;a href=&quot;https://github.com/stefano-meschiari/WhenGiantsCollide&quot; target=&quot;_blank&quot;&gt;GitHub repository for When Giants Collide.&lt;/a&gt; I will be developing the code in the open, and post periodically about my progress. Hopefully by the end of summer I will have an attractive app running on any modern device and web browser. Any ideas on how to gamify it?&lt;/p&gt;
+</description>
+        <pubDate>Wed, 16 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://www.stefanom.io//astronomy/2014/07/16/barnes-hut.html</link>
+        <guid isPermaLink="true">http://www.stefanom.io//astronomy/2014/07/16/barnes-hut.html</guid>
+        
+        <category>astronomy</category>
+        
+        <category>javascript</category>
+        
+        <category>gravity</category>
+        
+        <category>algorithms</category>
+        
+        
+        <category>astronomy</category>
+        
+      </item>
+    
+      <item>
         <title>The Automated Planet Finder, Systemic and Super Planet Crash</title>
         <description>&lt;p&gt;[&lt;em&gt;This short article I wrote has been published on &lt;a href=&quot;https://theconversation.com/telescope-apps-help-amateurs-hunt-for-exoplanets-24925&quot; target=&quot;_blank&quot;&gt;The Conversation&lt;/a&gt;  UK.&lt;/em&gt;]&lt;/p&gt;
 
@@ -339,8 +483,6 @@ Play
 &lt;p&gt;Only further discoveries can clarify whether planetary systems architected like our own are as uncommon as they appear to be. These observations will need to span many years of careful collection of Doppler shifts. Since the APF facility is primarily dedicated to Doppler observations, it is expected to make key contributions to exoplanetary science.&lt;/p&gt;
 
 &lt;p&gt;The two apps produced by the APF team make amateur scientists part of the hunt. These applications join the nascent movement of “citizen science”, which enable the general public to understand and even contribute to scientific research, either by lending a hand in &lt;a href=&quot;http://www.planethunters.org&quot;&gt;analyzing massive sets of scientific data&lt;/a&gt; or by &lt;a href=&quot;http://www.milkywayproject.org&quot;&gt;flagging interesting datasets&lt;/a&gt; that warrant further collection of data.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;The Conversation&quot; height=&quot;1&quot; src=&quot;https://counter.theconversation.edu.au/content/24925/count.gif&quot; width=&quot;1&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 16 Apr 2014 00:00:00 -0700</pubDate>
         <link>http://www.stefanom.io//astronomy/2014/04/16/the-automated-planet-finder-systemic-and-super-planet-crash.html</link>

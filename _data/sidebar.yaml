@@ -8,6 +8,16 @@
   id: resume
   color: "1abc9c"
 
+- title: Research & Outreach
+  url: research
+  id: research
+  color: "e74c3c"
+
+- title: Blog
+  url: blog
+  id: blog
+  color: "e74c3c"
+
 - title: Projects
   url: projects
   id: projects
@@ -18,13 +28,3 @@
   external: true
   id: github
   color: "f1c40f"
-
-- title: Research & Outreach
-  url: research
-  id: research
-  color: "e74c3c"
-
-- title: Blog
-  url: blog
-  id: blog
-  color: "e74c3c"

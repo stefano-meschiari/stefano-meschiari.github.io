@@ -10,7 +10,7 @@ author: Stefano Meschiari
 published: true
 sitemap: false
 ---
-<img class=" wp-image-1234 aligncenter" alt="Credit: Cliff" src="/img/blog/weasel.jpg">
+<img alt="Credit: Cliff" src="/img/blog/weasel.jpg">
 I added a bunch of new keywords to <a title="AstroTRENDS: A new tool to track astronomy topics in the literature" href="http://www.stefanom.org/astrotrends-a-new-tool-to-track-astronomy-topics-in-the-literature/">AstroTRENDS</a>, mostly suggested by friends and people in the community who had read my Facebook post.
 
 A thought I had yesterday is the following: has the astronomical literature become more speculative, and perhaps less committed to audacious claims, in recent times? It is difficult to test this hypothesis   by merely querying ADS for abstract keywords. It would certainly be better served by a <a href="http://en.wikipedia.org/wiki/Natural_language_processing" target="_blank"><em>natural-language processing</em></a> analysis of the full text, although this is just my uninformed speculation.

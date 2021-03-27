@@ -334,6 +334,14 @@ ul li {
     font-weight: 700;
   }
 
+  iframe {
+    margin: auto;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 1px solid $divider;
+  }
+
   img {
     display: block;
     margin: auto;

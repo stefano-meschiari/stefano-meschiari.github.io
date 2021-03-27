@@ -351,6 +351,8 @@ ul li { margin-bottom: 0.75em; }
 
 #blog .post h1 { font-weight: 700; }
 
+#blog .post iframe { margin: auto; display: block; margin-top: 1em; margin-bottom: 1em; border: 1px solid #e5e3e3; }
+
 #blog .post img { display: block; margin: auto; margin-top: 2em; margin-bottom: 2em; }
 
 #blog .post .post-description { font-style: italic; }

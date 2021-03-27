@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Learning under Concept Drift
+title: "Learning under Concept Drift: ML during interesting times"
 author: Stefano Meschiari
 date: '2021-02-25'
 category: notes
