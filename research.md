@@ -14,6 +14,7 @@ permalink: /research/
 * [Debugging Apache Spark Pipelines](https://duo.com/labs/tech-notes/debugging-apache-spark-pipelines) &mdash; a collection of common tuning steps for Apache Spark.
 
 #### Presentations
+* [Where We're Going, We Don't Need Labels: Anomaly Detection for 2FA](https://docs.google.com/presentation/d/1hiVEP1XUpccgsWaQZHBgsGego0oShS_XdMZrm1NIu7k/edit#slide=id.ge670be26ea_0_39) (DEFCON AI Village, 2021)
 * [Detecting and Preventing Cybersecurity Threats Using Machine Learning](https://dominodatalab.wistia.com/medias/eb6ga6kxee) (Domino Popup, Austin, 2018)
 
 <div class="ui hidden divider"></div>
