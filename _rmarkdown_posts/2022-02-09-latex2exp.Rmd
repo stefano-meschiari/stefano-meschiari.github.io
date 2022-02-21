@@ -65,8 +65,10 @@ Plotmath expressions can be used as plot annotations, titles, axis and legend la
 
 This system has a number of disadvantages:
 
-1. **The syntax unfamiliar to most practitioners.** LaTeX is the de-facto standard for typesetting mathematical equations. Although the plotmath system is somewhat reminiscent of LaTeX, anecdotally, new and [experienced](https://robjhyndman.com/hyndsight/latex2exp/) R users find the plotmath syntax unnecessarily different and complicated. While it is an interesting application of R's ability to do metaprogramming, in practice, this DSL does not bring tangible advantages over just using a LaTeX string.
-2. **Equations have to be valid R syntax.** Because a plotmath expression has to be recognized as valid by the parser, a number of equations need workarounds in order to be valid R expressions. For example, the equation $a < b < c$ is not valid R code, and needs workarounds using `{}` (braces are invisible groups), `phantom()` (an invisible token) and `*` (which juxtaposes the operands). The correct way to typeset the equation would be `expression({a < b} * {phantom() < c})`.
+1. **The syntax is unfamiliar to most R users** LaTeX is the de-facto standard for typesetting mathematical equations. Although the plotmath system is somewhat reminiscent of LaTeX, anecdotally, new and [experienced](https://robjhyndman.com/hyndsight/latex2exp/) R users find the plotmath syntax unnecessarily different and complicated. While it is an interesting application of R's ability to do metaprogramming, in practice, this DSL does not bring tangible advantages over a string containing LaTeX notation.
+2. **Equations have to be valid R syntax.** Because a plotmath expression has to be parsable, a number of equations need workarounds in order to be written as valid R expressions. Those equations typically need workarounds combining `{}` (braces are invisible groups), `phantom()` (an invisible token) and `*` (which juxtaposes the operands). 
+
+For example, the equation `a < b < c` is not valid R code; the correct way to typeset the equation would be `expression({a < b} * {phantom() < c})`.
 3. **It is not easily extensible.** As far as I can tell, there are no hooks for
 introducing new symbols and functions.
 4. **The quality of the output is... not ideal.** Compared to a full LaTeX typesetter, the rendered output is merely passable. Limitations include the inability to italicize symbols and greek letters; typeset and align multi-line equations; and, in some cases, properly resize symbols in presence of equations containing tall elements, resulting in artifacts.
@@ -81,7 +83,7 @@ expression.
 latex2exp, via its main function `latex2exp::TeX()`, parses an input LaTeX string 
 and tries to convert it to a plotmath expression. It does that by scanning the LaTeX string looking for various types 
 of tokens, and translating them into the plotmath representation that is visually
-closest.
+closest to the ideal rendering.
 
 For some expressions, the translation is straightforward. For example,
 
@@ -115,27 +117,27 @@ Error: '\P' is an unrecognized escape in character string starting ""\P"
 ```
 
 Prior to R 4.0, the only available option was to escape the backslash character
-using a double-backslash, e.g. `"\\Psi"`, which was both annoying and surprising
-to new users.
+using a double-backslash, e.g. `"\\Psi"`, a surprising first hurdle for
+new users of latex2exp.
 
 As of R 4.0, it is possible to use unquoted backslashes in a string, 
-if the string is marked as a **raw string**, e.g. `r"(\Psi)"`. Raw strings are written as `r"(...)"` with `...` being any character sequence (see `?Quotes` for a description of raw strings). I recommend using raw strings when using the package,
-unless it is not possible to use a version of R later than 4.0.
+if the string is marked as a **raw string**, e.g. `r"(\Psi)"`. Raw strings are written as `r"(...)"` with `...` being any character sequence (see `?Quotes` for a description of raw strings). I recommend using raw strings when using the package
+(unless using R > 4.0 is not possible).
 
-At any point, it is possible to preview the output of the call to TeX by calling
-`plot()` on the returned expression:
+At any point, it is possible to obtain a quick preview of the output of the call to TeX by calling `plot()` on the returned value:
 
 ```{r plot-preview, fig.width=3, fig.height=2, echo=TRUE}
 e <- TeX(r"($\sum_{i=1}^{N} x_i$)")
 plot(e, cex=3)
 ```
+
 Finally, the package website has a [filterable table](https://www.stefanom.io/latex2exp/articles/supported-commands.html) of 
 supported LaTeX commands and a preview of how they will be rendered. The same table can also be invoked anytime from the R prompt using the command
 `latex2exp_supported()`.
 
 ## What's next?
 As far as I can tell, the current version (0.9.3) of latex2exp supports all the LaTeX
-commands that can be feasibly rendered via plotmath (and a few more, using some tricks).
+commands that can be feasibly rendered via plotmath (and a few more are "emulated" using some trickery).
 
 The goal for the 1.x branch of latex2exp is to improve on workflows that are
 unnecessarily error prone, add new features that are hard or impossible to 

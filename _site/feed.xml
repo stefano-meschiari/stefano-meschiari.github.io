@@ -6,8 +6,8 @@
 </description>
     <link>http://www.stefanom.io//</link>
     <atom:link href="http://www.stefanom.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Feb 2022 15:25:40 -0800</pubDate>
-    <lastBuildDate>Mon, 21 Feb 2022 15:25:40 -0800</lastBuildDate>
+    <pubDate>Mon, 21 Feb 2022 15:38:21 -0800</pubDate>
+    <lastBuildDate>Mon, 21 Feb 2022 15:38:21 -0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -59,31 +59,32 @@ legend labels in base R, lattice, and ggplot2 graphics.&lt;/p&gt;
 &lt;p&gt;This system has a number of disadvantages:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;The syntax unfamiliar to most practitioners.&lt;/strong&gt; LaTeX is the
-de-facto standard for typesetting mathematical equations. Although
-the plotmath system is somewhat reminiscent of LaTeX, anecdotally,
-new and &lt;a href=&quot;https://robjhyndman.com/hyndsight/latex2exp/&quot;&gt;experienced&lt;/a&gt;
-R users find the plotmath syntax unnecessarily different and
+  &lt;li&gt;&lt;strong&gt;The syntax is unfamiliar to most R users&lt;/strong&gt; LaTeX is the de-facto
+standard for typesetting mathematical equations. Although the
+plotmath system is somewhat reminiscent of LaTeX, anecdotally, new
+and &lt;a href=&quot;https://robjhyndman.com/hyndsight/latex2exp/&quot;&gt;experienced&lt;/a&gt; R
+users find the plotmath syntax unnecessarily different and
 complicated. While it is an interesting application of R’s ability
 to do metaprogramming, in practice, this DSL does not bring tangible
-advantages over just using a LaTeX string.&lt;/li&gt;
+advantages over a string containing LaTeX notation.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Equations have to be valid R syntax.&lt;/strong&gt; Because a plotmath
-expression has to be recognized as valid by the parser, a number of
-equations need workarounds in order to be valid R expressions. For
-example, the equation &lt;em&gt;a&lt;/em&gt; &amp;lt; &lt;em&gt;b&lt;/em&gt; &amp;lt; &lt;em&gt;c&lt;/em&gt; is not valid R code, and
-needs workarounds using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{}&lt;/code&gt; (braces are invisible groups),
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phantom()&lt;/code&gt; (an invisible token) and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt; (which juxtaposes the
-operands). The correct way to typeset the equation would be
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;expression({a &amp;lt; b} * {phantom() &amp;lt; c})&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;It is not easily extensible.&lt;/strong&gt; As far as I can tell, there are no
-hooks for introducing new symbols and functions.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;The quality of the output is… not ideal.&lt;/strong&gt; Compared to a full
-LaTeX typesetter, the rendered output is merely passable.
-Limitations include the inability to italicize symbols and greek
-letters; typeset and align multi-line equations; and, in some cases,
-properly resize symbols in presence of equations containing tall
-elements, resulting in artifacts.&lt;/li&gt;
+expression has to be parsable, a number of equations need
+workarounds in order to be written as valid R expressions. Those
+equations typically need workarounds combining &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{}&lt;/code&gt; (braces are
+invisible groups), &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phantom()&lt;/code&gt; (an invisible token) and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt; (which
+juxtaposes the operands).&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;For example, the equation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a &amp;lt; b &amp;lt; c&lt;/code&gt; is not valid R code; the correct
+way to typeset the equation would be
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;expression({a &amp;lt; b} * {phantom() &amp;lt; c})&lt;/code&gt;. 3. &lt;strong&gt;It is not easily
+extensible.&lt;/strong&gt; As far as I can tell, there are no hooks for introducing
+new symbols and functions. 4. &lt;strong&gt;The quality of the output is… not
+ideal.&lt;/strong&gt; Compared to a full LaTeX typesetter, the rendered output is
+merely passable. Limitations include the inability to italicize symbols
+and greek letters; typeset and align multi-line equations; and, in some
+cases, properly resize symbols in presence of equations containing tall
+elements, resulting in artifacts.&lt;/p&gt;
 
 &lt;p&gt;latex2exp tries to address (1)-(3) by providing an easier-to-use
 interface to plotmath’s capabilities. Because it is just a translational
@@ -97,7 +98,7 @@ representation than a hand-written expression.&lt;/p&gt;
 LaTeX string and tries to convert it to a plotmath expression. It does
 that by scanning the LaTeX string looking for various types of tokens,
 and translating them into the plotmath representation that is visually
-closest.&lt;/p&gt;
+closest to the ideal rendering.&lt;/p&gt;
 
 &lt;p&gt;For some expressions, the translation is straightforward. For example,&lt;/p&gt;
 
@@ -130,25 +131,25 @@ by the error&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Prior to R 4.0, the only available option was to escape the backslash
-character using a double-backslash, e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;\Psi&quot;&lt;/code&gt;, which was both
-annoying and surprising to new users.&lt;/p&gt;
+character using a double-backslash, e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;\Psi&quot;&lt;/code&gt;, a surprising first
+hurdle for new users of latex2exp.&lt;/p&gt;
 
 &lt;p&gt;As of R 4.0, it is possible to use unquoted backslashes in a string, if
 the string is marked as a &lt;strong&gt;raw string&lt;/strong&gt;, e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;r&quot;(\Psi)&quot;&lt;/code&gt;. Raw strings
 are written as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;r&quot;(...)&quot;&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;...&lt;/code&gt; being any character sequence (see
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?Quotes&lt;/code&gt; for a description of raw strings). I recommend using raw
-strings when using the package, unless it is not possible to use a
-version of R later than 4.0.&lt;/p&gt;
+strings when using the package (unless using R &amp;gt; 4.0 is not possible).&lt;/p&gt;
 
-&lt;p&gt;At any point, it is possible to preview the output of the call to TeX by
-calling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plot()&lt;/code&gt; on the returned expression:&lt;/p&gt;
+&lt;p&gt;At any point, it is possible to obtain a quick preview of the output of
+the call to TeX by calling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plot()&lt;/code&gt; on the returned value:&lt;/p&gt;
 
 &lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TeX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;($\sum_{i=1}^{N} x_i$)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/blog/2022-02-09-latex2exp/plot-preview-1.png&quot; width=&quot;288&quot; /&gt;
-Finally, the package website has a &lt;a href=&quot;https://www.stefanom.io/latex2exp/articles/supported-commands.html&quot;&gt;filterable
+&lt;p&gt;&lt;img src=&quot;/img/blog/2022-02-09-latex2exp/plot-preview-1.png&quot; width=&quot;288&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, the package website has a &lt;a href=&quot;https://www.stefanom.io/latex2exp/articles/supported-commands.html&quot;&gt;filterable
 table&lt;/a&gt;
 of supported LaTeX commands and a preview of how they will be rendered.
 The same table can also be invoked anytime from the R prompt using the
@@ -158,7 +159,7 @@ command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;latex
 
 &lt;p&gt;As far as I can tell, the current version (0.9.3) of latex2exp supports
 all the LaTeX commands that can be feasibly rendered via plotmath (and a
-few more, using some tricks).&lt;/p&gt;
+few more are “emulated” using some trickery).&lt;/p&gt;
 
 &lt;p&gt;The goal for the 1.x branch of latex2exp is to improve on workflows that
 are unnecessarily error prone, add new features that are hard or
