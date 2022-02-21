@@ -15,7 +15,8 @@ layout: default
     <div class="post-content" itemprop="articleBody">
 
       {% if page.splash %}
-      <img src="/img/blog/{{page.splash}}" alt="Splash image for post">
+      <img src="/img/blog/{{page.splash.src}}" alt="{{page.splash.alt}}">
+      <div class="caption">{{page.splash.caption}}</div>
       {% endif %}
 
       {{ content }}

@@ -15,7 +15,10 @@ icon: edit
     </header>
 
     {% if post.splash %}
-    <img src="/img/blog/{{post.splash}}" alt="Splash image for post">
+    <img src="/img/blog/{{post.splash.src}}" alt="{{post.splash.alt}}">
+    {% if post.splash.caption %}
+    <div class="caption">{{post.splash.caption}}</div>
+    {% endif %}
     {% endif %}
 
     <p class="excerpt">

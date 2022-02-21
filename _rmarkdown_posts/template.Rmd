@@ -1,0 +1,24 @@
+---
+title: RMarkdown blogging sample with Jekyll
+output:
+  md_document:
+    variant: gfm
+    preserve_yaml: TRUE
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../_posts") })
+author: "Stefano Meschiari"
+date: '{date}'
+layout: post
+categories:
+  - development
+tags:
+  - R
+  - latex
+  - packages
+splash: '{splash_image}'
+---
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(fig.width=4, fig.height=3, fig.retina=2,
+                      echo=FALSE, message=FALSE,
+                      fig.path=str_c("../img/blog/", knitr::current_input(), "/"))
+```

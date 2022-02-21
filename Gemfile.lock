@@ -89,6 +89,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+  arm64-darwin-21
 
 DEPENDENCIES
   jekyll-compose
@@ -97,4 +98,4 @@ DEPENDENCIES
   jemoji
 
 BUNDLED WITH
-   2.2.11
+   2.3.7

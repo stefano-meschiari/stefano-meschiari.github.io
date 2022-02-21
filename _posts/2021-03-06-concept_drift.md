@@ -4,7 +4,9 @@ title: "Learning under Concept Drift: ML during interesting times"
 author: Stefano Meschiari
 date: '2021-02-25'
 category: notes
-splash: concept_drift/splash.png
+splash:
+    src: concept_drift/splash.png
+    alt: A string of colored boxes switching between red and blue
 tags:
 - machine_learning
 - concept_drift
@@ -13,7 +15,7 @@ changes:
 - 04/09 - Added JS divergence, Bach et al. paper
 - 04/06 - First revision
 ---
-It's very rare for both the underlying generative processes that produce the <span class="with-tooltip" data-tooltip="server accesses, yearly sales, movie ratings, ...">raw data</span>, and the <span class="with-tooltip" data-tooltip="APIs, software, cloud services, ...">systems</span> we use to measure, transform, and store that raw data, to be static and unchanging. More commonly, they evolve: distributions shift, relationships and constraints between the different dimensions of the data drift and break, data stops being available, and assumptions about the semantics of certain attributes cease to be valid. Multiple of those shifts can be happening on different timescales, and sometimes in abrupt ways.
+It's very rare for both the underlying generative processes that produce the raw data, and the <span class="with-tooltip" data-tooltip="APIs, software, cloud services, ...">systems</span> we use to measure, transform, and store that raw data, to be static and unchanging. More commonly, they evolve: distributions shift, relationships and constraints between the different dimensions of the data drift and break, data stops being available, and assumptions about the semantics of certain attributes cease to be valid. Multiple of those shifts can be happening on different timescales, and sometimes in abrupt ways.
 
 This can have a profound effect on machine learning models. An underlying assumption of machine learning models is that the state of the world observed at training time is representative of the environment at which the model is deployed (typically, some time after training). When that assumption is invalid, *in the best case scenario*, predictive performance might be degraded; a monitoring component might be able to detect this regression, attribute it to a specific root cause, and trigger a retrain using a different dataset. In the worst case, it will continue to silently, happily serve non-sensical results.
 

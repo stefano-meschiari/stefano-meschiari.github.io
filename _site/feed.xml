@@ -6,13 +6,254 @@
 </description>
     <link>http://www.stefanom.io//</link>
     <atom:link href="http://www.stefanom.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Mar 2021 14:08:08 -0700</pubDate>
-    <lastBuildDate>Sat, 27 Mar 2021 14:08:08 -0700</lastBuildDate>
+    <pubDate>Mon, 21 Feb 2022 15:25:40 -0800</pubDate>
+    <lastBuildDate>Mon, 21 Feb 2022 15:25:40 -0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
+        <title>latex2exp: a package to render LaTeX in R graphics</title>
+        <description>&lt;p&gt;This month, I pushed a big update to
+&lt;strong&gt;&lt;a href=&quot;https://www.stefanom.io/latex2exp/&quot;&gt;latex2exp&lt;/a&gt;&lt;/strong&gt;, bumping it to
+version 0.9.&lt;/p&gt;
+
+&lt;p&gt;latex2exp is the R package for rendering LaTeX-formatted text in any
+plotting context. This package lets the user add formatted text
+(e.g. bold, italic, underline, different font sizes…), mathematical
+symbols, and equations to plots. Although this capability exists in base
+R, latex2exp makes it more accessible by exposing it via LaTeX, which is
+the most common standard for typesetting mathematical formulas.&lt;/p&gt;
+
+&lt;p&gt;The 0.9.3 update massively increased the number of LaTeX commands
+recognized, reworked the parser to work correctly in circumstances where
+the old parser would fail, improved documentation, and expanded its test
+suite to include a large number of sample expressions, seen-in-the-wild
+uses of latex2exp, and edge cases.&lt;/p&gt;
+
+&lt;p&gt;In this post, I will outline briefly about how latex2exp came to be, how
+it works, what changed and what the roadmap for the package looks like.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;typesetting-formatted-text-and-formulas-in-base-r&quot;&gt;Typesetting formatted text and formulas in base R&lt;/h2&gt;
+
+&lt;p&gt;The primary way to add formatted text and mathematical notation in base
+R is to use &lt;strong&gt;plotmath expressions&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://web.mit.edu/~r/current/arch/i386_linux26/lib/R/library/grDevices/html/plotmath.html&quot;&gt;plotmath&lt;/a&gt;
+(described in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?plotmath&lt;/code&gt;) is a &lt;span class=&quot;with-tooltip&quot; data-tooltip=&quot;Domain-Specific Language&quot;&gt;DSL&lt;/span&gt; that comprises
+expressions that obey the syntax of regular R code, but are specially
+interpreted by a renderer. An expressions such as&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;expression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%-&amp;gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;combines function calls, subscripts, and operators like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%-&amp;gt;%&lt;/code&gt; to
+produce a valid, unevaluated R expression. Each operand and token is
+then interpreted by the renderer at plotting time; for instance, the
+expression above is rendered as&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/2022-02-09-latex2exp/example-plotmath-1.png&quot; width=&quot;288&quot; /&gt;
+Plotmath expressions can be used as plot annotations, titles, axis and
+legend labels in base R, lattice, and ggplot2 graphics.&lt;/p&gt;
+
+&lt;p&gt;This system has a number of disadvantages:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;The syntax unfamiliar to most practitioners.&lt;/strong&gt; LaTeX is the
+de-facto standard for typesetting mathematical equations. Although
+the plotmath system is somewhat reminiscent of LaTeX, anecdotally,
+new and &lt;a href=&quot;https://robjhyndman.com/hyndsight/latex2exp/&quot;&gt;experienced&lt;/a&gt;
+R users find the plotmath syntax unnecessarily different and
+complicated. While it is an interesting application of R’s ability
+to do metaprogramming, in practice, this DSL does not bring tangible
+advantages over just using a LaTeX string.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Equations have to be valid R syntax.&lt;/strong&gt; Because a plotmath
+expression has to be recognized as valid by the parser, a number of
+equations need workarounds in order to be valid R expressions. For
+example, the equation &lt;em&gt;a&lt;/em&gt; &amp;lt; &lt;em&gt;b&lt;/em&gt; &amp;lt; &lt;em&gt;c&lt;/em&gt; is not valid R code, and
+needs workarounds using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{}&lt;/code&gt; (braces are invisible groups),
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phantom()&lt;/code&gt; (an invisible token) and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt; (which juxtaposes the
+operands). The correct way to typeset the equation would be
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;expression({a &amp;lt; b} * {phantom() &amp;lt; c})&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;It is not easily extensible.&lt;/strong&gt; As far as I can tell, there are no
+hooks for introducing new symbols and functions.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;The quality of the output is… not ideal.&lt;/strong&gt; Compared to a full
+LaTeX typesetter, the rendered output is merely passable.
+Limitations include the inability to italicize symbols and greek
+letters; typeset and align multi-line equations; and, in some cases,
+properly resize symbols in presence of equations containing tall
+elements, resulting in artifacts.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;latex2exp tries to address (1)-(3) by providing an easier-to-use
+interface to plotmath’s capabilities. Because it is just a translational
+layer on plotmath, it cannot improve on the quality of the typesetting,
+although in many situations it can produce a higher-quality plotmath
+representation than a hand-written expression.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-latex2exp-works&quot;&gt;How latex2exp works&lt;/h2&gt;
+
+&lt;p&gt;latex2exp, via its main function &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;latex2exp::TeX()&lt;/code&gt;, parses an input
+LaTeX string and tries to convert it to a plotmath expression. It does
+that by scanning the LaTeX string looking for various types of tokens,
+and translating them into the plotmath representation that is visually
+closest.&lt;/p&gt;
+
+&lt;p&gt;For some expressions, the translation is straightforward. For example,&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;TeX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;(\alpha)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# is equivalent to&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;expression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For others, the translation is not so straightforward, and latex2exp
+translates the LaTeX string into the closest equivalent, which might be
+a relatively complicated plotmath expression:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;TeX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;($\frac{ih}{2\pi} \frac{d}{dt} \ket{\Psi(t)} = \hat{H}\ket{\Psi(t)}$)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# is equivalent to&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;expression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ih&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phantom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phantom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'|'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Psi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rangle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'|'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Psi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rangle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A common source of bugs for new users of latex2exp is that the backslash
+character inside strings is used to start an escape sequence, such as
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\n&lt;/code&gt; (newline), &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\t&lt;/code&gt; (tabs), or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\unnnn&lt;/code&gt; (a Unicode character). So, a
+user attempting to write a TeX string such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;\Psi&quot;&lt;/code&gt; will be greeted
+by the error&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Error: '\P' is an unrecognized escape in character string starting &quot;&quot;\P&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Prior to R 4.0, the only available option was to escape the backslash
+character using a double-backslash, e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;\Psi&quot;&lt;/code&gt;, which was both
+annoying and surprising to new users.&lt;/p&gt;
+
+&lt;p&gt;As of R 4.0, it is possible to use unquoted backslashes in a string, if
+the string is marked as a &lt;strong&gt;raw string&lt;/strong&gt;, e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;r&quot;(\Psi)&quot;&lt;/code&gt;. Raw strings
+are written as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;r&quot;(...)&quot;&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;...&lt;/code&gt; being any character sequence (see
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?Quotes&lt;/code&gt; for a description of raw strings). I recommend using raw
+strings when using the package, unless it is not possible to use a
+version of R later than 4.0.&lt;/p&gt;
+
+&lt;p&gt;At any point, it is possible to preview the output of the call to TeX by
+calling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plot()&lt;/code&gt; on the returned expression:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TeX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;($\sum_{i=1}^{N} x_i$)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/2022-02-09-latex2exp/plot-preview-1.png&quot; width=&quot;288&quot; /&gt;
+Finally, the package website has a &lt;a href=&quot;https://www.stefanom.io/latex2exp/articles/supported-commands.html&quot;&gt;filterable
+table&lt;/a&gt;
+of supported LaTeX commands and a preview of how they will be rendered.
+The same table can also be invoked anytime from the R prompt using the
+command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;latex2exp_supported()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-next&quot;&gt;What’s next?&lt;/h2&gt;
+
+&lt;p&gt;As far as I can tell, the current version (0.9.3) of latex2exp supports
+all the LaTeX commands that can be feasibly rendered via plotmath (and a
+few more, using some tricks).&lt;/p&gt;
+
+&lt;p&gt;The goal for the 1.x branch of latex2exp is to improve on workflows that
+are unnecessarily error prone, add new features that are hard or
+impossible to achieve with plotmath, and extend the range of examples
+provided in the documentation.&lt;/p&gt;
+
+&lt;h3 id=&quot;specialized-annotation-geoms-for-ggplot-and-ggrepel&quot;&gt;Specialized annotation geoms for ggplot and ggrepel&lt;/h3&gt;
+
+&lt;p&gt;I would like to support ggplot more directly. Currently, for ggplot
+geoms like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;geom_text&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;geom_label&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;annotate&lt;/code&gt; that take a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;label&lt;/code&gt;
+aesthetic, the input vector for the label aesthetic is expected to be of
+type character, rather than of type expression. In order to plot
+formatted text and formulas, the user is expected to pass a character
+representation of the plotmath expression and remember to specify the
+parameter &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parse=TRUE&lt;/code&gt; to force parsing of the expression.&lt;/p&gt;
+
+&lt;p&gt;This means that in order to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TeX&lt;/code&gt; with these functions, it is
+necessary to use the parameter &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TeX(..., output=&quot;character&quot;)&lt;/code&gt; to force
+it to return the character representation of the expression:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ggplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mtcars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mpg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;geom_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;annotate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;text&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+           &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TeX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;(\alpha+\beta)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;character&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+           &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is unintuitive, error-prone, and unnecessarily verbose.&lt;/p&gt;
+
+&lt;p&gt;I propose to add the functions: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;geom_text_TeX&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;geom_label_TeX&lt;/code&gt;, and
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;annotate_TeX&lt;/code&gt;. These functions will forward to the underlying ggplot
+functions, and set the appropriate parameters for the user, such that:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ggplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mtcars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mpg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;geom_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;annotate_TeX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;(\alpha+\beta)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;will automatically parse the TeX input, turn it into an expression, and
+forward it to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;annotate&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parse=TRUE&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;multi-line-equations&quot;&gt;Multi-line equations&lt;/h3&gt;
+
+&lt;p&gt;There is currently &lt;a href=&quot;https://web.archive.org/web/20190108072407/http://r.789695.n4.nabble.com/newline-in-plotmath-expressions-td795815.html&quot;&gt;no way to introduce a line
+break&lt;/a&gt;
+in an equation.&lt;/p&gt;
+
+&lt;p&gt;I can see two possibilities for achieving this in a future 1.x version:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Break the expression into separate labels, each containining a line
+of equation, and compute positioning coordinates that achieve the
+correct layout and alignment;&lt;/li&gt;
+  &lt;li&gt;Or, exploiting an undocumented (as far as I know) behavior of
+plotmath, it appears to be possible to liberal use of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;atop()&lt;/code&gt;
+plotmath function to stack multiple equations on top of each other,
+wrapped in a call to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;displaysize()&lt;/code&gt; to ensure each line is
+displayed with the correct font size.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The latter produces a passable-in-a-pinch output where each line is
+center-aligned: &lt;img src=&quot;/img/blog/2022-02-09-latex2exp/atop.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;gallery-of-examples&quot;&gt;Gallery of examples&lt;/h3&gt;
+
+&lt;p&gt;I am accumulating a few examples of usages of latex2exp – both from my
+own work, and in the wild – that can be used to showcase what the
+package can do for publication-quality plots.&lt;/p&gt;
+
+&lt;div class=&quot;ui segment&quot;&gt;
+
+Would you like to share a plot that you think showcases the ability of
+latex2exp (or just looks very pretty) for inclusion in this gallery?
+Please feel free to open an issue in the
+&lt;a href=&quot;https://github.com/stefano-meschiari/latex2exp/&quot;&gt;GitHub
+repo&lt;/a&gt;.
+
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 09 Feb 2022 00:00:00 -0800</pubDate>
+        <link>http://www.stefanom.io//development/2022/02/09/latex2exp.html</link>
+        <guid isPermaLink="true">http://www.stefanom.io//development/2022/02/09/latex2exp.html</guid>
+        
+        <category>R</category>
+        
+        <category>latex</category>
+        
+        <category>packages</category>
+        
+        
+        <category>development</category>
+        
+      </item>
+    
+      <item>
         <title>Learning under Concept Drift: ML during interesting times</title>
-        <description>&lt;p&gt;It’s very rare for both the underlying generative processes that produce the &lt;span class=&quot;with-tooltip&quot; data-tooltip=&quot;server accesses, yearly sales, movie ratings, ...&quot;&gt;raw data&lt;/span&gt;, and the &lt;span class=&quot;with-tooltip&quot; data-tooltip=&quot;APIs, software, cloud services, ...&quot;&gt;systems&lt;/span&gt; we use to measure, transform, and store that raw data, to be static and unchanging. More commonly, they evolve: distributions shift, relationships and constraints between the different dimensions of the data drift and break, data stops being available, and assumptions about the semantics of certain attributes cease to be valid. Multiple of those shifts can be happening on different timescales, and sometimes in abrupt ways.&lt;/p&gt;
+        <description>&lt;p&gt;It’s very rare for both the underlying generative processes that produce the raw data, and the &lt;span class=&quot;with-tooltip&quot; data-tooltip=&quot;APIs, software, cloud services, ...&quot;&gt;systems&lt;/span&gt; we use to measure, transform, and store that raw data, to be static and unchanging. More commonly, they evolve: distributions shift, relationships and constraints between the different dimensions of the data drift and break, data stops being available, and assumptions about the semantics of certain attributes cease to be valid. Multiple of those shifts can be happening on different timescales, and sometimes in abrupt ways.&lt;/p&gt;
 
 &lt;p&gt;This can have a profound effect on machine learning models. An underlying assumption of machine learning models is that the state of the world observed at training time is representative of the environment at which the model is deployed (typically, some time after training). When that assumption is invalid, &lt;em&gt;in the best case scenario&lt;/em&gt;, predictive performance might be degraded; a monitoring component might be able to detect this regression, attribute it to a specific root cause, and trigger a retrain using a different dataset. In the worst case, it will continue to silently, happily serve non-sensical results.&lt;/p&gt;
 
