@@ -1,14 +1,14 @@
 - emphasis: green
   title: Technical Lead<br>
-  period: Feb 2019-present
+  period: Feb 2019-Dec 2021
   title2: Senior Data Scientist
   period2: Aug 2017-Feb 2019
   company: Duo Security (Cisco)
   company_link: https://www.duosecurity.com
   description: |
-    I lead the research and technical development of the data science platform that powers the <a href="https://duo.com/blog/duo-trust-monitor-is-here-to-make-risk-detection-easy" target="_blank">Duo Trust Monitor</a> product feature.
+    I led the research and technical development of the data science platform that powers the <a href="https://duo.com/blog/duo-trust-monitor-is-here-to-make-risk-detection-easy" target="_blank">Duo Trust Monitor</a> product feature.
 
-    My work at Duo includes:
+    My work at Duo over four years included:
     * Develop pipeline components and infrastructure that analyze data, build models, and surface possible threats and authentication anomalies at scale, using Spark, SparkML, and H2O.
     * Research foundational supervised and unsupervised algorithms tailored to the security domain, with a particular attention to simplicity, explainability, and scalability. Translate internal domain expertise into expert rule layers and heuristics. Analyze our vast authentication dataset to mine new patterns of suspicious behavior.
     * Collaborate with the product and design teams to understand how to shape algorithms and visualizations to address with our customer needs, simplify their operations, and remove friction. Work with customers via interviews, observations, and testing advanced development of new capabilities.

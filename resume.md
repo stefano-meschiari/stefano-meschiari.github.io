@@ -12,7 +12,7 @@ Downloadable resume coming back soon!
 
 
 <h1 class="name">Stefano Meschiari, Ph.D.</h1>
-<h2 class="subtitle">Data Science Technical Lead, Duo Security</h2>
+<h2 class="subtitle">Data Scientist</h2>
 <hr>
 <div class="links">
 <a href="mailto:stefano.meschiari@gmail.com" class="ui circular button"><i class="mail outline icon"></i> stefano.meschiari@gmail.com</a>
@@ -21,7 +21,7 @@ Downloadable resume coming back soon!
 </div>
 <hr>
 
-I am an experienced data scientist with a background in scientific research. I have worked on projects that involved  researching new algorithms and approaches to attacking hard problems, analyzing complex, label-poor datasets, building novel production ETL and ML platforms, helping to bring intelligent capabilities to fruition for users, and creating functional data tooling. I am comfortable with bootstrapping new ideas, and figuring out how to chip away at uncertainty, clarify and better define the solution space, and measure success.
+I am an experienced data scientist with a background in scientific research. I have worked on projects that involved  researching new algorithms and approaches to attacking hard problems, analyzing complex, label-poor datasets, building novel production ETL and ML platforms, helping to bring intelligent capabilities to fruition for users, and creating functional data tooling.
 
 I enjoy working with cross-functional teams to create, polish, and evolve from napkin ideas to production. In particular, I love collaborating with product and design teams to coherently integrate data science into their vision, and helping them test out new concepts and visualizations with data science-driven prototypes and customer discovery.
 
@@ -42,7 +42,7 @@ I enjoy working with cross-functional teams to create, polish, and evolve from n
       <br>
 
       <div class="links">
-          <a href="{{templjobate.company_link}}" target="_blank">{{job.company}}</a>
+          <a href="{{job.company_link}}" target="_blank">{{job.company}}</a>
       </div>
   </div>
   <div class="twelve wide column">
