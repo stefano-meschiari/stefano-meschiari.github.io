@@ -23,7 +23,7 @@
   frontpage: true
 
 - title: latex2exp
-  url: https://github.com/stefano-meschiari/latex2exp
+  url: https://www.stefanom.io/latex2exp/
   external: true
   anchor: latex2exp
   description: A package to typeset math formulas in R using LaTeX notation.
