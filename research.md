@@ -9,12 +9,18 @@ permalink: /research/
 </h3>
 
 #### Writing
-* [Duo Trust Monitor Is Here to Make Risk Detection Easy](https://duo.com/blog/duo-trust-monitor-is-here-to-make-risk-detection-easy) &mdash; Duo Trust Monitor announcement.
-* [Finding a Needle in a Haystack using Apache Spark](https://github.com/stefano-meschiari/spark_workshop) &mdash; a workshop for engineers that shows how to use Apache Spark queries for simple outlier detection.
-* [Debugging Apache Spark Pipelines](https://duo.com/labs/tech-notes/debugging-apache-spark-pipelines) &mdash; a collection of common tuning steps for Apache Spark.
+* **[Duo Trust Monitor Is Here to Make Risk Detection Easy](https://duo.com/blog/duo-trust-monitor-is-here-to-make-risk-detection-easy)**<br>This article announced the availability of Duo Trust Monitor. Duo Trust Monitor (DTM) is a feature integrated in the Duo Platform that uses a variety of ML models to provide a simple, easy to enable, high signal source of risky access behavior to our customers. A [demo](https://demo.duo.com/trust-monitor) of Duo Trust Monitor is available.
+* **[Finding a Needle in a Haystack using Apache Spark](https://github.com/stefano-meschiari/spark_workshop)**<br>
+  An interactive workshop for engineers that shows how to use a Jupyter Notebook and introduces Apache SparkSQL, applied to simple outlier detection.
+* **[Debugging Apache Spark Pipelines](https://duo.com/labs/tech-notes/debugging-apache-spark-pipelines)**<br>
+  A collection of common tuning steps for Apache Spark.
 
 #### Presentations
-* [Detecting and Preventing Cybersecurity Threats Using Machine Learning](https://dominodatalab.wistia.com/medias/eb6ga6kxee) (Domino Popup, Austin, 2018)
+* **Where We’re Going, We Don’t Need Labels: Anomaly Detection for 2FA** (DEFCON AI Village 29, 2021)<br>
+  [slides](https://speakerdeck.com/exostefanom/where-were-going-we-dont-need-labels-anomaly-detection-for-2fa?slide=2),
+  [recording](https://www.youtube.com/watch?v=Kh9cKJGA5DM)
+* **Detecting and Preventing Cybersecurity Threats Using Machine Learning** (Domino Popup Data Science, Austin, 2018)<br>
+  [slides](https://speakerdeck.com/exostefanom/detecting-and-preventing-cybersecurity-threats), [recording](https://dominodatalab.wistia.com/medias/eb6ga6kxee)
 
 <div class="ui hidden divider"></div>
 

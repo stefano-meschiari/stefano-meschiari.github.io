@@ -9,16 +9,15 @@
   company: Duo Security (Cisco)
   company_link: https://www.duosecurity.com
   description: |
-    I led the research and technical development of the data science platform that powers the <a href="https://duo.com/blog/duo-trust-monitor-is-here-to-make-risk-detection-easy" target="_blank">Duo Trust Monitor</a> product feature, all the way to release.
-
-    My work at Duo over four years included:
-    * Developed pipeline components and infrastructure that analyze data, build models, and surface possible threats and authentication anomalies at scale, using Apache Spark, SparkML, and H2O.
-    * Researched foundational supervised and unsupervised algorithms tailored to the security domain, with a particular attention to simplicity, explainability, robustness, and scalability. Translated internal domain expertise into expert rule layers and heuristics. Analyzed our vast authentication dataset to mine new patterns of suspicious behavior.
-    * Collaborated with Product and Design teams to understand how to shape the algorithmic and presentation layers that would meet our product vision, simplify our customers’ operations, and increase the value of the Duo platform. Worked with customers and domain experts via interviews and observations to test new capabilities and models.
-    * Created reports, dashboards, and prototypes to assist with product and engineering decisions and build consensus on solutions. Helped prioritize quarterly and longer-term projects based on reach, confidence, and effort estimates. Led the Duo Trust Monitor project from conception all the way to general availability, coordinating product, engineering, and design efforts.
-    * Created reports, dashboards, and prototypes to assist with product and engineering decisions and build consensus on technical and UX solutions.
-    * 2 patents submitted to USPTO through Cisco.
-
+    * Led the research and development of the data science platform that powers <a href="https://duo.com/blog/duo-trust-monitor-is-here-to-make-risk-detection-easy" target="_blank">Duo Trust Monitor</a> (<a href="https://demo.duo.com/trust-monitor">demo</a>).
+    * Collaborated with Product and Design teams to seamlessly integrate machine learning and effective data presentation into Duo’s product, prioritizing usability and customer trust. Worked closely with customers to understand their use cases and validate new capabilities.
+    * Coordinated Data Science and Engineering work to ensure alignment, manage expectations, and hit delivery milestones.
+    * Led team through growth from 1 to 10 IC members, navigating substantial organizational change. Mentored 5 peers in data science and engineering. Served as interim manager for multiple data teams as required. Developed technical interviews on research, algorithms, and ML architecture.
+    * Researched supervised and unsupervised algorithms tailored to the security domain, focusing on simplicity, explainability, and scalability.
+    * Worked with domain experts to translate cybersecurity knowledge into expert rules and heuristic layers that complement ML models.
+    * Developed ETL and ML infrastructure to process data, build models, and surface threats and authentication anomalies at scale.
+    * Created reports, dashboards, and prototypes that guided technical and UX decisions. Delivered presentations, demos, and trainings internally (for engineering, sales, and VP-level executives) and externally.
+    * Submitted 2 patents to USPTO, including a first-inventor patent for our proprietary ML algorithm for threat detection.
 
 - titles:
     - title: Product Data Scientist
@@ -26,10 +25,9 @@
   company: Civitas Learning
   company_link: https://www.civitaslearning.com
   description: |
-    * Created and improved on prototype machine learning tools and pipelines to model student outcomes.
-    * Prototyped new product ideas and internal tooling that employ machine learning, novel summary statistics and visualizations.
-    * Maintained and improved the custom modeling platform. Reduced training and scoring running time (and cloud costs) by half.
-    * Developed new machine learning models and custom classification algorithms (in R/Caret, SparkML, and JavaScript); back-end data APIs for internal services (Express) and front-end tools (React, Highcharts, D3) that the sales team could use on customer calls to drive conversation, suggest insights, and facilitate upsells.
+    * Created and improved on machine learning pipelines and tooling to model university student outcomes. Improved the custom modeling platform, reducing batch training and scoring running time and cloud costs by half.
+    * Developed new ML models and custom classification algorithms (in R/ Caret, SparkML, and JavaScript) and back-end data APIs for internal services.
+    * Developed applications that surfaced institution-level insights and visualizations, empowering Sales and executives with timely data- driven talking points and facilitating new partnerships and upsells.
 
 - titles:
     - title: W. J. McDonald Postdoctoral Fellow
