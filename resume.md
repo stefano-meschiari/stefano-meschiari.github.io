@@ -3,7 +3,7 @@ layout: page
 title: Resume
 permalink: /resume/
 ---
-<a href="/files/cv.pdf" class="ui button right floated">Download PDF</a>
+<a href="/files/meschiari_cv.pdf" class="ui button right floated">Download PDF</a>
 <h1 class="name">Stefano Meschiari, Ph.D.</h1>
 <h2 class="subtitle">Data Scientist</h2>
 
