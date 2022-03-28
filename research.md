@@ -16,9 +16,12 @@ permalink: /research/
   A collection of common tuning steps for Apache Spark.
 
 #### Presentations
+##### Duo
 * **Where We’re Going, We Don’t Need Labels: Anomaly Detection for 2FA** (DEFCON AI Village 29, 2021)<br>
   [slides](https://speakerdeck.com/exostefanom/where-were-going-we-dont-need-labels-anomaly-detection-for-2fa?slide=2),
   [recording](https://www.youtube.com/watch?v=Kh9cKJGA5DM)
+* **Avoid Data Pitfalls in Your Threat Intelligence** (Duo Webinar, 2020)<br>
+  [recording](https://duo.com/resources/videos/avoid-data-pitfalls-in-your-threat-intelligence)
 * **Detecting and Preventing Cybersecurity Threats Using Machine Learning** (Domino Popup Data Science, Austin, 2018)<br>
   [slides](https://speakerdeck.com/exostefanom/detecting-and-preventing-cybersecurity-threats), [recording](https://dominodatalab.wistia.com/medias/eb6ga6kxee)
 
