@@ -6,7 +6,8 @@ description: That time I teamed up with a very, very smart high school student.
 date: 2015-12-13
 author: Stefano Meschiari
 category: astronomy
-splash: /jupiter_rarity/orbits.png
+splash:
+  src: /jupiter_rarity/orbits.png
 tags:
   - citizen_science
   - exoplanets

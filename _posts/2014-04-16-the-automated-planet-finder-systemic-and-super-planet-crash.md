@@ -3,7 +3,8 @@ layout: post
 title: The Automated Planet Finder, Systemic and Super Planet Crash
 date: 2014-04-16
 description: A 2.4 meter telescope that runs robotically
-splash: /jupiter_rarity/orbits.png
+splash:
+    src: /jupiter_rarity/orbits.png
 category: astronomy
 tags:
     - systemic
@@ -21,7 +22,7 @@ The following is a short article about the <a href="http://news.ucsc.edu/2014/03
 <!--more-->
 <h1>Telescope apps help amateurs hunt for exoplanets</h1>
 <img src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/45886/width668/q5bhnrtr-1396989823.jpg">
-<small><a href="www.lauriehatch.com" target="_blank">Laurie Hatch</a></small>
+<small>Credits: <a href="https://www.lauriehatch.com" target="_blank">Laurie Hatch</a></small>
 
 People around the world are being invited to learn how to hunt for planets, using <a href="http://mcdonaldobservatory.org/news/releases/2014/04/07">two new online apps</a> devised by scientists at the University of Texas at Austin and UC Santa Cruz.
 

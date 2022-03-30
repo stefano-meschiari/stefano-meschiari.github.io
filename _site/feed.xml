@@ -6,8 +6,8 @@
 </description>
     <link>http://www.stefanom.io//</link>
     <atom:link href="http://www.stefanom.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Mar 2022 14:04:44 -0700</pubDate>
-    <lastBuildDate>Wed, 30 Mar 2022 14:04:44 -0700</lastBuildDate>
+    <pubDate>Wed, 30 Mar 2022 15:39:12 -0700</pubDate>
+    <lastBuildDate>Wed, 30 Mar 2022 15:39:12 -0700</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -700,7 +700,7 @@ I added a bunch of new keywords to &lt;a title=&quot;AstroTRENDS: A new tool to 
 &lt;!--more--&gt;
 &lt;h1&gt;Telescope apps help amateurs hunt for exoplanets&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/45886/width668/q5bhnrtr-1396989823.jpg&quot; /&gt;
-&lt;small&gt;&lt;a href=&quot;www.lauriehatch.com&quot; target=&quot;_blank&quot;&gt;Laurie Hatch&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;small&gt;Credits: &lt;a href=&quot;https://www.lauriehatch.com&quot; target=&quot;_blank&quot;&gt;Laurie Hatch&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
 &lt;p&gt;People around the world are being invited to learn how to hunt for planets, using &lt;a href=&quot;http://mcdonaldobservatory.org/news/releases/2014/04/07&quot;&gt;two new online apps&lt;/a&gt; devised by scientists at the University of Texas at Austin and UC Santa Cruz.&lt;/p&gt;
 
@@ -743,6 +743,77 @@ I added a bunch of new keywords to &lt;a title=&quot;AstroTRENDS: A new tool to 
         <category>spc</category>
         
         <category>telescopes</category>
+        
+        
+        <category>astronomy</category>
+        
+      </item>
+    
+      <item>
+        <title>Star Wars planets migrate into position around stellar pairs</title>
+        <description>&lt;p&gt;[&lt;em&gt;This short article I wrote has been published on &lt;a href=&quot;https://theconversation.com/star-wars-planets-migrate-into-position-around-stellar-pairs-22663&quot; target=&quot;_blank&quot;&gt;The Conversation&lt;/a&gt; UK and &lt;a href=&quot;https://arstechnica.com/science/2014/02/star-wars-planets-migrate-into-position-around-stellar-pairs/&quot;&gt;Ars Technica&lt;/a&gt;.&lt;/em&gt;]&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr /&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;https://images.theconversation.com/files/40806/original/k52wr2xg-1391616188.jpg?ixlib=rb-1.1.0&amp;amp;q=45&amp;amp;auto=format&amp;amp;w=754&amp;amp;fit=clip&quot; /&gt;
+      &lt;figcaption&gt;
+        The giant planet Kepler-34b orbits round two stars. Now that’s just greedy.
+        &lt;span class=&quot;attribution&quot;&gt;&lt;span class=&quot;source&quot;&gt;David A. Aguilar&lt;/span&gt;&lt;/span&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+
+&lt;p&gt;Planetary science is beginning to catch up with science fiction. Since the launch of the Kepler space telescope in 2009, a deluge of planets outside of our solar system has been found, with many oddball, exotic worlds among them. One of Kepler’s most exciting discoveries was proving the existence of circumbinary planets: planets that orbit two stars, which are themselves bound together by gravity in an often-tight orbital dance. &lt;/p&gt;
+
+&lt;p&gt;Luke Skywalker’s home planet of Tatooine – invented by George Lucas’ for the Star Wars series – was envisioned to exist in this kind of binary system. Now, &lt;a href=&quot;http://iopscience.iop.org/2041-8205/782/1/L11/&quot;&gt;using computer models&lt;/a&gt;, a team from Bristol University has shed more light on how this kind of planet was formed.&lt;/p&gt;
+
+&lt;h2&gt;In the beginning&lt;/h2&gt;
+
+&lt;p&gt;Planetary scientists are in general agreement that planets form inside a thin, gaseous disk surrounding nascent stars. Within this disk, solid particles (evocatively named “dust”) collide and progressively grow to asteroid-sized bodies. These bodies, called planetesimals, are the essential bricks of planet formation. Further collisions among them build protoplanets – rocky, Earth-sized bodies.&lt;/p&gt;
+
+&lt;figure class=&quot;align-center &quot;&gt;
+            &lt;img alt=&quot;&quot; src=&quot;https://images.theconversation.com/files/40812/original/t8wzztkx-1391620584.jpg?ixlib=rb-1.1.0&amp;amp;q=45&amp;amp;auto=format&amp;amp;w=754&amp;amp;fit=clip&quot; srcset=&quot;https://images.theconversation.com/files/40812/original/t8wzztkx-1391620584.jpg?ixlib=rb-1.1.0&amp;amp;q=45&amp;amp;auto=format&amp;amp;w=600&amp;amp;h=401&amp;amp;fit=crop&amp;amp;dpr=1 600w, https://images.theconversation.com/files/40812/original/t8wzztkx-1391620584.jpg?ixlib=rb-1.1.0&amp;amp;q=30&amp;amp;auto=format&amp;amp;w=600&amp;amp;h=401&amp;amp;fit=crop&amp;amp;dpr=2 1200w, https://images.theconversation.com/files/40812/original/t8wzztkx-1391620584.jpg?ixlib=rb-1.1.0&amp;amp;q=15&amp;amp;auto=format&amp;amp;w=600&amp;amp;h=401&amp;amp;fit=crop&amp;amp;dpr=3 1800w, https://images.theconversation.com/files/40812/original/t8wzztkx-1391620584.jpg?ixlib=rb-1.1.0&amp;amp;q=45&amp;amp;auto=format&amp;amp;w=754&amp;amp;h=504&amp;amp;fit=crop&amp;amp;dpr=1 754w, https://images.theconversation.com/files/40812/original/t8wzztkx-1391620584.jpg?ixlib=rb-1.1.0&amp;amp;q=30&amp;amp;auto=format&amp;amp;w=754&amp;amp;h=504&amp;amp;fit=crop&amp;amp;dpr=2 1508w, https://images.theconversation.com/files/40812/original/t8wzztkx-1391620584.jpg?ixlib=rb-1.1.0&amp;amp;q=15&amp;amp;auto=format&amp;amp;w=754&amp;amp;h=504&amp;amp;fit=crop&amp;amp;dpr=3 2262w&quot; sizes=&quot;(min-width: 1466px) 754px, (max-width: 599px) 100vw, (min-width: 600px) 600px, 237px&quot; /&gt;
+            &lt;figcaption&gt;
+              &lt;span class=&quot;caption&quot;&gt;Giant planet accumulating its atmosphere.&lt;/span&gt;
+              &lt;span class=&quot;attribution&quot;&gt;&lt;span class=&quot;source&quot;&gt;Stefano Meschiari&lt;/span&gt;&lt;/span&gt;
+            &lt;/figcaption&gt;
+          &lt;/figure&gt;
+
+&lt;p&gt;Further out from the central star, water and other compounds “freeze out” and become part of the solid component. Past this so-called “ice line”, protoplanets can grow even larger and amass thick, massive atmospheres. This sharp divide between small, Earth-sized planets close to the central star (Mercury to Mars) and giant planets further out (Jupiter to Neptune) is easily recognised in the Solar System.&lt;/p&gt;
+
+&lt;p&gt;For this theory to work, it demands an incredible feat: growth from microscopic dust particles more than a hundred times smaller than a grain of sand, all the way to Jupiter-sized objects. It is a very delicate process, involving many physical mechanisms, some of which are still poorly understood today.&lt;/p&gt;
+
+&lt;h2&gt;Double trouble&lt;/h2&gt;
+
+&lt;p&gt;One sticking point is the stage in which planetesimals collide. Planetesimals need to collide surprisingly gingerly in order to come together; smash them too fast, and they will break into smaller rocks. Regions with high-speed collisions are sterile for planet formation, as no further growth can occur. This is why the recent discovery of circumbinary planets had astronomy theorists raise an eyebrow (or two). &lt;/p&gt;
+
+&lt;p&gt;There are few environments more violent than a binary star system. In the early stages of planet formation, the powerful gravitational perturbations around two stars should lead to destructive collisions that grind down the material. &lt;/p&gt;
+
+&lt;p&gt;And yet, all circumbinary planets discovered so far orbit very close to their parent binary stars. So close, in fact, that if they were any closer, their orbit would be destabilised to the point of ejection from the system or collision with one of the two stars. This is because the stars, moving along on their orbit, tug and perturb the planet with their gravity from different directions. Inside this unstable region, then, no planet could survive for long.&lt;/p&gt;
+
+&lt;p&gt;The Bristol University team devised sophisticated computer simulations of the early formation stages of the giant circumbinary planet Kepler-34(AB)b in order to better understand its birth environment. Their models found that at the current location of the planet, impacts between planetesimals would always be catastrophically destructive. Only far away from the gravitational pull of the two stars can we expect collision speeds to be low enough for planet building to occur.&lt;/p&gt;
+
+&lt;p&gt;Explaining giant planets in a location where they should never have been able to form requires invoking an old idea: that of planetary migration.&lt;/p&gt;
+
+&lt;p&gt;The first giant planet discovered outside of our solar system, 51 Peg b, orbits its parent star closer than Mercury does our sun. It is impossible for such a planet to form so close to its star, as the high temperatures would eliminate the rocks and ices before they could come together. Theorists quickly understood what had occurred early on in this system’s history: the planet probably formed further away from its star and subsequently migrated closer to it. &lt;/p&gt;
+
+&lt;p&gt;The picture, then, becomes clearer: Kepler-34(AB)b must have formed far from the two stars, in a more tranquil environment, and later migrated to its current location. Several computer models have shown this idea to be feasible, and compatible with our observations. The same models also help us understand why all the circumbinary planets found have been relatively small. &lt;/p&gt;
+
+&lt;p&gt;This had puzzled planetary scientists because normally the bigger a planet is, the easier it is to detect. But now we know that this isn’t the case: we would not observe such planets simply because they did not survive their turbulent beginnings. Simulations of planetary migration show that Jupiter-sized circumbinary planets end up strongly interacting with the gravitational field of the stars and are subsequently flung out from the system.&lt;/p&gt;
+
+&lt;p&gt;Although there are still many details to be worked out, this theoretical framework appears to be in step with Kepler’s discoveries so far. But yet-to-be-made planetary discoveries are bound to surprise us in the near future.&lt;!-- Below is The Conversation's page counter tag. Please DO NOT REMOVE. --&gt;&lt;img src=&quot;https://counter.theconversation.com/content/22663/count.gif?distributor=republish-lightbox-basic&quot; alt=&quot;The Conversation&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;border: none !important; box-shadow: none !important; margin: 0 !important; max-height: 1px !important; max-width: 1px !important; min-height: 1px !important; min-width: 1px !important; opacity: 0 !important; outline: none !important; padding: 0 !important; text-shadow: none !important&quot; /&gt;&lt;!-- End of code. If you don't see any code above, please get new code from the Advanced tab after you click the republish button. The page counter does not collect any personal data. More info: https://theconversation.com/republishing-guidelines --&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 10 Feb 2014 00:00:00 -0800</pubDate>
+        <link>http://www.stefanom.io//astronomy/2014/02/10/star-wars-planets.html</link>
+        <guid isPermaLink="true">http://www.stefanom.io//astronomy/2014/02/10/star-wars-planets.html</guid>
+        
+        <category>kepler_16</category>
+        
+        <category>circumbinary_planets</category>
+        
+        <category>astronomy</category>
         
         
         <category>astronomy</category>
