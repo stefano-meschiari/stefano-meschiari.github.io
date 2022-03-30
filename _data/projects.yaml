@@ -1,3 +1,19 @@
+- title: latex2exp
+  url: https://www.stefanom.io/latex2exp/
+  external: true
+  anchor: latex2exp
+  description: Typeset math formulas in R using LaTeX notation.
+  img: img/latex2exp.png
+  frontpage: true
+
+- title: Scikit-learn Classifiers Playground
+  url: https://www.stefanom.io/sklearn-classifiers-playground/
+  external: true
+  anchor: sklearn-classifiers
+  description: An online web app to compare Scikit-learn classifiers, implemented using Pyodide.
+  img: img/sklearn_classifiers.png
+  frontpage: true
+
 - title: Systemic
   url: http://www.stefanom.org/systemic
   anchor: systemic
@@ -20,12 +36,4 @@
   anchor: savepoint
   description: I lead a collaboration of astronomers and educators dedicated to developing games and apps to teach astronomical concepts.
   img: img/orbits.png
-  frontpage: true
-
-- title: latex2exp
-  url: https://www.stefanom.io/latex2exp/
-  external: true
-  anchor: latex2exp
-  description: A package to typeset math formulas in R using LaTeX notation.
-  img: img/latex2exp.png
   frontpage: true

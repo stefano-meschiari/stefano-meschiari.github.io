@@ -16,6 +16,7 @@
     * Researched supervised and unsupervised algorithms tailored to the security domain, focusing on simplicity, explainability, and scalability.
     * Worked with domain experts to translate cybersecurity knowledge into expert rules and heuristic layers that complement ML models.
     * Developed ETL and ML infrastructure to process data, build models, and surface threats and authentication anomalies at scale.
+      Duo [processes](https://duo.com/resources/ebooks/the-2021-duo-trusted-access-report) almost a billion authentications every month.
     * Created reports, dashboards, and prototypes that guided technical and UX decisions. Delivered presentations, demos, and trainings internally (for engineering, sales, and VP-level executives) and externally.
     * Submitted 2 patents to USPTO, including a first-inventor patent for our proprietary ML algorithm for threat detection.
 
