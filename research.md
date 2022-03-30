@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research & Outreach
+title: Publications & Outreach
 id: research
 permalink: /research/
 ---
