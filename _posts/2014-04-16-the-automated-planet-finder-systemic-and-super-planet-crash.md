@@ -3,8 +3,6 @@ layout: post
 title: The Automated Planet Finder, Systemic and Super Planet Crash
 date: 2014-04-16
 description: A 2.4 meter telescope that runs robotically
-splash:
-    src: /jupiter_rarity/orbits.png
 category: astronomy
 tags:
     - systemic

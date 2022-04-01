@@ -20,7 +20,7 @@ I am an experienced Data Scientist with a background in scientific research. As 
 <div class="ui divider"></div>
 
 ### Skills
-* **Machine Learning**: Building supervised and unsupervised classification and regression pipelines via state of the art and custom algorithms; devising high-performance statistical and numerical methods; time series analysis and forecasting. Experienced with sklearn, SparkML, H2O.
+* **Machine Learning**: Building supervised and unsupervised classification and regression pipelines via state of the art and custom algorithms; devising high-performance statistical and numerical methods; time series analysis and forecasting.
 * **Data Science and Engineering**: Architecting high-volume ETL and machine learning pipelines on AWS EMR using Spark, SparkML and H2O. Building components from MVP to production using R, Scala, Python, SQL, JavaScript, Java, and C. Creating interactive tools and reproducible research reports for company-wide consumption.
 * **Leadership**: Mentoring peers from junior to senior positions. Scoping complex tasks, evaluating risk and impact, and acting as a data advocate across multiple teams. Researching knotty problems with curiosity and rigor. Designing technical interviews. Explaining complex concepts to stakeholders with clarity and empathy. Creating knowledge value via clear presentations, technical reports, and workshops.
 
