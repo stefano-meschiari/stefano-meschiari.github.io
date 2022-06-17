@@ -1,5 +1,13 @@
-- emphasis: green
+- emphasis: purple
   titles:
+    - title: Data Scientist
+      period: June 2021-Present
+  company: Stripe
+  company_link: https://stripe.com/
+  description: |
+    * Working on the Fraud team.
+
+- titles:
     - title: Senior Technical Lead
       period: Oct 2021-Dec 2021
     - title: Technical Lead
