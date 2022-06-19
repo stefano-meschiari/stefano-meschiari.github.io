@@ -1,9 +1,9 @@
-- emphasis: purple
-  titles:
+- titles:
     - title: Data Scientist
-      period: June 2021-Present
+      period: June 2022-Present
   company: Stripe
   company_link: https://stripe.com/
+  emphasis: purple
   description: |
     * Working on the Fraud team.
 
@@ -16,6 +16,7 @@
       period: Jul 2017-May 2019
   company: Duo Security (Cisco)
   company_link: https://www.duosecurity.com
+  emphasis: green
   description: |
     * Led the research and development of the data science platform that powers <a href="https://duo.com/blog/duo-trust-monitor-is-here-to-make-risk-detection-easy" target="_blank">Duo Trust Monitor</a> (<a href="https://demo.duo.com/trust-monitor">demo</a>).
     * Collaborated with Product and Design teams to seamlessly integrate machine learning and effective data presentation into Duo’s product, prioritizing usability and customer trust. Worked closely with customers to understand their use cases and validate new capabilities.
@@ -33,6 +34,7 @@
       period: Feb 2016-Jun 2017
   company: Civitas Learning
   company_link: https://www.civitaslearning.com
+  emphasis: blue
   description: |
     * Created and improved on machine learning pipelines and tooling to model university student outcomes. Improved the custom modeling platform, reducing batch training and scoring running time and cloud costs by half.
     * Developed new ML models and custom classification algorithms (in R/ Caret, SparkML, and JavaScript) and back-end data APIs for internal services.
@@ -45,6 +47,7 @@
       period: 2014-2016
   company: University of Texas at Austin
   company_link: https://as.utexas.edu
+  emphasis: orange
   description: |
     As an astronomer, I divided my time between conducting research in theoretical astrophysics and exoplanet detection,
     building libraries tooling for the astronomical community, and devising apps and games for astronomy education.
