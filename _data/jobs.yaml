@@ -1,11 +1,14 @@
 - titles:
     - title: Data Scientist
-      period: June 2022-Present
+      period: June 2022-April 2024
   company: Stripe
   company_link: https://stripe.com/
   emphasis: purple
   description: |
-    * Working on the Fraud team.
+    * *Protected our customers from unauthorized access to their merchant accounts.* I owned building ML models, rules, and processes that prevent access to unauthorized Stripe merchant accounts, with the goal to prevent or minimize the impact to our customers. Drafted multi-quarter roadmaps, reported on loss accounting against budget, and delivered status updates to risk leadership and our financial partners. My work prevented more than $2M/yr in losses, not including customer pain and reputation costs.
+    * *Helped our Risk team make informed decisions.* I designed A/B experiments, detailed analyses and simulations of counterfactual options and their financial/UX consequences, and made recommendations on new operating points to hit our risk targets. I distilled these analyses into high-level projections and dashboards for leadership and our partner stakeholders, for an estimated $3M/year in customer churn reduction.
+    * *Remediated large-scale incidents.* As a part of incident response for many financial incidents, I worked with urgency to analyze new fraud patterns, build detection, stood up incident dashboards for leadership visibility, found gaps in our existing systems, and conducted post-mortems. I represented Stripe with our financial partners.
+    * *Built new customer-facing tooling.* I joined Risk PM, engineers, and designers to deliver a significant new web dashboard feature called Merchant Risk View. As the Risk data scientist, I designed the data model and underlying queries, stood up a mock implementation feeding from real customer data, and collaborated with engineering on a hard and tight deadline dictated Stripe’s Session 2024 conference.
 
 - titles:
     - title: Senior Technical Lead

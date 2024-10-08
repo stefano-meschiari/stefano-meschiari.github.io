@@ -12,7 +12,7 @@
 
   <meta property="og:title" content="Learning under Concept Drift: ML during interesting times">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://www.stefanom.io//notes/2021/02/25/concept_drift.html">
+  <meta property="og:url" content="http://localhost:4000//notes/2021/02/25/concept_drift.html">
   <meta property="og:image" content="http://www.stefanom.io/img/stefano.jpg">
   <meta name="google-site-verification" content="QsBlz5VRu-Ey-cC4xjPU9Fts_iuunkzWCZABJzYhlN4">
 
@@ -24,8 +24,8 @@
   <script type="text/javascript" src="/public/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="/public/semantic/semantic.min.js"></script>
 
-  <link rel="canonical" href="http://www.stefanom.io//notes/2021/02/25/concept_drift.html">
-  <link rel="alternate" type="application/rss+xml" title="Stefano Meschiari" href="http://www.stefanom.io//feed.xml">
+  <link rel="canonical" href="http://localhost:4000//notes/2021/02/25/concept_drift.html">
+  <link rel="alternate" type="application/rss+xml" title="Stefano Meschiari" href="http://localhost:4000//feed.xml">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;300;400;700;900&amp;family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
@@ -153,7 +153,7 @@
 <p><img src="/img/blog/concept_drift/types_of_drift.png" alt="types of drift"></p>
 <div class="caption">Four structural types of drift. Žliobaitė, “Learning under Concept Drift.”</div>
 
-<p>In <sup id="fnref:zliobaite" role="doc-noteref"><a href="#fn:zliobaite" class="footnote">1</a></sup>, concept drift encompasses:</p>
+<p>In <sup id="fnref:zliobaite" role="doc-noteref"><a href="#fn:zliobaite" class="footnote" rel="footnote">1</a></sup>, concept drift encompasses:</p>
 <ul>
   <li>a sudden change in context, where the data changed abruptly due to discontinuous changes in the data generation mechanism;</li>
   <li>a gradual drift, where a new contexts is gradually introduced;</li>
@@ -173,9 +173,11 @@
 <p><img src="/img/blog/concept_drift/windows.png" alt="Two different setups for windows"></p>
 <div class="caption">Different setups for laying out a reference (blue) and test (orange) window.</div>
 
-<p><sup id="fnref:dasu" role="doc-noteref"><a href="#fn:dasu" class="footnote">2</a></sup> propose the <a href="https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence">Kullback-Leibler (KL) divergence</a> to quantify the “distance” between the two distributions. Briefly, for two distributions $p$ and $q$, the KL-divergence measures the expectation value of the logarithmic difference between them, weighted by $p$:</p>
+<p><sup id="fnref:dasu" role="doc-noteref"><a href="#fn:dasu" class="footnote" rel="footnote">2</a></sup> propose the <a href="https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence">Kullback-Leibler (KL) divergence</a> to quantify the “distance” between the two distributions. Briefly, for two distributions $p$ and $q$, the KL-divergence measures the expectation value of the logarithmic difference between them, weighted by $p$:</p>
 
-\[D(p\|q) = \sum_x p(x) \log_2\frac{p(x)}{q(x)}\]
+<p>$$
+D(p|q) = \sum_x p(x) \log_2\frac{p(x)}{q(x)}
+$$</p>
 
 <p>Concretely, one could assign $p$ as the distribution of the variable(s) of interest within the reference window, and $q$ with the test window.</p>
 
@@ -192,7 +194,9 @@
 
 <p>An alternative measure to the KL divergence is the <a href="https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence">Jensen-Shannon (JS) divergence</a>. The JS divergence is a smoothed, symmetrized version of the KL divergence, defined as:</p>
 
-\[JS(p \| q) = \frac{KL(p \| \frac{p+q}{2}) + KL(q \| \frac{p+q}{2})}{2}\]
+<p>$$
+JS(p | q) = \frac{KL(p | \frac{p+q}{2}) + KL(q | \frac{p+q}{2})}{2}
+$$</p>
 
 <p>The JS divergence is bounded within $0 \leq JS \leq 1$, and does not diverge when one of the distributions is zero (or close to zero) and the other is non-zero.</p>
 
@@ -214,7 +218,7 @@
 <h3 id="comparing-performance-of-learners">Comparing performance of learners</h3>
 <p>Another option for detecting concept drift – if labels are available – is to keep track of performance metrics of models on unseen data, such as AUC/AUPR, F1, and Brier scores.</p>
 
-<p><sup id="fnref:bach" role="doc-noteref"><a href="#fn:bach" class="footnote">3</a></sup> proposes a system that pairs two online learners: a <em>stable</em> learner $S$, trained on a growing window of data encompassing all the examples seen up to time $t$, and a <em>reactive</em> learner $R_w$ trained on a sliding window of fixed length $w$. The stable learner outperforms the reactive learner as long as the concept is constant, but will start mispredicting as the data transitions to a new concept. Since $R_w$ is trained on a smaller window, it can react more quickly and act as a lagging indicator of drift.</p>
+<p><sup id="fnref:bach" role="doc-noteref"><a href="#fn:bach" class="footnote" rel="footnote">3</a></sup> proposes a system that pairs two online learners: a <em>stable</em> learner $S$, trained on a growing window of data encompassing all the examples seen up to time $t$, and a <em>reactive</em> learner $R_w$ trained on a sliding window of fixed length $w$. The stable learner outperforms the reactive learner as long as the concept is constant, but will start mispredicting as the data transitions to a new concept. Since $R_w$ is trained on a smaller window, it can react more quickly and act as a lagging indicator of drift.</p>
 
 <p>As a heuristic, the system keeps track of the number of incoming examples predicted correctly by $R_w$ and incorrectly by $S$; once that number passes a certain threshold, the training window of $S$ is clipped to be the same as $R$ before starting to grow again.</p>
 

@@ -12,7 +12,7 @@
 
   <meta property="og:title" content="latex2exp: a package to render LaTeX in R graphics">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://www.stefanom.io//development/2022/02/09/latex2exp.html">
+  <meta property="og:url" content="http://localhost:4000//development/2022/02/09/latex2exp.html">
   <meta property="og:image" content="http://www.stefanom.io/img/stefano.jpg">
   <meta name="google-site-verification" content="QsBlz5VRu-Ey-cC4xjPU9Fts_iuunkzWCZABJzYhlN4">
 
@@ -24,8 +24,8 @@
   <script type="text/javascript" src="/public/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="/public/semantic/semantic.min.js"></script>
 
-  <link rel="canonical" href="http://www.stefanom.io//development/2022/02/09/latex2exp.html">
-  <link rel="alternate" type="application/rss+xml" title="Stefano Meschiari" href="http://www.stefanom.io//feed.xml">
+  <link rel="canonical" href="http://localhost:4000//development/2022/02/09/latex2exp.html">
+  <link rel="alternate" type="application/rss+xml" title="Stefano Meschiari" href="http://localhost:4000//feed.xml">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;300;400;700;900&amp;family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
@@ -41,7 +41,6 @@
       }
     };
   </script>
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 
@@ -240,7 +239,7 @@ by the error</p>
 </code></pre></div></div>
 
 <p>Prior to R 4.0, the only available option was to escape the backslash
-character using a double-backslash, e.g. <code class="language-plaintext highlighter-rouge">"\Psi"</code>, a surprising first
+character using a double-backslash, e.g. <code class="language-plaintext highlighter-rouge">"\\Psi"</code>, a surprising first
 hurdle for new users of latex2exp.</p>
 
 <p>As of R 4.0, it is possible to use unquoted backslashes in a string, if

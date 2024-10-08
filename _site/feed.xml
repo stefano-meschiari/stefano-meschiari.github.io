@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stefano Meschiari</title>
-    <description>Stefano Meschiari's personal website.
+    <description>Stefano Meschiari&apos;s personal website.
 </description>
-    <link>http://www.stefanom.io//</link>
-    <atom:link href="http://www.stefanom.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jun 2022 13:11:15 -0700</pubDate>
-    <lastBuildDate>Mon, 20 Jun 2022 13:11:15 -0700</lastBuildDate>
-    <generator>Jekyll v4.2.0</generator>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 07 Oct 2024 19:29:20 -0700</pubDate>
+    <lastBuildDate>Mon, 07 Oct 2024 19:29:20 -0700</lastBuildDate>
+    <generator>Jekyll v4.3.4</generator>
     
       <item>
         <title>latex2exp: a package to render LaTeX in R graphics</title>
@@ -124,8 +124,8 @@ a relatively complicated plotmath expression:&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;expression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ih&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phantom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phantom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'|'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Psi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rangle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'|'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Psi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rangle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;|&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Psi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rangle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;|&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Psi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rangle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -135,11 +135,11 @@ character inside strings is used to start an escape sequence, such as
 user attempting to write a TeX string such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;\Psi&quot;&lt;/code&gt; will be greeted
 by the error&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Error: '\P' is an unrecognized escape in character string starting &quot;&quot;\P&quot;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Error: &apos;\P&apos; is an unrecognized escape in character string starting &quot;&quot;\P&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Prior to R 4.0, the only available option was to escape the backslash
-character using a double-backslash, e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;\Psi&quot;&lt;/code&gt;, a surprising first
+character using a double-backslash, e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;\\Psi&quot;&lt;/code&gt;, a surprising first
 hurdle for new users of latex2exp.&lt;/p&gt;
 
 &lt;p&gt;As of R 4.0, it is possible to use unquoted backslashes in a string, if
@@ -246,8 +246,8 @@ repo&lt;/a&gt;.
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 09 Feb 2022 00:00:00 -0800</pubDate>
-        <link>http://www.stefanom.io//development/2022/02/09/latex2exp.html</link>
-        <guid isPermaLink="true">http://www.stefanom.io//development/2022/02/09/latex2exp.html</guid>
+        <link>http://localhost:4000//development/2022/02/09/latex2exp.html</link>
+        <guid isPermaLink="true">http://localhost:4000//development/2022/02/09/latex2exp.html</guid>
         
         <category>R</category>
         
@@ -278,7 +278,7 @@ repo&lt;/a&gt;.
 &lt;p&gt;&lt;img src=&quot;/img/blog/concept_drift/types_of_drift.png&quot; alt=&quot;types of drift&quot; /&gt;&lt;/p&gt;
 &lt;div class=&quot;caption&quot;&gt;Four structural types of drift. Žliobaitė, “Learning under Concept Drift.”&lt;/div&gt;
 
-&lt;p&gt;In &lt;sup id=&quot;fnref:zliobaite&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:zliobaite&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, concept drift encompasses:&lt;/p&gt;
+&lt;p&gt;In &lt;sup id=&quot;fnref:zliobaite&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:zliobaite&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, concept drift encompasses:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;a sudden change in context, where the data changed abruptly due to discontinuous changes in the data generation mechanism;&lt;/li&gt;
   &lt;li&gt;a gradual drift, where a new contexts is gradually introduced;&lt;/li&gt;
@@ -298,9 +298,11 @@ repo&lt;/a&gt;.
 &lt;p&gt;&lt;img src=&quot;/img/blog/concept_drift/windows.png&quot; alt=&quot;Two different setups for windows&quot; /&gt;&lt;/p&gt;
 &lt;div class=&quot;caption&quot;&gt;Different setups for laying out a reference (blue) and test (orange) window.&lt;/div&gt;
 
-&lt;p&gt;&lt;sup id=&quot;fnref:dasu&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:dasu&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; propose the &lt;a href=&quot;https://en.wikipedia.org/wiki/Kullback–Leibler_divergence&quot;&gt;Kullback-Leibler (KL) divergence&lt;/a&gt; to quantify the “distance” between the two distributions. Briefly, for two distributions $p$ and $q$, the KL-divergence measures the expectation value of the logarithmic difference between them, weighted by $p$:&lt;/p&gt;
+&lt;p&gt;&lt;sup id=&quot;fnref:dasu&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:dasu&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; propose the &lt;a href=&quot;https://en.wikipedia.org/wiki/Kullback–Leibler_divergence&quot;&gt;Kullback-Leibler (KL) divergence&lt;/a&gt; to quantify the “distance” between the two distributions. Briefly, for two distributions $p$ and $q$, the KL-divergence measures the expectation value of the logarithmic difference between them, weighted by $p$:&lt;/p&gt;
 
-\[D(p\|q) = \sum_x p(x) \log_2\frac{p(x)}{q(x)}\]
+&lt;p&gt;$$
+D(p|q) = \sum_x p(x) \log_2\frac{p(x)}{q(x)}
+$$&lt;/p&gt;
 
 &lt;p&gt;Concretely, one could assign $p$ as the distribution of the variable(s) of interest within the reference window, and $q$ with the test window.&lt;/p&gt;
 
@@ -317,7 +319,9 @@ repo&lt;/a&gt;.
 
 &lt;p&gt;An alternative measure to the KL divergence is the &lt;a href=&quot;https://en.wikipedia.org/wiki/Jensen–Shannon_divergence&quot;&gt;Jensen-Shannon (JS) divergence&lt;/a&gt;. The JS divergence is a smoothed, symmetrized version of the KL divergence, defined as:&lt;/p&gt;
 
-\[JS(p \| q) = \frac{KL(p \| \frac{p+q}{2}) + KL(q \| \frac{p+q}{2})}{2}\]
+&lt;p&gt;$$
+JS(p | q) = \frac{KL(p | \frac{p+q}{2}) + KL(q | \frac{p+q}{2})}{2}
+$$&lt;/p&gt;
 
 &lt;p&gt;The JS divergence is bounded within $0 \leq JS \leq 1$, and does not diverge when one of the distributions is zero (or close to zero) and the other is non-zero.&lt;/p&gt;
 
@@ -339,7 +343,7 @@ repo&lt;/a&gt;.
 &lt;h3 id=&quot;comparing-performance-of-learners&quot;&gt;Comparing performance of learners&lt;/h3&gt;
 &lt;p&gt;Another option for detecting concept drift – if labels are available – is to keep track of performance metrics of models on unseen data, such as AUC/AUPR, F1, and Brier scores.&lt;/p&gt;
 
-&lt;p&gt;&lt;sup id=&quot;fnref:bach&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:bach&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; proposes a system that pairs two online learners: a &lt;em&gt;stable&lt;/em&gt; learner $S$, trained on a growing window of data encompassing all the examples seen up to time $t$, and a &lt;em&gt;reactive&lt;/em&gt; learner $R_w$ trained on a sliding window of fixed length $w$. The stable learner outperforms the reactive learner as long as the concept is constant, but will start mispredicting as the data transitions to a new concept. Since $R_w$ is trained on a smaller window, it can react more quickly and act as a lagging indicator of drift.&lt;/p&gt;
+&lt;p&gt;&lt;sup id=&quot;fnref:bach&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:bach&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; proposes a system that pairs two online learners: a &lt;em&gt;stable&lt;/em&gt; learner $S$, trained on a growing window of data encompassing all the examples seen up to time $t$, and a &lt;em&gt;reactive&lt;/em&gt; learner $R_w$ trained on a sliding window of fixed length $w$. The stable learner outperforms the reactive learner as long as the concept is constant, but will start mispredicting as the data transitions to a new concept. Since $R_w$ is trained on a smaller window, it can react more quickly and act as a lagging indicator of drift.&lt;/p&gt;
 
 &lt;p&gt;As a heuristic, the system keeps track of the number of incoming examples predicted correctly by $R_w$ and incorrectly by $S$; once that number passes a certain threshold, the training window of $S$ is clipped to be the same as $R$ before starting to grow again.&lt;/p&gt;
 
@@ -371,8 +375,8 @@ repo&lt;/a&gt;.
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 25 Feb 2021 00:00:00 -0800</pubDate>
-        <link>http://www.stefanom.io//notes/2021/02/25/concept_drift.html</link>
-        <guid isPermaLink="true">http://www.stefanom.io//notes/2021/02/25/concept_drift.html</guid>
+        <link>http://localhost:4000//notes/2021/02/25/concept_drift.html</link>
+        <guid isPermaLink="true">http://localhost:4000//notes/2021/02/25/concept_drift.html</guid>
         
         <category>machine_learning</category>
         
@@ -436,8 +440,8 @@ repo&lt;/a&gt;.
 &lt;p&gt;This article was originally published on &lt;a href=&quot;http://theconversation.com&quot;&gt;The Conversation&lt;/a&gt;. Read the &lt;a href=&quot;https://theconversation.com/rarity-of-jupiter-like-planets-means-planetary-systems-exactly-like-ours-may-be-scarce-52116&quot;&gt;original article&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Dec 2015 00:00:00 -0800</pubDate>
-        <link>http://www.stefanom.io//astronomy/2015/12/13/rarity-of-jupiter-like-planets-means-planetary-systems-exactly-like-ours-may-be-scarce.html</link>
-        <guid isPermaLink="true">http://www.stefanom.io//astronomy/2015/12/13/rarity-of-jupiter-like-planets-means-planetary-systems-exactly-like-ours-may-be-scarce.html</guid>
+        <link>http://localhost:4000//astronomy/2015/12/13/rarity-of-jupiter-like-planets-means-planetary-systems-exactly-like-ours-may-be-scarce.html</link>
+        <guid isPermaLink="true">http://localhost:4000//astronomy/2015/12/13/rarity-of-jupiter-like-planets-means-planetary-systems-exactly-like-ours-may-be-scarce.html</guid>
         
         <category>citizen_science</category>
         
@@ -481,8 +485,8 @@ I added a bunch of new keywords to &lt;a title=&quot;AstroTRENDS: A new tool to 
 &lt;p&gt;How did this post do with &lt;a href=&quot;https://github.com/bnbeckwith/writegood-mode&quot; target=&quot;_blank&quot;&gt;writegood-mode&lt;/a&gt;? Pretty nicely… but I got a grade of “11” on &lt;a href=&quot;http://www.hemingwayapp.com&quot; target=&quot;_blank&quot;&gt;Hemingway&lt;/a&gt;, with about 9 out 24 sentences being &lt;em&gt;hard to read&lt;/em&gt;.   Oh well.&lt;/p&gt;
 </description>
         <pubDate>Sun, 15 Feb 2015 00:00:00 -0800</pubDate>
-        <link>http://www.stefanom.io//astronomy/2015/02/15/astrotrends-weasel-words.html</link>
-        <guid isPermaLink="true">http://www.stefanom.io//astronomy/2015/02/15/astrotrends-weasel-words.html</guid>
+        <link>http://localhost:4000//astronomy/2015/02/15/astrotrends-weasel-words.html</link>
+        <guid isPermaLink="true">http://localhost:4000//astronomy/2015/02/15/astrotrends-weasel-words.html</guid>
         
         
         <category>astronomy</category>
@@ -514,7 +518,7 @@ I added a bunch of new keywords to &lt;a title=&quot;AstroTRENDS: A new tool to 
 
 &lt;h3&gt;Performance notes&lt;/h3&gt;
 &lt;p&gt;While playing with the app, you may be wondering (a) why there is a “buffering” stage before you can see the evolution of the system, and (b) why so few particles?&lt;/p&gt;
-&lt;h4&gt;Buffering: it's all about delayed gratification&lt;/h4&gt;
+&lt;h4&gt;Buffering: it&apos;s all about delayed gratification&lt;/h4&gt;
 &lt;p&gt;The app animates the particle motion at 30 frames per second. This requirement places a hard and fast constraint: if you want to compute the particle motion at each frame request, then the computation must take less than 1/30th of a second, otherwise the webpage will freeze as the JavaScript engine tries to catch up with the accumulated frame requests. For reasonable number of particles (say, 100 or more — see below) and the time steps required by the above app, this requirement is &lt;em&gt;way &lt;/em&gt;overshot.&lt;/p&gt;
 
 &lt;p&gt;This issue can be ameliorated by running the numerical computation in a separate thread (&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers&quot; target=&quot;_blank&quot;&gt;a web worker&lt;/a&gt;), and drawing frames on the main thread as soon as they are computed. This is still not as optimal: while it solves the UI freezing issue, the particle motion will appear very jerky as it will be animated at (typically) less than a frame per second!&lt;/p&gt;
@@ -532,8 +536,8 @@ I added a bunch of new keywords to &lt;a title=&quot;AstroTRENDS: A new tool to 
 &lt;p&gt;You can check out the other demos using code from WGC in &lt;a href=&quot;http://www.stefanom.org/wgc&quot; target=&quot;_blank&quot;&gt;this webpage&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 07 Aug 2014 00:00:00 -0700</pubDate>
-        <link>http://www.stefanom.io//astronomy/2014/08/07/colliding-n-body-spheres-particle-mayhem.html</link>
-        <guid isPermaLink="true">http://www.stefanom.io//astronomy/2014/08/07/colliding-n-body-spheres-particle-mayhem.html</guid>
+        <link>http://localhost:4000//astronomy/2014/08/07/colliding-n-body-spheres-particle-mayhem.html</link>
+        <guid isPermaLink="true">http://localhost:4000//astronomy/2014/08/07/colliding-n-body-spheres-particle-mayhem.html</guid>
         
         <category>visualization</category>
         
@@ -633,8 +637,8 @@ I added a bunch of new keywords to &lt;a title=&quot;AstroTRENDS: A new tool to 
 &lt;p&gt;The benchmark runs in a different thread, so that the page itself remains responsive. This is accomplished using Web Workers, a relatively new technology that allows the page to spin off threads to do computation-heavy work. &lt;a href=&quot;http://caniuse.com/webworkers&quot; target=&quot;_blank&quot;&gt;It’s quite well supported&lt;/a&gt;, and I found it pretty easy to learn (&lt;a href=&quot;http://stackoverflow.com/questions/21408510/chrome-cant-load-web-worker&quot; target=&quot;_blank&quot;&gt;aside from some surprising quirks&lt;/a&gt;). I plan on spinning off some of the tasks in &lt;a title=&quot;Systemic Live&quot; href=&quot;http://www.stefanom.org/systemic-live/&quot;&gt;Systemic Live&lt;/a&gt; – which currently either block the interface or use timers – into Web Workers (it’ll be a quite a bit of work, so don’t hold your breath).&lt;/p&gt;
 </description>
         <pubDate>Thu, 24 Jul 2014 00:00:00 -0700</pubDate>
-        <link>http://www.stefanom.io//astronomy/2014/07/24/barnes-hut-benchmark.html</link>
-        <guid isPermaLink="true">http://www.stefanom.io//astronomy/2014/07/24/barnes-hut-benchmark.html</guid>
+        <link>http://localhost:4000//astronomy/2014/07/24/barnes-hut-benchmark.html</link>
+        <guid isPermaLink="true">http://localhost:4000//astronomy/2014/07/24/barnes-hut-benchmark.html</guid>
         
         <category>astronomy</category>
         
@@ -675,8 +679,8 @@ I added a bunch of new keywords to &lt;a title=&quot;AstroTRENDS: A new tool to 
 &lt;p&gt;The code for building the Barnes-Hut tree from an array of 3D positions is available at the &lt;a href=&quot;https://github.com/stefano-meschiari/WhenGiantsCollide&quot; target=&quot;_blank&quot;&gt;GitHub repository for When Giants Collide.&lt;/a&gt; I will be developing the code in the open, and post periodically about my progress. Hopefully by the end of summer I will have an attractive app running on any modern device and web browser. Any ideas on how to gamify it?&lt;/p&gt;
 </description>
         <pubDate>Wed, 16 Jul 2014 00:00:00 -0700</pubDate>
-        <link>http://www.stefanom.io//astronomy/2014/07/16/barnes-hut.html</link>
-        <guid isPermaLink="true">http://www.stefanom.io//astronomy/2014/07/16/barnes-hut.html</guid>
+        <link>http://localhost:4000//astronomy/2014/07/16/barnes-hut.html</link>
+        <guid isPermaLink="true">http://localhost:4000//astronomy/2014/07/16/barnes-hut.html</guid>
         
         <category>astronomy</category>
         
@@ -735,8 +739,8 @@ I added a bunch of new keywords to &lt;a title=&quot;AstroTRENDS: A new tool to 
 &lt;p&gt;The two apps produced by the APF team make amateur scientists part of the hunt. These applications join the nascent movement of “citizen science”, which enable the general public to understand and even contribute to scientific research, either by lending a hand in &lt;a href=&quot;http://www.planethunters.org&quot;&gt;analyzing massive sets of scientific data&lt;/a&gt; or by &lt;a href=&quot;http://www.milkywayproject.org&quot;&gt;flagging interesting datasets&lt;/a&gt; that warrant further collection of data.&lt;/p&gt;
 </description>
         <pubDate>Wed, 16 Apr 2014 00:00:00 -0700</pubDate>
-        <link>http://www.stefanom.io//astronomy/2014/04/16/the-automated-planet-finder-systemic-and-super-planet-crash.html</link>
-        <guid isPermaLink="true">http://www.stefanom.io//astronomy/2014/04/16/the-automated-planet-finder-systemic-and-super-planet-crash.html</guid>
+        <link>http://localhost:4000//astronomy/2014/04/16/the-automated-planet-finder-systemic-and-super-planet-crash.html</link>
+        <guid isPermaLink="true">http://localhost:4000//astronomy/2014/04/16/the-automated-planet-finder-systemic-and-super-planet-crash.html</guid>
         
         <category>systemic</category>
         
@@ -803,11 +807,11 @@ I added a bunch of new keywords to &lt;a title=&quot;AstroTRENDS: A new tool to 
 
 &lt;p&gt;This had puzzled planetary scientists because normally the bigger a planet is, the easier it is to detect. But now we know that this isn’t the case: we would not observe such planets simply because they did not survive their turbulent beginnings. Simulations of planetary migration show that Jupiter-sized circumbinary planets end up strongly interacting with the gravitational field of the stars and are subsequently flung out from the system.&lt;/p&gt;
 
-&lt;p&gt;Although there are still many details to be worked out, this theoretical framework appears to be in step with Kepler’s discoveries so far. But yet-to-be-made planetary discoveries are bound to surprise us in the near future.&lt;!-- Below is The Conversation's page counter tag. Please DO NOT REMOVE. --&gt;&lt;img src=&quot;https://counter.theconversation.com/content/22663/count.gif?distributor=republish-lightbox-basic&quot; alt=&quot;The Conversation&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;border: none !important; box-shadow: none !important; margin: 0 !important; max-height: 1px !important; max-width: 1px !important; min-height: 1px !important; min-width: 1px !important; opacity: 0 !important; outline: none !important; padding: 0 !important; text-shadow: none !important&quot; /&gt;&lt;!-- End of code. If you don't see any code above, please get new code from the Advanced tab after you click the republish button. The page counter does not collect any personal data. More info: https://theconversation.com/republishing-guidelines --&gt;&lt;/p&gt;
+&lt;p&gt;Although there are still many details to be worked out, this theoretical framework appears to be in step with Kepler’s discoveries so far. But yet-to-be-made planetary discoveries are bound to surprise us in the near future.&lt;!-- Below is The Conversation&apos;s page counter tag. Please DO NOT REMOVE. --&gt;&lt;img src=&quot;https://counter.theconversation.com/content/22663/count.gif?distributor=republish-lightbox-basic&quot; alt=&quot;The Conversation&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;border: none !important; box-shadow: none !important; margin: 0 !important; max-height: 1px !important; max-width: 1px !important; min-height: 1px !important; min-width: 1px !important; opacity: 0 !important; outline: none !important; padding: 0 !important; text-shadow: none !important&quot; /&gt;&lt;!-- End of code. If you don&apos;t see any code above, please get new code from the Advanced tab after you click the republish button. The page counter does not collect any personal data. More info: https://theconversation.com/republishing-guidelines --&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 10 Feb 2014 00:00:00 -0800</pubDate>
-        <link>http://www.stefanom.io//astronomy/2014/02/10/star-wars-planets.html</link>
-        <guid isPermaLink="true">http://www.stefanom.io//astronomy/2014/02/10/star-wars-planets.html</guid>
+        <link>http://localhost:4000//astronomy/2014/02/10/star-wars-planets.html</link>
+        <guid isPermaLink="true">http://localhost:4000//astronomy/2014/02/10/star-wars-planets.html</guid>
         
         <category>kepler_16</category>
         
