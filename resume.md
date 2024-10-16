@@ -3,12 +3,12 @@ layout: page
 title: Resume
 permalink: /resume/
 ---
-<a href="/files/meschiari_cv.pdf" class="ui button right floated">Download PDF</a>
+<a href="/files/meschiari_cv.pdf" class="ui button right floated">Download Resume (PDF)</a>
 <h1 class="name">Stefano Meschiari, Ph.D.</h1>
 <h2 class="subtitle">Data Scientist</h2>
 
 
-I am an experienced Data Scientist with a background in scientific research. As a Data Science leader, I work cross-functionally to create, evolve, and deliver data science solutions that are practical, usable, and trustworthy. I ensure success by fostering alignment across Product, Design, and Engineering, tearing down communication barriers and semantic gaps, and advocating for customer value. I lead teams through the full research and development lifecycle, while supporting individuals’ professional growth.
+I am an experienced Data Scientist with a background in scientific research. As a Data Science leader with more than 8 years’ experience, I use data and algorithms to deliver solutions that are practical, durable, and trustworthy. I bring a scientific mindset, rigorous craft, and people-first attitude to every team I join. I thrive on cross-functional projects that require strong leadership across many teams and quarters.
 
 <hr>
 <div class="links">
@@ -20,9 +20,10 @@ I am an experienced Data Scientist with a background in scientific research. As 
 <div class="ui divider"></div>
 
 ### Skills
-* **Machine Learning**: Building supervised and unsupervised classification and regression pipelines via state of the art and custom algorithms; devising high-performance statistical and numerical methods; time series analysis and forecasting.
-* **Data Science and Engineering**: Architecting high-volume ETL and machine learning pipelines on AWS EMR using Spark, SparkML and H2O. Building components from MVP to production using R, Scala, Python, SQL, JavaScript, Java, and C. Creating interactive tools and reproducible research reports for company-wide consumption.
-* **Leadership**: Mentoring peers from junior to senior positions. Scoping complex tasks, evaluating risk and impact, and acting as a data advocate across multiple teams. Researching knotty problems with curiosity and rigor. Designing technical interviews. Explaining complex concepts to stakeholders with clarity and empathy. Creating knowledge value via clear presentations, technical reports, and workshops.
+* **Machine Learning** (supervised and unsupervised classification and regression; fraud detection; custom ML algorithms development; high-performance numerical algorithms; applied ML research in the security and fraud space)
+* **Data and Software Engineering** (high-volume ETL and ML pipelines on AWS and Databricks; data products for BI/internal analysis; web-based applications and games; open-source development; Spark/SparkML, H2O, Python, Java, Scala, C, JavaScript, React)
+* **Data Science and Analysis** (causal inference and A/B testing; dashboards, tooling, and reproducible reports for executive decision-making; Python, R, SQL, Streamlit, Shiny, Databricks)
+* **Team Leadership** (mentoring junior teammates to senior positions; scoping complex timelines and deliverables, evaluating risk and impact, and acting as a data advocate across multiple teams; distilling complex concepts to stakeholders and users)
 
 <div class="ui divider"></div>
 

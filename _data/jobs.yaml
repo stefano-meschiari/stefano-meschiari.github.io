@@ -5,18 +5,16 @@
   company_link: https://stripe.com/
   emphasis: purple
   description: |
-    * *Protected our customers from unauthorized access to their merchant accounts.* I owned building ML models, rules, and processes that prevent access to unauthorized Stripe merchant accounts, with the goal to prevent or minimize the impact to our customers. Drafted multi-quarter roadmaps, reported on loss accounting against budget, and delivered status updates to risk leadership and our financial partners. My work prevented more than $2M/yr in losses, not including customer pain and reputation costs.
-    * *Helped our Risk team make informed decisions.* I designed A/B experiments, detailed analyses and simulations of counterfactual options and their financial/UX consequences, and made recommendations on new operating points to hit our risk targets. I distilled these analyses into high-level projections and dashboards for leadership and our partner stakeholders, for an estimated $3M/year in customer churn reduction.
-    * *Remediated large-scale incidents.* As a part of incident response for many financial incidents, I worked with urgency to analyze new fraud patterns, build detection, stood up incident dashboards for leadership visibility, found gaps in our existing systems, and conducted post-mortems. I represented Stripe with our financial partners.
-    * *Built new customer-facing tooling.* I joined Risk PM, engineers, and designers to deliver a significant new web dashboard feature called Merchant Risk View. As the Risk data scientist, I designed the data model and underlying queries, stood up a mock implementation feeding from real customer data, and collaborated with engineering on a hard and tight deadline dictated Stripe’s Session 2024 conference.
+    * *Protected our customers from unauthorized access to their merchant accounts.* I built ML models, rules, and processes that protect Stripe users accounts, balances, and data. Drafted multi-quarter roadmaps, reported on losses against budget, and delivered status updates to leadership. My work delivered more than $2M/yr in prevented losses and a 2x decrease in accounts flagged.
+    * *Guided our Risk Team through tradeoffs.* I designed A/B experiments, analyses, and simulations on tradeoffs between financial losses and customer pain when altering our risk appetite. I provided recommendations for new operating points, financial projections, and dashboards for leadership and our partners. The new operating points resulted in an estimated $3M/year in customer churn reduction.
+    * *Remediated large-scale incidents.* As a part of fraud incident response, I worked with urgency to analyze new fraud patterns, stand up incident dashboards, build models to predict terminal losses and plug detection gaps, and conduct post-mortems. I represented Stripe with partners such as Mastercard.
+    * *Built new customer-facing features.* I joined a team of Risk PMs, front-end, data engineers, and designers to deliver a significant new merchant feature (Merchant Risk View). I designed the data model and underlying queries, validated the semantics of the fraud metrics, built and stood  up a mock implementation feeding from real customer data, and paired with engineering to successfully deliver the feature on a hard marketing deadline.
 
 - titles:
-    - title: Senior Technical Lead
-      period: Oct 2021-Dec 2021
-    - title: Technical Lead
-      period: May 2019-Nov 2021
     - title: Senior Data Scientist
       period: Jul 2017-May 2019
+    - title: Technical Lead
+      period: May 2019-Dec 2021
   company: Duo Security (Cisco)
   company_link: https://www.duosecurity.com
   emphasis: green
